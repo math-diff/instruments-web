@@ -1,0 +1,42 @@
+---
+title: Pressure transmitter installation
+description: Mounting, impulse lines and wiring for the DW-3051.
+date: 2024-12-01
+category: Installation
+---
+
+Correct installation is 80% of accurate pressure measurement. Follow these
+steps for the DW-3051 smart transmitter.
+
+## Mounting
+
+- Mount the transmitter **below the tap** for liquids, **above** for gases and
+  steam (to keep condensate in the leg).
+- Use a 3-valve or 5-valve manifold to allow zeroing without breaking the
+  process.
+- Keep impulse lines **short and equal length** for differential measurement.
+
+## Impulse lines
+
+| Media | Tap location | Line fill |
+| --- | --- | --- |
+| Liquid | Below tap | Process liquid |
+| Gas | Above tap | Dry |
+| Steam | Above tap | Condensate |
+
+## Wiring
+
+1. Use shielded twisted pair, 0.5–1.5 mm².
+2. Earth the shield at **one** end only (usually the power supply).
+3. Observe polarity — the DW-3051 is non-polar but a reverse connection
+   disables HART.
+4. Loop supply: 12–45 V DC. Verify the supply can deliver (Vsupply −
+   Vmin) ≥ 20 mA × Rload.
+
+## Commissioning
+
+After power-up, zero the transmitter at zero differential pressure using the
+HART handheld or the local zero button. Then verify the 4 mA and 20 mA
+endpoints against a reference.
+
+> See the full manual PDF on each product page for terminal diagrams.

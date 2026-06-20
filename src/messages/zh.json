@@ -1,0 +1,180 @@
+{
+  "brand": {
+    "name": "德威仪表",
+    "full": "安徽德威仪表有限公司",
+    "tagline": "工业级过程测量仪表"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "pricing": "定价",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "blog": "博客",
+    "docs": "文档",
+    "getQuote": "获取报价"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "requestQuote": "申请报价",
+    "contactSales": "联系销售",
+    "download": "下载",
+    "specifications": "技术规格",
+    "category": "分类",
+    "all": "全部",
+    "back": "返回"
+  },
+  "footer": {
+    "products": "产品",
+    "company": "公司",
+    "resources": "资源",
+    "followUs": "关注我们",
+    "rights": "保留所有权利。",
+    "address": "中国安徽省蚌埠市仪表大道 1 号",
+    "email": "sales@dewe-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "安徽德威仪表有限公司",
+    "heroTitle": "为工业过程提供精准测量",
+    "heroSubtitle": "压力、流量、温度与液位仪表,专为苛刻工业环境设计 — 广泛应用于石化、电力、水处理与冶金行业,深得全球客户信赖。",
+    "heroCtaPrimary": "浏览产品",
+    "heroCtaSecondary": "咨询工程师",
+    "categoriesTitle": "产品分类",
+    "categoriesSubtitle": "四大核心仪表系列,覆盖过程测量的完整场景。",
+    "featuresTitle": "工程师为何选择德威",
+    "featuresSubtitle": "在测量至关重要的场景中,始终稳定可靠。",
+    "applicationsTitle": "为严苛行业而生",
+    "applicationsSubtitle": "在无法容忍停机的流程工业中久经考验。",
+    "certsTitle": "符合全球标准认证",
+    "certsSubtitle": "每台仪表都随附审计所需的完整证书。",
+    "blogTitle": "来自工程博客",
+    "blogSubtitle": "现场笔记、应用指南与选型经验。",
+    "ctaTitle": "准备好选型您的下一台仪表了吗?",
+    "ctaSubtitle": "提交您的需求,我们的应用工程师将在一个工作日内回复。",
+    "ctaButton": "申请报价"
+  },
+  "categories": {
+    "pressure": {
+      "name": "压力仪表",
+      "desc": "表压、绝压与差压变送器、压力表与开关。"
+    },
+    "flow": {
+      "name": "流量仪表",
+      "desc": "电磁、涡街与科氏力流量计,适用液体、气体与蒸汽。"
+    },
+    "temperature": {
+      "name": "温度仪表",
+      "desc": "热电阻、热电偶与温度变送器,配现场表头。"
+    },
+    "level": {
+      "name": "液位仪表",
+      "desc": "雷达、超声波与静压液位变送器,适用储罐与水井。"
+    }
+  },
+  "features": [
+    {
+      "title": "高精度",
+      "desc": "精度可达量程的 0.05%,年长期稳定性低于 0.1%。"
+    },
+    {
+      "title": "防爆认证",
+      "desc": "Ex d、Ex i 以及 ATEX/IECEx 认证,适用 1 区与 2 区安装。"
+    },
+    {
+      "title": "工业协议",
+      "desc": "HART、Modbus RTU 与 4–20 mA 输出,无缝接入现有 DCS/SCADA。"
+    },
+    {
+      "title": "坚固耐用",
+      "desc": "316L 接液部件、IP67 外壳,-40 至 85 °C 工作温度。"
+    }
+  ],
+  "applications": [
+    { "name": "石油化工", "desc": "炼油与化工过程控制" },
+    { "name": "电力", "desc": "锅炉与冷却回路监测" },
+    { "name": "水处理", "desc": "取水、加药与排放计量" },
+    { "name": "冶金", "desc": "炉窑与轧机测量" }
+  ],
+  "certs": ["ISO 9001", "ISO 14001", "CE / ATEX", "IECEx", "RoHS", "CNEX"],
+  "products": {
+    "title": "产品",
+    "subtitle": "浏览我们的仪表系列,按分类筛选找到合适的型号。",
+    "filterAll": "全部分类",
+    "specs": "技术规格",
+    "docs": "资料下载",
+    "inquire": "咨询此产品",
+    "empty": "该分类暂无产品。",
+    "downloadDatasheet": "产品规格书 (PDF)",
+    "downloadManual": "安装手册 (PDF)"
+  },
+  "pricing": {
+    "title": "定价与型号",
+    "subtitle": "对比我们的仪表档次。过程仪表按项目报价 — 申请报价获取准确价格。",
+    "inquireNote": "价格因量程、材质、认证与数量而异。提交您的规格,我们将在一个工作日内提供定制报价。",
+    "tierBasic": "基础型",
+    "tierStandard": "标准型",
+    "tierPremium": "高端型",
+    "inquireButton": "获取报价",
+    "features": "包含内容"
+  },
+  "about": {
+    "title": "关于德威仪表",
+    "subtitle": "自 2008 年起,为工业过程测量值得信赖的伙伴。",
+    "storyTitle": "我们的故事",
+    "story": "安徽德威仪表有限公司成立于 2008 年,总部位于安徽蚌埠,为全球最严苛的工业行业设计制造过程测量仪表。从第一台压力变送器到如今涵盖压力、流量、温度与液位的完整产品线,我们的产品已远销 40 多个国家。",
+    "missionTitle": "使命",
+    "mission": "让可靠、经过认证的过程测量惠及每一家工业企业 — 而无需承担高昂的进口溢价。",
+    "certsTitle": "认证与资质",
+    "teamTitle": "管理团队",
+    "historyTitle": "发展历程"
+  },
+  "team": [
+    { "name": "张伟", "role": "创始人兼首席执行官" },
+    { "name": "李梅", "role": "工程副总裁" },
+    { "name": "陈宇", "role": "质量负责人" },
+    { "name": "王磊", "role": "销售总监" }
+  ],
+  "history": [
+    { "year": "2008", "text": "于安徽蚌埠成立。" },
+    { "year": "2013", "text": "首台电磁流量计交付。" },
+    { "year": "2017", "text": "取得 ATEX / IECEx 防爆认证。" },
+    { "year": "2021", "text": "推出雷达液位变送器系列。" },
+    { "year": "2024", "text": "产品出口至 40 余国。" }
+  ],
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "告诉我们您的应用场景,我们的工程师将在一个工作日内回复。",
+    "formName": "姓名",
+    "formCompany": "公司",
+    "formEmail": "邮箱",
+    "formPhone": "电话",
+    "formProduct": "意向产品",
+    "formMessage": "您的需求",
+    "formSubmit": "发送询盘",
+    "formSuccess": "感谢您的咨询 — 我们将在一个工作日内与您联系。",
+    "formError": "提交失败,请直接发送邮件与我们联系。",
+    "infoTitle": "直接联系我们",
+    "addressLabel": "地址",
+    "emailLabel": "邮箱",
+    "phoneLabel": "电话",
+    "hoursLabel": "工作时间",
+    "hoursValue": "周一至周五 8:30–17:30(北京时间)"
+  },
+  "blog": {
+    "title": "工程博客",
+    "subtitle": "应用指南、选型经验与工程师现场笔记。",
+    "readMore": "阅读全文",
+    "publishedOn": "发布于",
+    "backToList": "返回文章列表",
+    "tags": "标签"
+  },
+  "docs": {
+    "title": "文档中心",
+    "subtitle": "产品手册、安装指南与选型资料。",
+    "searchPlaceholder": "搜索文档…",
+    "onThisPage": "本页内容",
+    "backToDocs": "返回文档"
+  }
+}

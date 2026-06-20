@@ -1,0 +1,187 @@
+{
+  "brand": {
+    "name": "Dewe Instruments",
+    "full": "Anhui Dewe Instrument Co., Ltd.",
+    "tagline": "Industrial-grade process measurement instruments"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "docs": "Docs",
+    "getQuote": "Get a Quote"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "requestQuote": "Request a Quote",
+    "contactSales": "Contact Sales",
+    "download": "Download",
+    "specifications": "Specifications",
+    "category": "Category",
+    "all": "All",
+    "back": "Back"
+  },
+  "footer": {
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@dewe-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Dewe Instrument Co., Ltd.",
+    "heroTitle": "Precision measurement for industrial processes",
+    "heroSubtitle": "Pressure, flow, temperature and level instruments engineered for harsh industrial environments — trusted in petrochemical, power, water and metallurgy plants worldwide.",
+    "heroCtaPrimary": "Explore products",
+    "heroCtaSecondary": "Talk to an engineer",
+    "categoriesTitle": "Product categories",
+    "categoriesSubtitle": "Four core instrument families covering the full spectrum of process measurement.",
+    "featuresTitle": "Why engineers choose Dewe",
+    "featuresSubtitle": "Built to perform where measurement matters most.",
+    "applicationsTitle": "Built for demanding industries",
+    "applicationsSubtitle": "Proven across the process industries that can't afford downtime.",
+    "certsTitle": "Certified to global standards",
+    "certsSubtitle": "Every instrument ships with the paperwork your auditors require.",
+    "blogTitle": "From the engineering blog",
+    "blogSubtitle": "Field notes, application guides and selection know-how.",
+    "ctaTitle": "Ready to specify your next instrument?",
+    "ctaSubtitle": "Send your requirements and our application engineers will respond within one business day.",
+    "ctaButton": "Request a quote"
+  },
+  "categories": {
+    "pressure": {
+      "name": "Pressure",
+      "desc": "Transmitters, gauges and switches for gauge, absolute and differential pressure."
+    },
+    "flow": {
+      "name": "Flow",
+      "desc": "Electromagnetic, vortex and Coriolis flowmeters for liquids, gas and steam."
+    },
+    "temperature": {
+      "name": "Temperature",
+      "desc": "RTDs, thermocouples and temperature transmitters with field-ready heads."
+    },
+    "level": {
+      "name": "Level",
+      "desc": "Radar, ultrasonic and hydrostatic level transmitters for tanks and wells."
+    }
+  },
+  "features": [
+    {
+      "title": "High accuracy",
+      "desc": "Up to 0.05% of span, with long-term stability under 0.1% per year."
+    },
+    {
+      "title": "Hazardous-area certified",
+      "desc": "Ex d, Ex i and ATEX/IECEx approvals for Zone 1 and Zone 2 installations."
+    },
+    {
+      "title": "Industrial protocols",
+      "desc": "HART, Modbus RTU and 4–20 mA outputs that drop into existing DCS/SCADA."
+    },
+    {
+      "title": "Rugged construction",
+      "desc": "316L wetted parts, IP67 housings and -40 to 85 °C operating range."
+    }
+  ],
+  "applications": [
+    { "name": "Petrochemical", "desc": "Refinery and chemical process control" },
+    { "name": "Power", "desc": "Boiler and cooling loop monitoring" },
+    { "name": "Water treatment", "desc": "Intake, dosing and discharge metering" },
+    { "name": "Metallurgy", "desc": "Furnace and rolling-mill measurement" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Products",
+    "subtitle": "Browse our instrument families. Filter by category to find the right fit.",
+    "filterAll": "All categories",
+    "specs": "Specifications",
+    "docs": "Downloads",
+    "inquire": "Inquire about this product",
+    "empty": "No products in this category yet.",
+    "downloadDatasheet": "Datasheet (PDF)",
+    "downloadManual": "Installation manual (PDF)"
+  },
+  "pricing": {
+    "title": "Pricing & models",
+    "subtitle": "Compare our instrument tiers. Process instruments are quoted per project — request a quote for exact pricing.",
+    "inquireNote": "Prices vary by range, material, certification and quantity. Send your spec for a tailored quote within one business day.",
+    "tierBasic": "Essential",
+    "tierStandard": "Standard",
+    "tierPremium": "Premium",
+    "inquireButton": "Get a quote",
+    "features": "Included"
+  },
+  "about": {
+    "title": "About Dewe Instruments",
+    "subtitle": "Measuring what matters in industrial processes since 2008.",
+    "storyTitle": "Our story",
+    "story": "Founded in Bengbu, Anhui in 2008, Anhui Dewe Instrument Co., Ltd. designs and manufactures process measurement instruments for the world's most demanding industries. From our first pressure transmitter to today's full range of pressure, flow, temperature and level instruments, we have shipped to plants in over 40 countries.",
+    "missionTitle": "Mission",
+    "mission": "Make reliable, certified process measurement accessible to every industrial operation — without the premium import price tag.",
+    "certsTitle": "Certifications & approvals",
+    "teamTitle": "Leadership",
+    "historyTitle": "Milestones"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Founder & CEO" },
+    { "name": "Li Mei", "role": "VP Engineering" },
+    { "name": "Chen Yu", "role": "Head of Quality" },
+    { "name": "Wang Lei", "role": "Director of Sales" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Founded in Bengbu, Anhui." },
+    { "year": "2013", "text": "First electromagnetic flowmeter shipped." },
+    { "year": "2017", "text": "ATEX / IECEx hazardous-area certifications." },
+    { "year": "2021", "text": "Radar level transmitter line launched." },
+    { "year": "2024", "text": "Exports to 40+ countries." }
+  ],
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Tell us about your application. Our engineers respond within one business day.",
+    "formName": "Full name",
+    "formCompany": "Company",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formProduct": "Product of interest",
+    "formMessage": "Your requirements",
+    "formSubmit": "Send inquiry",
+    "formSuccess": "Thank you — we'll be in touch within one business day.",
+    "formError": "Something went wrong. Please email us directly.",
+    "infoTitle": "Reach us directly",
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Hours",
+    "hoursValue": "Mon–Fri, 8:30–17:30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Engineering blog",
+    "subtitle": "Application guides, selection know-how and field notes from our engineers.",
+    "readMore": "Read article",
+    "publishedOn": "Published on",
+    "backToList": "Back to all articles",
+    "tags": "Tags"
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Product manuals, installation guides and selection resources.",
+    "searchPlaceholder": "Search docs…",
+    "onThisPage": "On this page",
+    "backToDocs": "Back to docs"
+  }
+}
