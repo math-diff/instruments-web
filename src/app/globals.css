@@ -97,6 +97,24 @@
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+  /* header nav: underline slides in from the left on hover, stays on the active page */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    height: 2px;
+    width: 100%;
+    background: var(--color-link);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after,
+  .nav-link.is-active::after {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes fade-up {
@@ -111,4 +129,26 @@
 }
 .animate-fade-up {
   animation: fade-up 0.5s ease both;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+.hero-zoom {
+  animation: hero-zoom 9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .hero-zoom {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

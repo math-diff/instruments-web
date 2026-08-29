@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n-config";
 import { localizePath } from "@/lib/i18n-config";
+import { categories } from "@/lib/products";
 import type { Dictionary } from "@/lib/i18n";
 
 export function Footer({
@@ -10,12 +11,10 @@ export function Footer({
   locale: Locale;
   dict: Dictionary;
 }) {
-  const productLinks = (["pressure", "flow", "temperature", "level"] as const).map(
-    (c) => ({
-      label: dict.categories[c].name,
-      href: localizePath(locale, `/products?cat=${c}`),
-    }),
-  );
+  const productLinks = categories.map((c) => ({
+    label: dict.categories[c].name,
+    href: localizePath(locale, `/products?cat=${c}`),
+  }));
 
   const companyLinks = [
     { label: dict.nav.about, href: localizePath(locale, "/about") },

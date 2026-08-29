@@ -46,9 +46,17 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
           key={slide.title}
           className={`absolute inset-0 transition-opacity duration-700 ${
             i === index ? "opacity-100" : "pointer-events-none opacity-0"
-          } ${themeStyles[slide.theme]}`}
+          }`}
           aria-hidden={i !== index}
         >
+          {/* gradient background with a slow Ken Burns zoom while active */}
+          <div
+            key={i === index ? `bg-active-${index}` : `bg-idle-${i}`}
+            className={`absolute inset-0 ${themeStyles[slide.theme]} ${
+              i === index ? "hero-zoom" : ""
+            }`}
+          />
+
           {/* decorative ribbons, echoing the flowing WIKA banner lines */}
           <div className="absolute -right-40 -top-56 h-[46rem] w-[46rem] rounded-full border-[3rem] border-white/[0.08]" />
           <div className="absolute -bottom-72 -right-24 h-[52rem] w-[52rem] rounded-full border-[3rem] border-cyan/25" />
@@ -61,9 +69,12 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             }}
           />
 
-          {/* floating white caption card */}
+          {/* floating white caption card — replays its entrance on every activation */}
           <div className="container-page relative flex h-full items-center">
-            <div className="w-full max-w-[30rem] rounded-[0.8rem] bg-white p-7 shadow-[0_0.6rem_2.4rem_rgba(0,37,101,0.35)] sm:p-9 animate-fade-up">
+            <div
+              key={i === index ? `card-active-${index}` : `card-idle-${i}`}
+              className="w-full max-w-[30rem] rounded-[0.8rem] bg-white p-7 shadow-[0_0.6rem_2.4rem_rgba(0,37,101,0.35)] sm:p-9 animate-fade-up"
+            >
               <h1 className="text-2xl font-bold leading-tight text-brand sm:text-[2rem] sm:leading-[1.2]">
                 {slide.title}
               </h1>
@@ -76,7 +87,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
                 tabIndex={i === index ? undefined : -1}
               >
                 {slide.ctaLabel}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </div>
@@ -87,14 +98,14 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
       <button
         onClick={() => go(index - 1)}
         aria-label="Previous slide"
-        className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand shadow-[0_2px_8px_rgba(0,37,101,0.25)] transition-colors hover:bg-white"
+        className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand shadow-[0_2px_8px_rgba(0,37,101,0.25)] transition-all duration-200 hover:scale-110 hover:bg-white"
       >
         <ChevronLeft className="h-5 w-5" strokeWidth={2.5} />
       </button>
       <button
         onClick={() => go(index + 1)}
         aria-label="Next slide"
-        className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand shadow-[0_2px_8px_rgba(0,37,101,0.25)] transition-colors hover:bg-white"
+        className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand shadow-[0_2px_8px_rgba(0,37,101,0.25)] transition-all duration-200 hover:scale-110 hover:bg-white"
       >
         <ChevronRight className="h-5 w-5" strokeWidth={2.5} />
       </button>
@@ -107,7 +118,9 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             onClick={() => go(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-2 rounded-full transition-all duration-300 ${
-              i === index ? "w-8 bg-cyan" : "w-2 bg-white/60 hover:bg-white"
+              i === index
+                ? "w-8 bg-cyan shadow-[0_0_8px_rgba(0,207,255,0.8)]"
+                : "w-2 bg-white/60 hover:w-4 hover:bg-white"
             }`}
           />
         ))}

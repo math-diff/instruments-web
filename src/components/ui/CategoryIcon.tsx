@@ -1,6 +1,5 @@
 import {
   Gauge,
-  Waves,
   Thermometer,
   AlignVerticalJustifyCenter,
   type LucideIcon,
@@ -9,7 +8,6 @@ import type { Category } from "@/lib/products";
 
 export const categoryIcon: Record<Category, LucideIcon> = {
   pressure: Gauge,
-  flow: Waves,
   temperature: Thermometer,
   level: AlignVerticalJustifyCenter,
 };

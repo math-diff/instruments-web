@@ -25,8 +25,8 @@ export function ContactForm({
   return (
     <form action={ENDPOINT} method="POST" className="grid gap-4 sm:grid-cols-2">
       <input type="hidden" name="access_key" value={ACCESS_KEY} />
-      <input type="hidden" name="subject" value="New inquiry — Dewe Instruments" />
-      <input type="hidden" name="from_name" value="Dewe Instruments Website" />
+      <input type="hidden" name="subject" value="New inquiry — Jingfeng Instruments" />
+      <input type="hidden" name="from_name" value="Jingfeng Instruments Website" />
       {redirect && <input type="hidden" name="redirect" value={redirect} />}
       <input
         type="checkbox"

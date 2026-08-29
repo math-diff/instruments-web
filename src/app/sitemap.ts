@@ -3,7 +3,7 @@ import { locales, defaultLocale } from "@/lib/i18n-config";
 import { products } from "@/lib/products";
 import { listContent } from "@/lib/content";
 
-const BASE = "https://dewe-instrument.vercel.app";
+const BASE = "https://jingfeng-instrument.vercel.app";
 
 function url(locale: string, path: string) {
   const prefix = locale === defaultLocale ? "" : `/${locale}`;

@@ -1,7 +1,7 @@
 {
   "brand": {
-    "name": "德威仪表",
-    "full": "安徽德威仪表有限公司",
+    "name": "晶锋仪表",
+    "full": "安徽晶锋仪表有限公司",
     "tagline": "工业级过程测量仪表"
   },
   "nav": {
@@ -33,18 +33,18 @@
     "followUs": "关注我们",
     "rights": "保留所有权利。",
     "address": "中国安徽省蚌埠市仪表大道 1 号",
-    "email": "sales@dewe-instrument.com",
+    "email": "sales@jingfeng-instrument.com",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "安徽德威仪表有限公司",
+    "heroEyebrow": "安徽晶锋仪表有限公司",
     "heroTitle": "为工业过程提供精准测量",
-    "heroSubtitle": "压力、流量、温度与液位仪表,专为苛刻工业环境设计 — 广泛应用于石化、电力、水处理与冶金行业,深得全球客户信赖。",
+    "heroSubtitle": "压力、温度与液位仪表,专为苛刻工业环境设计 — 广泛应用于石化、电力、水处理与冶金行业,深得全球客户信赖。",
     "heroCtaPrimary": "浏览产品",
     "heroCtaSecondary": "咨询工程师",
     "categoriesTitle": "产品分类",
-    "categoriesSubtitle": "四大核心仪表系列,覆盖过程测量的完整场景。",
-    "featuresTitle": "工程师为何选择德威",
+    "categoriesSubtitle": "三大核心仪表系列,覆盖过程测量的完整场景。",
+    "featuresTitle": "工程师为何选择晶锋",
     "featuresSubtitle": "在测量至关重要的场景中,始终稳定可靠。",
     "applicationsTitle": "为严苛行业而生",
     "applicationsSubtitle": "在无法容忍停机的流程工业中久经考验。",
@@ -123,10 +123,10 @@
     "features": "包含内容"
   },
   "about": {
-    "title": "关于德威仪表",
+    "title": "关于晶锋仪表",
     "subtitle": "自 2008 年起,为工业过程测量值得信赖的伙伴。",
     "storyTitle": "我们的故事",
-    "story": "安徽德威仪表有限公司成立于 2008 年,总部位于安徽蚌埠,为全球最严苛的工业行业设计制造过程测量仪表。从第一台压力变送器到如今涵盖压力、流量、温度与液位的完整产品线,我们的产品已远销 40 多个国家。",
+    "story": "安徽晶锋仪表有限公司成立于 2008 年,总部位于安徽蚌埠,为全球最严苛的工业行业设计制造过程测量仪表。从第一台压力变送器到如今涵盖压力、温度与液位的完整产品线,我们的产品已远销 40 多个国家。",
     "missionTitle": "使命",
     "mission": "让可靠、经过认证的过程测量惠及每一家工业企业 — 而无需承担高昂的进口溢价。",
     "certsTitle": "认证与资质",

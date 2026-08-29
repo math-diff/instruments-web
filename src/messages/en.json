@@ -1,7 +1,7 @@
 {
   "brand": {
-    "name": "Dewe Instruments",
-    "full": "Anhui Dewe Instrument Co., Ltd.",
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
     "tagline": "Industrial-grade process measurement instruments"
   },
   "nav": {
@@ -33,18 +33,18 @@
     "followUs": "Follow Us",
     "rights": "All rights reserved.",
     "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@dewe-instrument.com",
+    "email": "sales@jingfeng-instrument.com",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Dewe Instrument Co., Ltd.",
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Precision measurement for industrial processes",
-    "heroSubtitle": "Pressure, flow, temperature and level instruments engineered for harsh industrial environments — trusted in petrochemical, power, water and metallurgy plants worldwide.",
+    "heroSubtitle": "Pressure, temperature and level instruments engineered for harsh industrial environments — trusted in petrochemical, power, water and metallurgy plants worldwide.",
     "heroCtaPrimary": "Explore products",
     "heroCtaSecondary": "Talk to an engineer",
     "categoriesTitle": "Product categories",
-    "categoriesSubtitle": "Four core instrument families covering the full spectrum of process measurement.",
-    "featuresTitle": "Why engineers choose Dewe",
+    "categoriesSubtitle": "Three core instrument families covering the full spectrum of process measurement.",
+    "featuresTitle": "Why engineers choose Jingfeng",
     "featuresSubtitle": "Built to perform where measurement matters most.",
     "applicationsTitle": "Built for demanding industries",
     "applicationsSubtitle": "Proven across the process industries that can't afford downtime.",
@@ -130,10 +130,10 @@
     "features": "Included"
   },
   "about": {
-    "title": "About Dewe Instruments",
+    "title": "About Jingfeng Instruments",
     "subtitle": "Measuring what matters in industrial processes since 2008.",
     "storyTitle": "Our story",
-    "story": "Founded in Bengbu, Anhui in 2008, Anhui Dewe Instrument Co., Ltd. designs and manufactures process measurement instruments for the world's most demanding industries. From our first pressure transmitter to today's full range of pressure, flow, temperature and level instruments, we have shipped to plants in over 40 countries.",
+    "story": "Founded in Bengbu, Anhui in 2008, Anhui Jingfeng Instrument Co., Ltd. designs and manufactures process measurement instruments for the world's most demanding industries. From our first pressure transmitter to today's full range of pressure, temperature and level instruments, we have shipped to plants in over 40 countries.",
     "missionTitle": "Mission",
     "mission": "Make reliable, certified process measurement accessible to every industrial operation — without the premium import price tag.",
     "certsTitle": "Certifications & approvals",

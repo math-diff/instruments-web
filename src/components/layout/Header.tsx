@@ -65,14 +65,65 @@ export function Header({
       <div className="container-page flex h-[4.5rem] items-center gap-6">
         <Link
           href={localizePath(locale, "/")}
-          className="flex shrink-0 items-center gap-2.5"
+          className="group flex shrink-0 items-center gap-3"
           aria-label={brandName}
         >
-          <span className="flex items-center rounded-[4px] border-[3px] border-brand px-2 py-[3px] text-xl font-bold leading-none tracking-tight text-brand">
-            DEWE
-          </span>
-          <span className="hidden text-base font-bold text-brand sm:block">
-            {brandName}
+          {/* gauge-style mark: gradient dial arc, ticks and a needle that
+              swings slightly on hover */}
+          <svg
+            width="46"
+            height="46"
+            viewBox="0 0 48 48"
+            fill="none"
+            aria-hidden="true"
+            className="shrink-0"
+          >
+            <defs>
+              <linearGradient
+                id="jf-dial"
+                x1="7"
+                y1="31"
+                x2="41"
+                y2="31"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#002565" />
+                <stop offset="1" stopColor="#00cfff" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M7.1 30.2A18 18 0 1 1 40.9 30.2"
+              stroke="url(#jf-dial)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <line x1="14.8" y1="14.8" x2="13.4" y2="13.4" stroke="#3480cf" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="24" y1="11" x2="24" y2="9" stroke="#3480cf" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="33.2" y1="14.8" x2="34.6" y2="13.4" stroke="#3480cf" strokeWidth="1.5" strokeLinecap="round" />
+            <g
+              style={{ transformOrigin: "24px 24px" }}
+              className="transition-transform duration-500 ease-out group-hover:rotate-[28deg]"
+            >
+              <line
+                x1="24"
+                y1="24"
+                x2="31.5"
+                y2="11"
+                stroke="#002565"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </g>
+            <circle cx="24" cy="24" r="3" fill="#002565" />
+            <circle cx="24" cy="24" r="1.1" fill="#ffffff" />
+          </svg>
+          <span className="flex flex-col leading-none">
+            <span className="text-[1.5rem] font-bold tracking-[0.12em] text-brand">
+              JINFENG
+            </span>
+            <span className="mt-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-ink-soft">
+              {brandName}
+            </span>
           </span>
         </Link>
 
@@ -105,9 +156,9 @@ export function Header({
               <Link
                 key={item.key}
                 href={localizePath(locale, item.path)}
-                className={`inline-flex items-center gap-1 text-[15px] font-bold transition-colors ${
+                className={`nav-link relative inline-flex items-center gap-1 py-1 text-[15px] font-bold transition-colors ${
                   isActive(item.path)
-                    ? "text-link"
+                    ? "is-active text-link"
                     : "text-brand hover:text-link"
                 }`}
               >
@@ -117,8 +168,10 @@ export function Header({
             ))}
             <Link
               href={localizePath(locale, "/contact")}
-              className={`inline-flex items-center gap-1 text-[15px] font-bold transition-colors ${
-                isActive("/contact") ? "text-link" : "text-brand hover:text-link"
+              className={`nav-link relative inline-flex items-center gap-1 py-1 text-[15px] font-bold transition-colors ${
+                isActive("/contact")
+                  ? "is-active text-link"
+                  : "text-brand hover:text-link"
               }`}
             >
               {nav.contact}
@@ -128,13 +181,13 @@ export function Header({
           <div className="flex items-center gap-3">
             <Link
               href={localizePath(locale, "/pricing")}
-              className="inline-flex h-10 items-center rounded-full border border-brand px-5 text-sm font-bold text-brand transition-colors hover:bg-brand-soft"
+              className="inline-flex h-10 items-center rounded-full border border-brand px-5 text-sm font-bold text-brand transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_0.3rem_0.8rem_rgba(0,37,101,0.18)]"
             >
               {quoteLabel}
             </Link>
             <Link
               href={localizePath(locale, "/contact")}
-              className="inline-flex h-10 items-center rounded-full bg-brand px-6 text-sm font-bold text-white transition-colors hover:bg-brand-strong"
+              className="inline-flex h-10 items-center rounded-full bg-brand px-6 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0.3rem_0.8rem_rgba(0,37,101,0.35)]"
             >
               {contactLabel}
             </Link>

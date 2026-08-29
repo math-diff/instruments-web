@@ -6,6 +6,7 @@ import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { tiers } from "@/lib/pricing";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Reveal } from "@/components/ui/Reveal";
 
 export async function generateMetadata({
   params,
@@ -36,24 +37,26 @@ export default async function PricingPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
-            {dict.pricing.title}
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
-            {dict.pricing.subtitle}
-          </p>
+          <Reveal>
+            <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
+              {dict.pricing.title}
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
+              {dict.pricing.subtitle}
+            </p>
+          </Reveal>
         </Container>
       </section>
 
       <Section>
         <div className="grid gap-6 lg:grid-cols-3">
-          {tiers.map((tier) => (
-            <div
-              key={tier.id}
-              className={`card flex flex-col p-8 ${
-                tier.highlighted ? "ring-2 ring-brand" : ""
-              }`}
-            >
+          {tiers.map((tier, i) => (
+            <Reveal key={tier.id} delay={i * 100} className="h-full">
+              <div
+                className={`card flex h-full flex-col p-8 transition-shadow duration-300 hover:shadow-[var(--shadow-card-hover)] ${
+                  tier.highlighted ? "ring-2 ring-brand" : ""
+                }`}
+              >
               {tier.highlighted && (
                 <span className="mb-4 inline-flex w-fit rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">
                   Recommended
@@ -84,23 +87,26 @@ export default async function PricingPage({
               </ul>
               <Link
                 href={localizePath(loc, "/contact")}
-                className={`mt-8 inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-medium transition-colors ${
+                className={`mt-8 inline-flex h-11 items-center justify-center rounded-full px-5 text-sm font-bold transition-colors ${
                   tier.highlighted
                     ? "bg-brand text-white hover:bg-brand-strong"
-                    : "border border-line bg-white text-ink hover:border-brand hover:text-brand"
+                    : "border border-brand bg-white text-brand hover:bg-brand-soft"
                 }`}
               >
                 {dict.pricing.inquireButton}
               </Link>
-            </div>
+              </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl rounded-xl border border-line bg-surface-muted p-6 text-center">
-          <p className="text-sm leading-6 text-ink-soft">
-            {dict.pricing.inquireNote}
-          </p>
-        </div>
+        <Reveal delay={150}>
+          <div className="mx-auto mt-12 max-w-3xl rounded-xl border border-line bg-surface-muted p-6 text-center">
+            <p className="text-sm leading-6 text-ink-soft">
+              {dict.pricing.inquireNote}
+            </p>
+          </div>
+        </Reveal>
       </Section>
     </>
   );
