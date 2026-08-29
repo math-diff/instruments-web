@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -14,12 +15,18 @@ import { listContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
-import { CategoryIcon } from "@/components/ui/CategoryIcon";
 import { Reveal } from "@/components/ui/Reveal";
 import { HeroSlider, type HeroSlide } from "@/components/sections/HeroSlider";
 import type { Category } from "@/lib/products";
 
 const featureIcons = [GaugeIcon, ShieldCheck, Cpu, Layers];
+
+// representative photo per category for the homepage teaser cards
+const categoryCover: Record<Category, string> = {
+  pressure: "/products/stainless-pressure-gauge.jpg",
+  temperature: "/products/bimetal-thermometer.jpg",
+  level: "/products/magnetic-level.jpg",
+};
 
 export default async function HomePage({
   params,
@@ -91,21 +98,29 @@ export default async function HomePage({
             <Reveal key={cat} delay={i * 90} className="h-full">
               <Link
                 href={localizePath(loc, `/products?cat=${cat}`)}
-                className="card card-hover group flex h-full flex-col p-6"
+                className="card card-hover group flex h-full flex-col overflow-hidden"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-[0.6rem] bg-brand-soft text-brand transition-all duration-300 group-hover:scale-110 group-hover:bg-brand group-hover:text-white">
-                  <CategoryIcon category={cat} className="h-7 w-7" />
+                <div className="relative h-44 border-b border-line bg-surface">
+                  <Image
+                    src={categoryCover[cat]}
+                    alt={dict.categories[cat].name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-brand">
-                  {dict.categories[cat].name}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">
-                  {dict.categories[cat].desc}
-                </p>
-                <span className="more-link mt-4 text-sm">
-                  {dict.common.learnMore}
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </span>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-bold text-brand">
+                    {dict.categories[cat].name}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">
+                    {dict.categories[cat].desc}
+                  </p>
+                  <span className="more-link mt-4 text-sm">
+                    {dict.common.learnMore}
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}

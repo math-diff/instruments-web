@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Download, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Download, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
@@ -11,6 +11,8 @@ import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
 import { SpecTable } from "@/components/ui/SpecTable";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+import { ProductImageViewer } from "@/components/ProductImageViewer";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -50,24 +52,24 @@ export default async function ProductDetailPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-12">
-          <Link
+          <Button
             href={localizePath(loc, "/products")}
-            className="text-sm font-medium text-ink-soft hover:text-brand"
+            variant="secondary"
+            className="group w-fit border-line px-3.5 shadow-[0_0.15rem_0.55rem_rgba(0,37,101,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-link hover:shadow-[0_0.35rem_1rem_rgba(0,37,101,0.14)]"
           >
-            ← {dict.nav.products}
-          </Link>
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand text-white transition-transform duration-200 group-hover:-translate-x-0.5">
+              <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.25} />
+            </span>
+            <span>{dict.nav.products}</span>
+          </Button>
           <div className="mt-6 grid gap-8 lg:grid-cols-2">
             <Reveal>
-              <div className="relative h-72 overflow-hidden rounded-xl border border-line bg-surface sm:h-80">
-                <Image
-                  src={product.image}
-                  alt={product.name[loc]}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain p-6"
-                  priority
-                />
-              </div>
+              <ProductImageViewer
+                src={product.image}
+                alt={product.name[loc]}
+                zoomLabel={dict.products.zoomImage}
+                closeLabel={dict.products.closeImage}
+              />
             </Reveal>
             <Reveal delay={150}>
               <div className="flex flex-col justify-center">
@@ -107,11 +109,25 @@ export default async function ProductDetailPage({
       </section>
 
       <Section>
-        <div className="grid gap-12 lg:grid-cols-3">
+        <Reveal>
+          <div className="max-w-4xl">
+            <h2 className="text-2xl font-bold text-brand">
+              {dict.products.overview}
+            </h2>
+            <p className="mt-4 text-base leading-8 text-ink-soft sm:text-lg">
+              {product.description[loc]}
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="mt-12 grid gap-12 border-t border-line pt-12 lg:grid-cols-3">
           <Reveal className="lg:col-span-2">
             <h2 className="text-2xl font-bold text-brand">
               {dict.products.specs}
             </h2>
+            <p className="mt-3 text-sm leading-6 text-ink-soft">
+              {dict.products.specsNote}
+            </p>
             <div className="mt-6">
               <SpecTable rows={product.specs[loc]} />
             </div>

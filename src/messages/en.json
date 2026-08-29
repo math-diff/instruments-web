@@ -61,7 +61,7 @@
   "categories": {
     "pressure": {
       "name": "Pressure",
-      "desc": "Transmitters, gauges and switches for gauge, absolute and differential pressure."
+      "desc": "General, stainless, capsule and ammonia-service pressure gauges."
     },
     "flow": {
       "name": "Flow",
@@ -69,11 +69,11 @@
     },
     "temperature": {
       "name": "Temperature",
-      "desc": "RTDs, thermocouples and temperature transmitters with field-ready heads."
+      "desc": "RTDs, thermocouples and bimetal thermometers for contact measurement."
     },
     "level": {
       "name": "Level",
-      "desc": "Radar, ultrasonic and hydrostatic level transmitters for tanks and wells."
+      "desc": "Radar, magnetic and float level gauges for tanks and wells."
     }
   },
   "features": [
@@ -112,12 +112,16 @@
     "title": "Products",
     "subtitle": "Browse our instrument families. Filter by category to find the right fit.",
     "filterAll": "All categories",
-    "specs": "Specifications",
+    "overview": "Product overview",
+    "specs": "Photo-verified sample specifications",
+    "specsNote": "The information below is limited to dial markings, labels and structures that are legible in the current product photo. Unclear ranges, materials and connections are not inferred; final ordering data must be confirmed against the selected model and product nameplate.",
     "docs": "Downloads",
     "inquire": "Inquire about this product",
     "empty": "No products in this category yet.",
     "downloadDatasheet": "Datasheet (PDF)",
-    "downloadManual": "Installation manual (PDF)"
+    "downloadManual": "Installation manual (PDF)",
+    "zoomImage": "View larger",
+    "closeImage": "Close image"
   },
   "pricing": {
     "title": "Pricing & models",
