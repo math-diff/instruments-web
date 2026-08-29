@@ -23,7 +23,8 @@
     "specifications": "Specifications",
     "category": "Category",
     "all": "All",
-    "back": "Back"
+    "back": "Back",
+    "searchPlaceholder": "What are you looking for?"
   },
   "footer": {
     "products": "Products",
@@ -53,7 +54,9 @@
     "blogSubtitle": "Field notes, application guides and selection know-how.",
     "ctaTitle": "Ready to specify your next instrument?",
     "ctaSubtitle": "Send your requirements and our application engineers will respond within one business day.",
-    "ctaButton": "Request a quote"
+    "ctaButton": "Request a quote",
+    "salesTitle": "Sales contact",
+    "salesDesc": "Talk to our sales team for sizing advice, certificates and quotations."
   },
   "categories": {
     "pressure": {

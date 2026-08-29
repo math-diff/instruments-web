@@ -31,7 +31,7 @@ export default async function DocsPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
             {dict.docs.title}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
@@ -56,7 +56,7 @@ export default async function DocsPage({
                   {doc.category}
                 </p>
               )}
-              <h2 className="mt-1 text-lg font-semibold text-ink">
+              <h2 className="mt-1 text-lg font-bold text-brand">
                 {doc.title}
               </h2>
               <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">

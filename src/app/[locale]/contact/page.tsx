@@ -39,7 +39,7 @@ export default async function ContactPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
             {dict.contact.title}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
@@ -75,7 +75,7 @@ export default async function ContactPage({
           </div>
 
           <div className="lg:col-span-2">
-            <h2 className="text-xl font-bold text-ink">
+            <h2 className="text-xl font-bold text-brand">
               {dict.contact.infoTitle}
             </h2>
             <ul className="mt-6 space-y-5">

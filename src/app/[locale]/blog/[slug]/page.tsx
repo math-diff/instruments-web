@@ -59,7 +59,7 @@ export default async function BlogPostPage({
             {post.meta.category && (
               <Badge color="brand">{post.meta.category}</Badge>
             )}
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-brand sm:text-5xl">
               {post.meta.title}
             </h1>
             <p className="mt-4 text-lg text-ink-soft">{post.meta.description}</p>

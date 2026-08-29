@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Noto_Sans_SC } from "next/font/google";
+import { Noto_Sans_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n";
@@ -12,12 +12,6 @@ import {
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  display: "swap",
-});
 
 const notoSC = Noto_Sans_SC({
   subsets: ["latin"],
@@ -77,7 +71,7 @@ export default async function LocaleLayout({
     <html
       lang={currentLocale}
       data-scroll-behavior="smooth"
-      className={`${roboto.variable} ${notoSC.variable} h-full antialiased`}
+      className={`${notoSC.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col bg-surface text-ink">
@@ -86,6 +80,8 @@ export default async function LocaleLayout({
           nav={dict.nav}
           brandName={dict.brand.name}
           quoteLabel={dict.nav.getQuote}
+          contactLabel={dict.nav.contact}
+          searchPlaceholder={dict.common.searchPlaceholder}
         />
         <main className="flex-1">{children}</main>
         <Footer locale={currentLocale} dict={dict} />

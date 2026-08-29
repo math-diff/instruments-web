@@ -66,7 +66,7 @@ export default async function ProductDetailPage({
                   {dict.categories[product.category].name}
                 </Badge>
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              <h1 className="text-3xl font-bold tracking-tight text-brand sm:text-4xl">
                 {product.name[loc]}
               </h1>
               <p className="mt-4 text-lg leading-7 text-ink-soft">
@@ -97,7 +97,7 @@ export default async function ProductDetailPage({
       <Section>
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-ink">
+            <h2 className="text-2xl font-bold text-brand">
               {dict.products.specs}
             </h2>
             <div className="mt-6">
@@ -105,7 +105,7 @@ export default async function ProductDetailPage({
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-ink">{dict.products.docs}</h2>
+            <h2 className="text-2xl font-bold text-brand">{dict.products.docs}</h2>
             <ul className="mt-6 space-y-3">
               <li>
                 <a
@@ -132,7 +132,7 @@ export default async function ProductDetailPage({
 
       {related.length > 0 && (
         <Section muted>
-          <h2 className="text-2xl font-bold text-ink">
+          <h2 className="text-2xl font-bold text-brand">
             {dict.categories[product.category].name}
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
@@ -146,7 +146,7 @@ export default async function ProductDetailPage({
                   <CategoryIcon category={p.category} className="h-10 w-10" />
                 </div>
                 <p className="text-xs font-medium text-brand">{p.model}</p>
-                <h3 className="mt-1 text-base font-semibold text-ink">
+                <h3 className="mt-1 text-base font-bold text-brand">
                   {p.name[loc]}
                 </h3>
                 <p className="mt-1 line-clamp-2 text-sm text-ink-soft">

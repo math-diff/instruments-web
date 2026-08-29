@@ -61,7 +61,7 @@ export default async function DocPage({
           </Link>
           <div className="mt-4 max-w-3xl">
             {doc.meta.category && <Badge color="brand">{doc.meta.category}</Badge>}
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-brand sm:text-4xl">
               {doc.meta.title}
             </h1>
             <p className="mt-3 text-lg text-ink-soft">{doc.meta.description}</p>

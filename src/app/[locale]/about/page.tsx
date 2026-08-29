@@ -29,7 +29,7 @@ export default async function AboutPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
             {dict.about.title}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
@@ -45,7 +45,7 @@ export default async function AboutPage({
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand">
               <TrendingUp className="h-5 w-5" strokeWidth={1.5} />
             </div>
-            <h2 className="text-2xl font-bold text-ink">
+            <h2 className="text-2xl font-bold text-brand">
               {dict.about.storyTitle}
             </h2>
             <p className="mt-4 leading-7 text-ink-soft">{dict.about.story}</p>
@@ -54,7 +54,7 @@ export default async function AboutPage({
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand">
               <Target className="h-5 w-5" strokeWidth={1.5} />
             </div>
-            <h2 className="text-2xl font-bold text-ink">
+            <h2 className="text-2xl font-bold text-brand">
               {dict.about.missionTitle}
             </h2>
             <p className="mt-4 leading-7 text-ink-soft">{dict.about.mission}</p>
@@ -90,7 +90,7 @@ export default async function AboutPage({
               <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-brand-soft text-2xl font-bold text-brand">
                 {member.name.charAt(0)}
               </div>
-              <h3 className="text-lg font-semibold text-ink">{member.name}</h3>
+              <h3 className="text-lg font-bold text-brand">{member.name}</h3>
               <p className="mt-1 text-sm text-ink-soft">{member.role}</p>
             </Card>
           ))}

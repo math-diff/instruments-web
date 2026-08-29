@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import { localizePath } from "@/lib/i18n-config";
 import type { Dictionary } from "@/lib/i18n";
@@ -30,51 +29,46 @@ export function Footer({
   ];
 
   return (
-    <footer className="border-t border-line bg-surface-muted">
+    <footer className="border-t border-line bg-surface">
       <div className="container-page py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 text-lg font-bold text-ink">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-brand text-sm font-bold text-white">
-                D
-              </span>
-              {dict.brand.name}
-            </div>
-            <p className="mt-3 max-w-xs text-sm leading-6 text-ink-soft">
-              {dict.brand.tagline}
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft">
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" strokeWidth={1.5} />
-                <span>{dict.footer.address}</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0 text-brand" strokeWidth={1.5} />
-                <a href={`mailto:${dict.footer.email}`} className="hover:text-brand">
-                  {dict.footer.email}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <FooterColumn title={dict.footer.products} links={productLinks} />
+          <FooterColumn title={dict.footer.company} links={companyLinks} />
+          <FooterColumn title={dict.footer.resources} links={resourceLinks} />
+          <div>
+            <h4 className="mb-4 text-lg font-bold text-brand">
+              {dict.nav.contact}
+            </h4>
+            <ul className="space-y-2.5 text-[15px] leading-6 text-ink">
+              <li>{dict.brand.full}</li>
+              <li>{dict.footer.address}</li>
+              <li>
+                <a
+                  href={`tel:${dict.footer.phone.replace(/\s/g, "")}`}
+                  className="text-ink hover:text-link"
+                >
+                  {dict.footer.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0 text-brand" strokeWidth={1.5} />
-                <a href={`tel:${dict.footer.phone.replace(/\s/g, "")}`} className="hover:text-brand">
-                  {dict.footer.phone}
+              <li>
+                <a
+                  href={`mailto:${dict.footer.email}`}
+                  className="font-bold text-link hover:text-brand hover:underline underline-offset-4"
+                >
+                  {dict.footer.email}
                 </a>
               </li>
             </ul>
           </div>
-
-          <FooterColumn title={dict.footer.products} links={productLinks} />
-          <FooterColumn title={dict.footer.company} links={companyLinks} />
-          <FooterColumn title={dict.footer.resources} links={resourceLinks} />
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-sm text-ink-soft sm:flex-row">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 text-sm text-ink-soft sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} {dict.brand.full}. {dict.footer.rights}
+            © {new Date().getFullYear()} {dict.brand.name}
           </p>
           <Link
             href={localizePath(locale === "en" ? "zh" : "en", "/")}
-            className="hover:text-brand"
+            className="font-bold text-link hover:text-brand hover:underline underline-offset-4"
           >
             {locale === "en" ? "中文" : "English"}
           </Link>
@@ -93,11 +87,14 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h4 className="mb-3 text-sm font-semibold text-ink">{title}</h4>
-      <ul className="space-y-2 text-sm">
+      <h4 className="mb-4 text-lg font-bold text-brand">{title}</h4>
+      <ul className="space-y-2.5 text-[15px]">
         {links.map((l) => (
           <li key={l.href + l.label}>
-            <Link href={l.href} className="text-ink-soft hover:text-brand">
+            <Link
+              href={l.href}
+              className="font-bold text-link transition-colors hover:text-brand hover:underline underline-offset-4"
+            >
               {l.label}
             </Link>
           </li>

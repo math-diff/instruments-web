@@ -23,7 +23,8 @@
     "specifications": "技术规格",
     "category": "分类",
     "all": "全部",
-    "back": "返回"
+    "back": "返回",
+    "searchPlaceholder": "您在找什么仪表?"
   },
   "footer": {
     "products": "产品",
@@ -53,7 +54,9 @@
     "blogSubtitle": "现场笔记、应用指南与选型经验。",
     "ctaTitle": "准备好选型您的下一台仪表了吗?",
     "ctaSubtitle": "提交您的需求,我们的应用工程师将在一个工作日内回复。",
-    "ctaButton": "申请报价"
+    "ctaButton": "申请报价",
+    "salesTitle": "销售联系",
+    "salesDesc": "联系我们的销售团队,获取选型建议、认证文件与报价。"
   },
   "categories": {
     "pressure": {

@@ -5,18 +5,18 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-full font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
   primary: "bg-brand text-white hover:bg-brand-strong",
   secondary:
-    "bg-white text-ink border border-line hover:border-brand hover:text-brand",
-  ghost: "text-brand hover:bg-brand-soft",
+    "bg-surface text-brand border border-brand hover:bg-brand-soft",
+  ghost: "text-link hover:text-brand hover:underline underline-offset-4",
 };
 
 const sizes: Record<Size, string> = {
-  md: "h-10 px-4 text-sm",
-  lg: "h-12 px-6 text-base",
+  md: "h-10 px-5 text-sm",
+  lg: "h-12 px-7 text-base",
 };
 
 type CommonProps = {

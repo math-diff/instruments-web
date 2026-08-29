@@ -36,7 +36,7 @@ export default async function PricingPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
             {dict.pricing.title}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
@@ -59,7 +59,7 @@ export default async function PricingPage({
                   Recommended
                 </span>
               )}
-              <h3 className="text-xl font-bold text-ink">
+              <h3 className="text-xl font-bold text-brand">
                 {tierLabel[tier.id]}
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink-soft">

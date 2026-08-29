@@ -24,17 +24,31 @@ export default async function ProductsPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ cat?: string }>;
+  searchParams: Promise<{ cat?: string; q?: string }>;
 }) {
   const { locale } = await params;
-  const { cat } = await searchParams;
+  const { cat, q } = await searchParams;
   const loc = locale as Locale;
   const dict = await getDictionary(loc);
 
   const activeCat = (categories as readonly string[]).includes(cat ?? "")
     ? (cat as Category)
     : null;
-  const list = activeCat ? products.filter((p) => p.category === activeCat) : products;
+  const query = (q ?? "").trim().toLowerCase();
+  const list = products
+    .filter((p) => (activeCat ? p.category === activeCat : true))
+    .filter((p) => {
+      if (!query) return true;
+      const haystack = [
+        p.name[loc],
+        p.summary[loc],
+        p.model,
+        ...p.highlights[loc],
+      ]
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(query);
+    });
 
   const tabs: { key: Category | "all"; label: string; href: string }[] = [
     { key: "all", label: dict.products.filterAll, href: localizePath(loc, "/products") },
@@ -49,12 +63,18 @@ export default async function ProductsPage({
     <>
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 text-center sm:py-20">
-          <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl">
             {dict.products.title}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-soft">
             {dict.products.subtitle}
           </p>
+          {query && (
+            <p className="mt-4 text-base text-ink">
+              “{q?.trim()}” — {list.length}{" "}
+              {loc === "zh" ? "个结果" : "result(s)"}
+            </p>
+          )}
         </Container>
       </section>
 
@@ -99,7 +119,7 @@ export default async function ProductsPage({
                       {dict.categories[p.category].name}
                     </Badge>
                   </div>
-                  <h3 className="text-lg font-semibold text-ink">
+                  <h3 className="text-lg font-bold text-brand">
                     {p.name[loc]}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">
