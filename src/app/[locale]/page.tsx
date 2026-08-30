@@ -4,22 +4,24 @@ import {
   ArrowRight,
   CheckCircle2,
   ShieldCheck,
-  Cpu,
   Gauge as GaugeIcon,
   Layers,
+  Wrench,
   Globe,
 } from "lucide-react";
 import { getDictionary } from "@/lib/i18n";
 import { localizePath, type Locale } from "@/lib/i18n-config";
-import { listContent } from "@/lib/content";
+import { listContent, hasOwnContent } from "@/lib/content";
+import { formatDate } from "@/lib/date";
+import { certificates } from "@/lib/certs";
 import { Container } from "@/components/ui/Container";
 import { Section, SectionHeader } from "@/components/ui/Section";
-import { Badge } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { HeroSlider, type HeroSlide } from "@/components/sections/HeroSlider";
+import { CertScroller } from "@/components/sections/CertScroller";
 import type { Category } from "@/lib/products";
 
-const featureIcons = [GaugeIcon, ShieldCheck, Cpu, Layers];
+const featureIcons = [GaugeIcon, ShieldCheck, Layers, Wrench];
 
 // representative photo per category for the homepage teaser cards
 const categoryCover: Record<Category, string> = {
@@ -37,6 +39,8 @@ export default async function HomePage({
   const loc = locale as Locale;
   const dict = await getDictionary(loc);
   const posts = listContent("blog", loc).slice(0, 3);
+  // hide the blog teaser for locales that have no articles of their own
+  const showBlog = posts.length > 0 && hasOwnContent("blog", loc);
 
   const categoryItems: Category[] = [
     "pressure",
@@ -210,7 +214,7 @@ export default async function HomePage({
         </div>
       </Section>
 
-      {/* Certifications */}
+      {/* Certificates — horizontal scroller */}
       <Section>
         <Reveal>
           <SectionHeader
@@ -218,17 +222,13 @@ export default async function HomePage({
             subtitle={dict.home.certsSubtitle}
           />
         </Reveal>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          {dict.certs.map((cert, i) => (
-            <Reveal key={cert} delay={i * 60}>
-              <Badge color="neutral">{cert}</Badge>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={120} className="mt-10">
+          <CertScroller items={certificates} locale={loc} />
+        </Reveal>
       </Section>
 
       {/* Blog preview */}
-      {posts.length > 0 && (
+      {showBlog && (
         <Section muted>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <Reveal>
@@ -255,7 +255,7 @@ export default async function HomePage({
                   className="card card-hover group flex h-full flex-col p-6"
                 >
                   <span className="mb-3 inline-flex w-fit items-center rounded-full bg-surface-muted px-3 py-1 text-xs font-medium text-ink-soft">
-                    {post.date}
+                    {formatDate(post.date, loc)}
                   </span>
                   <h3 className="text-lg font-bold leading-snug text-brand transition-colors group-hover:text-link">
                     {post.title}

@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Industrielle Prozess-Messtechnik"
+  },
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "pricing": "Preise",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "docs": "Dokumentation",
+    "getQuote": "Angebot anfordern"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle ansehen",
+    "requestQuote": "Angebot anfordern",
+    "contactSales": "Vertrieb kontaktieren",
+    "download": "Download",
+    "specifications": "Technische Daten",
+    "category": "Kategorie",
+    "all": "Alle",
+    "back": "Zurück",
+    "searchPlaceholder": "Wonach suchen Sie?"
+  },
+  "footer": {
+    "products": "Produkte",
+    "company": "Unternehmen",
+    "resources": "Ressourcen",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "Präzisionsmessung für industrielle Prozesse",
+    "heroSubtitle": "Druck-, Temperatur- und Füllstandmessgeräte für raue Industrieumgebungen — vertraut in Petrochemie, Energie, Wasser- und Metallurgieanlagen weltweit.",
+    "heroCtaPrimary": "Produkte entdecken",
+    "heroCtaSecondary": "Mit einem Ingenieur sprechen",
+    "categoriesTitle": "Produktfamilien",
+    "categoriesSubtitle": "Drei Kerngerätefamilien für das gesamte Spektrum der Prozessmessung.",
+    "featuresTitle": "Anwendungsorientierte Auswahl für zuverlässige Messung",
+    "featuresSubtitle": "Der Messbereich ist nur der Anfang: Medium, Temperatur, Anschluss, Einbau und Betriebsbedingungen entscheiden über die Eignung.",
+    "applicationsTitle": "Für anspruchsvolle Industrien gebaut",
+    "applicationsSubtitle": "Bewährt in Prozessindustrien, in denen Stillstand nicht infrage kommt.",
+    "certsTitle": "Zertifikate und Auszeichnungen",
+    "certsSubtitle": "Musterzulassungen, Branchen-Auszeichnungen und Unternehmensnachweise — automatischer Lauf, mit Hover pausieren.",
+    "blogTitle": "Aus dem Technik-Blog",
+    "blogSubtitle": "Anwendungsleitfäden, Auswahlwissen und Praxisberichte.",
+    "ctaTitle": "Bereit, Ihr nächstes Messgerät zu spezifizieren?",
+    "ctaSubtitle": "Senden Sie uns Ihre Anforderung — unsere Applikationsingenieure antworten innerhalb eines Werktags.",
+    "ctaButton": "Angebot anfordern",
+    "salesTitle": "Vertriebskontakt",
+    "salesDesc": "Sprechen Sie mit unserem Vertrieb über Auslegung, Zertifikate und Angebote."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Druck",
+      "desc": "Allgemeine, Edelstahl-, Kapselfedern- und Ammoniak-Manometer."
+    },
+    "flow": {
+      "name": "Durchfluss",
+      "desc": "Elektromagnetische, Vortex- und Coriolis-Durchflussmessgeräte."
+    },
+    "temperature": {
+      "name": "Temperatur",
+      "desc": "Widerstandsthermometer, Thermoelemente und Bimetallthermometer."
+    },
+    "level": {
+      "name": "Füllstand",
+      "desc": "Radar-, Magnet- und Schwimmer-Füllstandmessgeräte für Tanks und Brunnen."
+    }
+  },
+  "features": [
+    {
+      "title": "Passung zur Anwendung",
+      "desc": "Klären Sie Medium, Normal- und Maximaldruck, Prozesstemperatur, Umgebungsbedingungen und Einbauort, bevor Sie Messprinzip und Bereich wählen."
+    },
+    {
+      "title": "Nachprüfbare Daten",
+      "desc": "Bereiche, Genauigkeitsklassen, Typenschilder und sichtbare Konstruktion werden wie vorgefunden berichtet; unbestätigte Werte werden nicht verallgemeinert."
+    },
+    {
+      "title": "Werkstoffe und Anschlüsse",
+      "desc": "Definieren Sie mediumskontaktierte Werkstoffe, Dichtungen, Gewinde- oder Flanschnorm und Druckstufe passend zu Medium und Rohrleitung."
+    },
+    {
+      "title": "Installation und Wartung",
+      "desc": "Beachten Sie Einbaulage, Vibration, Druckpulsation und Wartungszugang; bei Bedarf Dämpfung, Trennung oder Schutz vorsehen."
+    }
+  ],
+  "applications": [
+    { "name": "Petrochemie", "desc": "Prozessleittechnik in Raffinerien und Chemieanlagen" },
+    { "name": "Energie", "desc": "Überwachung von Kesseln und Kühlkreisläufen" },
+    { "name": "Wasseraufbereitung", "desc": "Messung von Zulauf, Dosierung und Ablauf" },
+    { "name": "Metallurgie", "desc": "Messung an Öfen und Walzwerken" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Produkte",
+    "subtitle": "Durchsuchen Sie unsere Gerätefamilien. Filtern Sie nach Kategorie, um das passende Gerät zu finden.",
+    "filterAll": "Alle Kategorien",
+    "overview": "Produktübersicht",
+    "specs": "Foto-verifizierte Beispiel-Spezifikationen",
+    "specsNote": "Die folgenden Angaben beschränken sich auf Skalenbeschriftungen, Etiketten und Konstruktionen, die auf den aktuellen Produktfotos lesbar sind. Nicht lesbare Bereiche, Werkstoffe und Anschlüsse werden nicht erschlossen; verbindliche Bestelldaten sind am gewählten Modell und Typenschild zu bestätigen.",
+    "docs": "Downloads",
+    "inquire": "Dieses Produkt anfragen",
+    "empty": "Keine Produkte in dieser Kategorie.",
+    "downloadDatasheet": "Datenblatt (PDF)",
+    "downloadManual": "Installationsanleitung (PDF)",
+    "zoomImage": "Bild vergrößern",
+    "closeImage": "Bild schließen"
+  },
+  "pricing": {
+    "title": "Preise und Modelle",
+    "subtitle": "Vergleichen Sie unsere Geräteklassen. Prozessgeräte werden projektspezifisch angeboten — fordern Sie ein Angebot an.",
+    "inquireNote": "Preise variieren je nach Bereich, Werkstoff, Zertifizierung und Menge. Senden Sie Ihre Spezifikation für ein Angebot innerhalb eines Werktags.",
+    "tierBasic": "Essential",
+    "tierStandard": "Standard",
+    "tierPremium": "Premium",
+    "inquireButton": "Angebot anfordern",
+    "features": "Enthalten"
+  },
+  "about": {
+    "title": "Über Jingfeng Instruments",
+    "subtitle": "Seit 2008 messen wir, was in Industrieprozessen zählt.",
+    "storyTitle": "Unsere Geschichte",
+    "story": "Anhui Jingfeng Instrument Co., Ltd. wurde 2008 in Bengbu (Anhui) gegründet und entwickelt und fertigt Prozess-Messtechnik für die anspruchsvollsten Industrien der Welt. Vom ersten Drucktransmitter bis zur heutigen Produktpalette für Druck, Temperatur und Füllstand liefern wir in über 40 Länder.",
+    "missionTitle": "Mission",
+    "mission": "Zuverlässige, zertifizierte Prozessmessung für jeden Industriebetrieb zugänglich machen — ohne Aufpreis wie bei Importprodukten.",
+    "certsTitle": "Zertifikate und Zulassungen",
+    "teamTitle": "Führung",
+    "historyTitle": "Meilensteine"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Gründer und CEO" },
+    { "name": "Li Mei", "role": "VP Engineering" },
+    { "name": "Chen Yu", "role": "Leiter Qualität" },
+    { "name": "Wang Lei", "role": "Vertriebsleiter" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Gründung in Bengbu, Anhui." },
+    { "year": "2013", "text": "Erstes magnetisch-induktives Durchflussmessgerät ausgeliefert." },
+    { "year": "2017", "text": "ATEX / IECEx-Zertifizierungen für Ex-Bereiche." },
+    { "year": "2021", "text": "Produktlinie Radar-Füllstandtransmitter eingeführt." },
+    { "year": "2024", "text": "Export in über 40 Länder." }
+  ],
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Beschreiben Sie Ihre Anwendung. Unsere Ingenieure antworten innerhalb eines Werktags.",
+    "formName": "Name",
+    "formCompany": "Unternehmen",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "formProduct": "Interessierendes Produkt",
+    "formMessage": "Ihre Anforderungen",
+    "formSubmit": "Anfrage senden",
+    "formSuccess": "Vielen Dank — wir melden uns innerhalb eines Werktags.",
+    "formError": "Etwas ist schiefgelaufen. Bitte schreiben Sie uns direkt eine E-Mail.",
+    "infoTitle": "Direkter Kontakt",
+    "addressLabel": "Adresse",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Öffnungszeiten",
+    "hoursValue": "Mo–Fr, 8:30–17:30 Uhr (GMT+8)"
+  },
+  "blog": {
+    "title": "Technik-Blog",
+    "subtitle": "Anwendungsleitfäden, Auswahlwissen und Praxisberichte unserer Ingenieure.",
+    "readMore": "Artikel lesen",
+    "publishedOn": "Veröffentlicht am",
+    "backToList": "Zurück zu allen Artikeln",
+    "tags": "Tags"
+  },
+  "docs": {
+    "title": "Dokumentation",
+    "subtitle": "Produkthandbücher, Installationsanleitungen und Auswahlressourcen.",
+    "searchPlaceholder": "Dokumentation durchsuchen…",
+    "onThisPage": "Auf dieser Seite",
+    "backToDocs": "Zurück zur Dokumentation"
+  }
+}

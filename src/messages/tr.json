@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Endüstriyel proses ölçüm cihazları"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "blog": "Blog",
+    "docs": "Dokümantasyon",
+    "getQuote": "Teklif alın"
+  },
+  "common": {
+    "learnMore": "Daha fazla bilgi",
+    "viewAll": "Tümünü gör",
+    "requestQuote": "Teklif isteyin",
+    "contactSales": "Satışla görüşün",
+    "download": "İndir",
+    "specifications": "Teknik özellikler",
+    "category": "Kategori",
+    "all": "Tümü",
+    "back": "Geri",
+    "searchPlaceholder": "Ne arıyorsunuz?"
+  },
+  "footer": {
+    "products": "Ürünler",
+    "company": "Şirket",
+    "resources": "Kaynaklar",
+    "followUs": "Bizi takip edin",
+    "rights": "Tüm hakları saklıdır.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "Endüstriyel süreçler için hassas ölçüm",
+    "heroSubtitle": "Zorlu endüstriyel ortamlar için tasarlanmış basınç, sıcaklık ve seviye ölçüm cihazları — petrokimya, enerji, su arıtma ve metalurji tesislerinde dünya çapında güvenilir.",
+    "heroCtaPrimary": "Ürünleri keşfedin",
+    "heroCtaSecondary": "Bir mühendisle görüşün",
+    "categoriesTitle": "Ürün aileleri",
+    "categoriesSubtitle": "Proses ölçümünün tamamını kapsayan üç temel cihaz ailesi.",
+    "featuresTitle": "Güvenilir ölçüm için uygulamaya yönelik seçim",
+    "featuresSubtitle": "Ölçüm aralığı sadece başlangıçtır; ortam, sıcaklık, bağlantı, montaj ve işletim koşulları uygun cihazı belirler.",
+    "applicationsTitle": "Zorlu endüstriler için tasarlandı",
+    "applicationsSubtitle": "Duruşmaya tahammülü olmayan proses endüstrilerinde kanıtlanmıştır.",
+    "certsTitle": "Sertifikalar ve ödüller",
+    "certsSubtitle": "Tip onayları, sektör tanımları ve şirket ödülleri — otomatik kaydırma, duraklatmak için üzerine gelin.",
+    "blogTitle": "Mühendislik blogundan",
+    "blogSubtitle": "Uygulama kılavuzları, seçim bilgi birikimi ve saha notları.",
+    "ctaTitle": "Bir sonraki cihazınızı belirtmeye hazır mısınız?",
+    "ctaSubtitle": "Gereksinimlerinizi gönderin — uygulama mühendislerimiz bir iş günü içinde yanıt verir.",
+    "ctaButton": "Teklif isteyin",
+    "salesTitle": "Satış iletişimi",
+    "salesDesc": "Seçim tavsiyesi, sertifikalar ve teklifler için satış ekibimizle görüşün."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Basınç",
+      "desc": "Genel amaçlı, paslanmaz çelik, kapsül ve amonyak manometreleri."
+    },
+    "flow": {
+      "name": "Akış",
+      "desc": "Elektromanyetik, vorteks ve Coriolis debimetreleri."
+    },
+    "temperature": {
+      "name": "Sıcaklık",
+      "desc": "Direnç sıcaklık algılayıcıları, termokupllar ve bimetal termometreler."
+    },
+    "level": {
+      "name": "Seviye",
+      "desc": "Tank ve kuyular için radar, manyetik ve şamandıralı seviye ölçerler."
+    }
+  },
+  "features": [
+    {
+      "title": "Uygulamaya uygunluk",
+      "desc": "Ölçüm prensibini ve aralığı seçmeden önce ortamı, normal ve maksimum basıncı, proses sıcaklığını, ortam koşullarını ve montaj yerini teyit edin."
+    },
+    {
+      "title": "Doğrulanabilir veriler",
+      "desc": "Aralıklar, doğruluk sınıfları, tip plakası bilgileri ve görünür yapı fotoğraflarda görüldüğü gibi aktarılır; doğrulanmayan değerler genellenmez."
+    },
+    {
+      "title": "Malzemeler ve bağlantılar",
+      "desc": "Ortama ve boruya uygun temas malzemelerini, contaları, diş veya flanş standardını ve basınç sınıfını belirtin."
+    },
+    {
+      "title": "Montaj ve bakım",
+      "desc": "Yön, titreşim, basınç darbesi ve bakım erişimini hesaba katın; gerektiğinde sönümleme, ayırma veya koruma ekleyin."
+    }
+  ],
+  "applications": [
+    { "name": "Petrokimya", "desc": "Rafineri ve kimya proses kontrolü" },
+    { "name": "Enerji", "desc": "Kazan ve soğutma devresi izleme" },
+    { "name": "Su arıtma", "desc": "Alım, dozajlama ve deşarj ölçümü" },
+    { "name": "Metalurji", "desc": "Fırın ve haddene ölçümleri" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Ürünler",
+    "subtitle": "Cihaz ailelerimize göz atın. Doğru ürünü bulmak için kategoriye göre filtreleyin.",
+    "filterAll": "Tüm kategoriler",
+    "overview": "Ürüne genel bakış",
+    "specs": "Fotoğrafla doğrulanmış örnek özellikler",
+    "specsNote": "Aşağıdaki bilgiler, mevcut ürün fotoğraflarında okunabilen kadran yazıları, etiketler ve yapılarla sınırlıdır. Okunamayan aralık, malzeme ve bağlantılar varsayılmaz; nihai sipariş verileri seçilen model ve tip plakası üzerinden teyit edilmelidir.",
+    "docs": "İndirilenler",
+    "inquire": "Bu ürün hakkında soru sorun",
+    "empty": "Bu kategoride henüz ürün yok.",
+    "downloadDatasheet": "Teknik veri formu (PDF)",
+    "downloadManual": "Montaj kılavuzu (PDF)",
+    "zoomImage": "Büyüt",
+    "closeImage": "Görseli kapat"
+  },
+  "pricing": {
+    "title": "Fiyatlandırma ve modeller",
+    "subtitle": "Cihaz sınıflarımızı karşılaştırın. Proses cihazları projeye göre fiyatlanır — kesin fiyat için teklif isteyin.",
+    "inquireNote": "Fiyatlar aralık, malzeme, sertifikasyon ve miktara göre değişir. Şartnamenizi gönderin, bir iş günü içinde özel teklif alın.",
+    "tierBasic": "Temel",
+    "tierStandard": "Standart",
+    "tierPremium": "Premium",
+    "inquireButton": "Teklif isteyin",
+    "features": "Dahil olanlar"
+  },
+  "about": {
+    "title": "Jingfeng Instruments Hakkında",
+    "subtitle": "2008'den beri endüstriyel süreçlerde önemli olanı ölçüyoruz.",
+    "storyTitle": "Hikâyemiz",
+    "story": "2008 yılında Çin'in Anhui eyaletindeki Bengbu şehrinde kurulan Anhui Jingfeng Instrument Co., Ltd., dünyanın en zorlu endüstrileri için proses ölçüm cihazları tasarlar ve üretir. İlk basınç transmitterimizden bugünkü basınç-sıcaklık-seviye ürün gamına kadar, ürünlerimiz 40'tan fazla ülkedeki tesislere ulaştı.",
+    "missionTitle": "Misyon",
+    "mission": "Güvenilir, sertifikalı proses ölçümünü her endüstriyel işletme için erişilebilir kılmak — yüksek ithalat fiyatı olmadan.",
+    "certsTitle": "Sertifikalar ve onaylar",
+    "teamTitle": "Yönetim",
+    "historyTitle": "Kilometre taşları"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Kurucu ve CEO" },
+    { "name": "Li Mei", "role": "Mühendislik Başkan Yardımcısı" },
+    { "name": "Chen Yu", "role": "Kalite Direktörü" },
+    { "name": "Wang Lei", "role": "Satış Direktörü" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Bengbu, Anhui'de kuruluş." },
+    { "year": "2013", "text": "İlk elektromanyetik debimetre teslim edildi." },
+    { "year": "2017", "text": "ATEX / IECEx Ex-zona sertifikaları." },
+    { "year": "2021", "text": "Radar seviye transmitteri serisi lansmanı." },
+    { "year": "2024", "text": "40'tan fazla ülkeye ihracat." }
+  ],
+  "contact": {
+    "title": "Bize ulaşın",
+    "subtitle": "Uygulamanızı anlatın; mühendislerimiz bir iş günü içinde yanıt verir.",
+    "formName": "Ad soyad",
+    "formCompany": "Şirket",
+    "formEmail": "E-posta",
+    "formPhone": "Telefon",
+    "formProduct": "İlgilenilen ürün",
+    "formMessage": "Gereksinimleriniz",
+    "formSubmit": "Talebi gönder",
+    "formSuccess": "Teşekkürler — bir iş günü içinde size döneceğiz.",
+    "formError": "Bir sorun oluştu. Lütfen doğrudan e-posta gönderin.",
+    "infoTitle": "Doğrudan iletişim",
+    "addressLabel": "Adres",
+    "emailLabel": "E-posta",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Çalışma saatleri",
+    "hoursValue": "Pzt–Cum, 8:30–17:30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Mühendislik blogu",
+    "subtitle": "Mühendislerimizden uygulama kılavuzları, seçim bilgisi ve saha notları.",
+    "readMore": "Yazıyı oku",
+    "publishedOn": "Yayınlanma",
+    "backToList": "Tüm yazılara dön",
+    "tags": "Etiketler"
+  },
+  "docs": {
+    "title": "Dokümantasyon",
+    "subtitle": "Ürün kılavuzları, montaj rehberleri ve seçim kaynakları.",
+    "searchPlaceholder": "Dokümantasyonda ara…",
+    "onThisPage": "Bu sayfada",
+    "backToDocs": "Dokümantasyona dön"
+  }
+}

@@ -34,9 +34,6 @@
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     background: var(--color-surface);
     color: var(--color-ink);
@@ -97,6 +94,38 @@
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  /* certificate wall: hovering the strip greys out every certificate
+     except the one under the cursor (default stays fully coloured) */
+  .cert-img {
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .cert-wall:hover figure:not(:hover) .cert-img {
+    filter: grayscale(1);
+    opacity: 0.7;
+  }
+  /* seamless certificate marquee: the track holds two identical halves,
+     translating by -50% loops without a visible jump */
+  @keyframes cert-marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee-track {
+    animation: cert-marquee 55s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      overflow-x: auto;
+    }
+  }
   /* header nav: underline slides in from the left on hover, stays on the active page */
   .nav-link::after {
     content: "";
@@ -147,8 +176,5 @@
   .animate-fade-up,
   .hero-zoom {
     animation: none;
-  }
-  html {
-    scroll-behavior: auto;
   }
 }

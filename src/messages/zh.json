@@ -44,12 +44,12 @@
     "heroCtaSecondary": "咨询工程师",
     "categoriesTitle": "产品分类",
     "categoriesSubtitle": "三大核心仪表系列,覆盖过程测量的完整场景。",
-    "featuresTitle": "工程师为何选择晶锋",
-    "featuresSubtitle": "在测量至关重要的场景中,始终稳定可靠。",
+    "featuresTitle": "从工况出发，做可靠选型",
+    "featuresSubtitle": "量程只是起点；介质、温度、连接、安装和运行条件共同决定仪表是否适用。",
     "applicationsTitle": "为严苛行业而生",
     "applicationsSubtitle": "在无法容忍停机的流程工业中久经考验。",
-    "certsTitle": "符合全球标准认证",
-    "certsSubtitle": "每台仪表都随附审计所需的完整证书。",
+    "certsTitle": "资质证书与荣誉",
+    "certsSubtitle": "计量型式批准、行业背书与企业证书原件,自动轮播,悬停可暂停查看。",
     "blogTitle": "来自工程博客",
     "blogSubtitle": "现场笔记、应用指南与选型经验。",
     "ctaTitle": "准备好选型您的下一台仪表了吗?",
@@ -78,20 +78,20 @@
   },
   "features": [
     {
-      "title": "高精度",
-      "desc": "精度可达量程的 0.05%,年长期稳定性低于 0.1%。"
+      "title": "工况匹配",
+      "desc": "先确认介质、正常与最大压力、过程温度、环境条件及安装位置，再确定测量原理和量程。"
     },
     {
-      "title": "防爆认证",
-      "desc": "Ex d、Ex i 以及 ATEX/IECEx 认证,适用 1 区与 2 区安装。"
+      "title": "参数可核验",
+      "desc": "量程、精度、铭牌标识和可见结构据实呈现；未经确认的参数不跨型号推断。"
     },
     {
-      "title": "工业协议",
-      "desc": "HART、Modbus RTU 与 4–20 mA 输出,无缝接入现有 DCS/SCADA。"
+      "title": "材料与连接",
+      "desc": "接液材质、密封、螺纹或法兰标准及压力等级，应结合介质和管道条件逐项确认。"
     },
     {
-      "title": "坚固耐用",
-      "desc": "316L 接液部件、IP67 外壳,-40 至 85 °C 工作温度。"
+      "title": "安装与维护",
+      "desc": "选型阶段同步考虑安装方向、振动、压力脉动及检修空间，必要时配置缓冲、隔离或防护附件。"
     }
   ],
   "applications": [

@@ -1,8 +1,10 @@
+import { pick, type L10n } from "@/lib/products";
+
 export type Tier = {
   id: "essential" | "standard" | "premium";
-  priceFrom: { en: string; zh: string };
-  tagline: { en: string; zh: string };
-  features: { en: string[]; zh: string[] };
+  priceFrom: L10n<string>;
+  tagline: L10n<string>;
+  features: L10n<string[]>;
   highlighted?: boolean;
 };
 

@@ -1,15 +1,34 @@
+import type { Locale } from "@/lib/i18n-config";
+import { table as frT } from "./product-translations/fr";
+import { table as deT } from "./product-translations/de";
+import { table as itT } from "./product-translations/it";
+import { table as ruT } from "./product-translations/ru";
+import { table as arT } from "./product-translations/ar";
+import { table as hiT } from "./product-translations/hi";
+import { table as skT } from "./product-translations/sk";
+import { table as msT } from "./product-translations/ms";
+import { table as svT } from "./product-translations/sv";
+import { table as trT } from "./product-translations/tr";
+
 export type Category = "pressure" | "temperature" | "level";
+
+/** localized value: English required, other locales fall back via pick() */
+export type L10n<T> = { en: T } & Partial<Record<Locale, T>>;
+
+export function pick<T>(l10n: L10n<T>, locale: Locale): T {
+  return l10n[locale] ?? l10n.en;
+}
 
 export type Product = {
   slug: string;
   category: Category;
   model: string;
   image: string;
-  name: { en: string; zh: string };
-  summary: { en: string; zh: string };
-  description: { en: string; zh: string };
-  highlights: { en: string[]; zh: string[] };
-  specs: { en: [string, string][]; zh: [string, string][] };
+  name: L10n<string>;
+  summary: L10n<string>;
+  description: L10n<string>;
+  highlights: L10n<string[]>;
+  specs: L10n<[string, string][]>;
 };
 
 export const categories: Category[] = [
@@ -26,12 +45,12 @@ export const products: Product[] = [
     image: "/products/pressure-gauge.jpg",
     name: { en: "Pressure Gauge", zh: "压力表" },
     summary: {
-      en: "General-purpose Bourdon tube pressure gauge for local process pressure indication.",
-      zh: "通用波登管压力表,用于现场过程压力指示。",
+      en: "Bourdon-tube mechanical gauge for local monitoring of gauge pressure on industrial piping, equipment and pressure vessels.",
+      zh: "用于工业管道、设备及压力容器现场表压监测的波登管式机械压力表。",
     },
     description: {
-      en: "The photographed unit combines a large circular dial with high-contrast graduations for quick local reading on pipelines, equipment and pressure vessels. Its mechanical Bourdon-tube design requires no external power and can be configured by pressure range, dial size, and radial or axial process connection.",
-      zh: "实拍产品采用圆形大表盘与高对比度刻度，读数直观，适合安装在工业管道、设备和压力容器上进行现场压力监测。波登管机械结构无需外部供电，可按量程、表盘直径以及径向或轴向接口进行选型。",
+      en: "This gauge uses a Bourdon-tube sensing element to convert process pressure into elastic displacement; a geared movement then drives the pointer to provide local indication without external power. The photographed sample has a 0–1.6 MPa range and accuracy class 1.6, and is suited to pumps, compressed-air systems, general process lines and pressure vessels operating under relatively stable pressure. Final selection should confirm the operating range, process-medium compatibility, temperature, connection orientation and ambient vibration; pressure pulsation or shock may require a restrictor, snubber or other protective accessory.",
+      zh: "该仪表采用波登管弹性元件将介质压力转换为管端位移，再经齿轮传动机构驱动指针，实现无需外部供电的就地压力指示。实拍样品量程为 0–1.6 MPa、精度等级 1.6，适用于泵组、压缩空气系统、一般工艺管线及压力容器等压力相对稳定的工况。实际选型应综合确认工作量程、介质相容性、工作温度、接口方向和环境振动；存在压力脉动或冲击时，应配置节流、缓冲或其他防护附件。",
     },
     highlights: {
       en: ["Photo sample: 0–1.6 MPa", "Accuracy class 1.6", "Mechanical pointer display"],
@@ -59,12 +78,12 @@ export const products: Product[] = [
     image: "/products/stainless-pressure-gauge.jpg",
     name: { en: "Stainless Steel Pressure Gauge", zh: "不锈钢压力表" },
     summary: {
-      en: "All-stainless pressure gauge for corrosive media and harsh environments.",
-      zh: "全不锈钢压力表,适用于腐蚀性介质与恶劣环境。",
+      en: "All-stainless pressure gauge for local measurement in corrosive, humid and cleanliness-sensitive process environments.",
+      zh: "面向腐蚀性介质、高湿及清洁度要求较高工况的全不锈钢压力表。",
     },
     description: {
-      en: "The photographed sample features a stainless-steel dial case and a robust lower flange assembly, giving the instrument a clean, corrosion-resistant construction for demanding process service. Threaded or flanged connections and compatible wetted materials can be selected to suit pipelines, vessels and media with higher cleanliness or corrosion-resistance requirements.",
-      zh: "实拍样品采用不锈钢表壳与坚固的下部法兰组件，整体结构简洁耐用，适合对耐腐蚀性和清洁度要求较高的过程工况。可根据管道、容器和介质条件选择螺纹或法兰连接，并配置相应的接液材质。",
+      en: "The gauge combines a mechanical pressure-sensing movement with a stainless-steel case and process assembly to improve resistance to humid and corrosive environments. The photographed sample has a 0–2.5 MPa range, accuracy class 1.6 and a lower flange assembly visibly marked 316L, making it suitable for local monitoring on chemical-service equipment, utility systems, vessels and process piping where a robust connection is required. The final specification must confirm wetted-material compatibility, flange standard and pressure rating, operating temperature and sealing arrangement; the visible 316L marking should not be treated as confirmation that every wetted component uses the same alloy.",
+      zh: "该仪表采用机械式压力敏感元件，并配置不锈钢表壳及过程连接组件，以提升在潮湿和腐蚀性环境中的耐受能力。实拍样品量程为 0–2.5 MPa、精度等级 1.6，下部法兰组件可见 316L 标识，适用于化工设备、公用工程、容器和工艺管线的现场压力监测。最终选型需确认接液材质与介质的相容性、法兰标准及压力等级、工作温度和密封形式；图片中的 316L 标识不应视为全部接液部件均采用同一材料的依据。",
     },
     highlights: {
       en: ["Photo sample: 0–2.5 MPa", "Accuracy class 1.6", "316L-marked flange assembly"],
@@ -92,12 +111,12 @@ export const products: Product[] = [
     image: "/products/capsule-pressure-gauge-repaired.png",
     name: { en: "Capsule Pressure Gauge", zh: "不锈钢膜盒压力表" },
     summary: {
-      en: "Capsule element gauge for low pressure and micro-pressure measurement of gases.",
-      zh: "膜盒式压力表,适用于气体微压与低压测量。",
+      en: "Capsule-element pressure gauge for local indication of low and very low gas pressures in ventilation, dust-collection and process applications.",
+      zh: "用于微压与低压气体现场指示的膜盒式压力表，适用于通风、除尘及低压工艺管线。",
     },
     description: {
-      en: "The oversized low-pressure dial and clearly spaced Pa-scale markings shown in the product photo make small pressure changes easy to identify at a glance. A capsule sensing element provides the sensitivity needed for clean, non-corrosive gas service such as ventilation, furnace draft and low-pressure process lines.",
-      zh: "实拍产品采用大尺寸低压表盘，Pa 级刻度间距清晰，便于现场观察细微压力变化。膜盒式敏感元件适合洁净、无腐蚀性气体的微压测量，可用于通风系统、炉膛风压及低压工艺管线。",
+      en: "The instrument uses an elastic capsule element to sense small pressure variations. A mechanical movement converts capsule displacement into local pointer indication on a large-diameter Pa-scale dial. The photographed sample has a 0–10,000 Pa range, accuracy class 2.5 and a side-entry threaded process connection, making it suitable for micro-pressure monitoring in HVAC and ventilation systems, dust collection, furnace draft and other low-pressure gas lines. Final selection should confirm process-medium compatibility, operating temperature, mounting orientation and connection specification; pulsating pressure, mechanical vibration or special media may require appropriate damping, isolation or protective accessories.",
+      zh: "该仪表采用膜盒式弹性元件感受微小压力变化，经机械传动机构驱动指针，在大直径 Pa 刻度表盘上实现就地指示。实拍样品量程为 0–10000 Pa、精度等级 2.5，并采用侧向螺纹过程连接，适用于通风空调、除尘系统、炉膛风压及低压气体管线等需要监测微压变化的场合。实际选型应根据介质兼容性、工作温度、安装方向和接口规格进行确认；存在压力脉动、机械振动或特殊介质时，应配置相应的缓冲、隔离或防护措施。",
     },
     highlights: {
       en: ["Photo sample: 0–10,000 Pa", "Accuracy class 2.5", "Side threaded connection"],
@@ -125,12 +144,12 @@ export const products: Product[] = [
     image: "/products/ammonia-pressure-gauge.jpg",
     name: { en: "Ammonia Pressure Gauge", zh: "不锈钢氨用压力表" },
     summary: {
-      en: "Stainless pressure gauge for ammonia and refrigeration systems, with a clear dual-scale dial.",
-      zh: "氨及制冷系统用不锈钢压力表，采用清晰的 MPa / psi 双刻度显示。",
+      en: "Mechanical pressure gauge for ammonia refrigeration and related gas systems, with MPa / psi dual-scale local indication.",
+      zh: "用于氨制冷及相关气体系统、采用 MPa / psi 双刻度现场指示的机械压力表。",
     },
     description: {
-      en: "The photographed instrument uses a stainless circular case, a clear MPa / psi dual-scale dial and a bottom process connection for straightforward local installation and reading. For ammonia and refrigeration service, wetted materials and sealing components must be selected and confirmed for media compatibility against the final order specification.",
-      zh: "实拍产品采用不锈钢圆形表壳、清晰的 MPa / psi 双刻度表盘和下部过程接口，便于现场安装与快速读数。用于氨及制冷系统时，应根据最终订货规格确认接液材料和密封部件与介质相容。",
+      en: "This gauge uses an elastic pressure element and mechanical movement to provide direct local indication without external power. The photographed sample has a 0–4 MPa / 0–580 psi dual scale, accuracy class 1.6, a stainless circular case and a bottom process connection, supporting pressure monitoring on refrigeration compressors, condensers, receivers and ammonia piping. Ammonia service imposes specific compatibility requirements on wetted materials and seals, so the final order must confirm the specified refrigerant, pressure range, operating temperature, connection size and vibration conditions.",
+      zh: "该仪表通过弹性压力元件和机械传动机构直接指示系统压力，无需外部供电。实拍样品采用 0–4 MPa / 0–580 psi 双刻度、精度等级 1.6、不锈钢圆形表壳及下部过程接口，可用于制冷压缩机、冷凝器、储液设备和氨管线的现场压力监测。氨介质对接液材质和密封件的相容性有专门要求，订货时应明确制冷剂类型、压力范围、工作温度、接口规格及现场振动条件。",
     },
     highlights: {
       en: ["Photo sample: 0–4 MPa", "Dual scale: 0–580 psi", "Accuracy class 1.6"],
@@ -614,6 +633,45 @@ export const products: Product[] = [
     },
   },
 ];
+
+/**
+ * Per-locale product content overrides (name / summary / description /
+ * highlights / specs). Applied once at module load; fields without a
+ * translation fall back to English via pick().
+ */
+export type ProductOverride = Partial<{
+  name: string;
+  summary: string;
+  description: string;
+  highlights: string[];
+  specs: [string, string][];
+}>;
+
+const translationTables: Partial<Record<Locale, Record<string, ProductOverride>>> = {
+  fr: frT,
+  de: deT,
+  it: itT,
+  ru: ruT,
+  ar: arT,
+  hi: hiT,
+  sk: skT,
+  ms: msT,
+  sv: svT,
+  tr: trT,
+};
+
+for (const [localeKey, table] of Object.entries(translationTables)) {
+  const loc = localeKey as Locale;
+  for (const product of products) {
+    const t = table[product.slug];
+    if (!t) continue;
+    if (t.name) product.name[loc] = t.name;
+    if (t.summary) product.summary[loc] = t.summary;
+    if (t.description) product.description[loc] = t.description;
+    if (t.highlights) product.highlights[loc] = t.highlights;
+    if (t.specs) product.specs[loc] = t.specs;
+  }
+}
 
 export function getProduct(slug: string) {
   return products.find((p) => p.slug === slug);

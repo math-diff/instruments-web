@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { listContent } from "@/lib/content";
+import { formatDate } from "@/lib/date";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
@@ -56,7 +57,7 @@ export default async function BlogPage({
                   className="card card-hover group flex h-full flex-col p-6"
                 >
                   <time className="text-xs font-medium text-ink-soft">
-                    {post.date}
+                    {formatDate(post.date, loc)}
                   </time>
                   <h2 className="mt-2 text-lg font-bold text-brand transition-colors group-hover:text-link">
                     {post.title}

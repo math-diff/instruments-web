@@ -44,12 +44,12 @@
     "heroCtaSecondary": "Talk to an engineer",
     "categoriesTitle": "Product categories",
     "categoriesSubtitle": "Three core instrument families covering the full spectrum of process measurement.",
-    "featuresTitle": "Why engineers choose Jingfeng",
-    "featuresSubtitle": "Built to perform where measurement matters most.",
+    "featuresTitle": "Application-led selection for reliable measurement",
+    "featuresSubtitle": "Range is only the starting point; medium, temperature, connection, installation and operating conditions determine whether an instrument is suitable.",
     "applicationsTitle": "Built for demanding industries",
     "applicationsSubtitle": "Proven across the process industries that can't afford downtime.",
-    "certsTitle": "Certified to global standards",
-    "certsSubtitle": "Every instrument ships with the paperwork your auditors require.",
+    "certsTitle": "Certifications & honors",
+    "certsSubtitle": "Pattern approvals, industry endorsements and company honors — auto-rotating, hover to pause.",
     "blogTitle": "From the engineering blog",
     "blogSubtitle": "Field notes, application guides and selection know-how.",
     "ctaTitle": "Ready to specify your next instrument?",
@@ -78,20 +78,20 @@
   },
   "features": [
     {
-      "title": "High accuracy",
-      "desc": "Up to 0.05% of span, with long-term stability under 0.1% per year."
+      "title": "Application fit",
+      "desc": "Confirm the medium, normal and maximum pressure, process temperature, ambient conditions and mounting location before selecting the measuring principle and range."
     },
     {
-      "title": "Hazardous-area certified",
-      "desc": "Ex d, Ex i and ATEX/IECEx approvals for Zone 1 and Zone 2 installations."
+      "title": "Verifiable data",
+      "desc": "Ranges, accuracy classes, nameplate markings and visible construction are reported as observed; unconfirmed values are not generalized across models."
     },
     {
-      "title": "Industrial protocols",
-      "desc": "HART, Modbus RTU and 4–20 mA outputs that drop into existing DCS/SCADA."
+      "title": "Materials and connections",
+      "desc": "Specify wetted materials, seals, thread or flange standard and pressure rating against the medium and piping conditions."
     },
     {
-      "title": "Rugged construction",
-      "desc": "316L wetted parts, IP67 housings and -40 to 85 °C operating range."
+      "title": "Installation and maintenance",
+      "desc": "Account for orientation, vibration, pressure pulsation and service clearance during selection; add damping, isolation or protection where required."
     }
   ],
   "applications": [

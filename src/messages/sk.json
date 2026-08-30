@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Priemyselné meranie technologických procesov"
+  },
+  "nav": {
+    "home": "Domov",
+    "products": "Produkty",
+    "pricing": "Cenník",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "docs": "Dokumentácia",
+    "getQuote": "Vyžiadať ponuku"
+  },
+  "common": {
+    "learnMore": "Zistiť viac",
+    "viewAll": "Zobraziť všetko",
+    "requestQuote": "Vyžiadať ponuku",
+    "contactSales": "Kontakt na predaj",
+    "download": "Stiahnuť",
+    "specifications": "Technické parametre",
+    "category": "Kategória",
+    "all": "Všetko",
+    "back": "Späť",
+    "searchPlaceholder": "Čo hľadáte?"
+  },
+  "footer": {
+    "products": "Produkty",
+    "company": "Spoločnosť",
+    "resources": "Zdroje",
+    "followUs": "Sledujte nás",
+    "rights": "Všetky práva vyhradené.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "Presné meranie pre priemyselné procesy",
+    "heroSubtitle": "Meracie prístroje na tlak, teplotu a hladinu navrhnuté pre náročné priemyselné prostredie — osvedčené v petrochémii, energetike, úprave vône a metalurgii.",
+    "heroCtaPrimary": "Prezrieť produkty",
+    "heroCtaSecondary": "Porozprávať s inžinierom",
+    "categoriesTitle": "Produktové rady",
+    "categoriesSubtitle": "Tri kľúčové rady prístrojov pokrývajúce celé spektrum procesného merania.",
+    "featuresTitle": "Výber vedený aplikáciou pre spoľahlivé meranie",
+    "featuresSubtitle": "Rozsah je len východisko: médium, teplota, prípojka, montáž a prevádzkové podmienky rozhodujú o vhodnosti prístroja.",
+    "applicationsTitle": "Navrhnuté pre náročné odvetvia",
+    "applicationsSubtitle": "Overené v odvetviach, kde nie je priestor na prestoje.",
+    "certsTitle": "Certifikáty a ocenenia",
+    "certsSubtitle": "Schválenia typov, odvetvové pôsobenie a ocenenia spoločnosti — automatický posun, pre pauzu prejdite kurzorom.",
+    "blogTitle": "Z technického blogu",
+    "blogSubtitle": "Aplikačné príručky, skúsenosti s výberom a postrehy z praxe.",
+    "ctaTitle": "Pripravení špecifikovať váš ďalší prístroj?",
+    "ctaSubtitle": "Pošlite nám požiadavky — naši aplikační inžinieri odpovedia do jedného pracovného dňa.",
+    "ctaButton": "Vyžiadať ponuku",
+    "salesTitle": "Obchodný kontakt",
+    "salesDesc": "Porozprávajte sa s náším obchodným tímom o dimenzovaní, certifikátoch a ponukách."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Tlak",
+      "desc": "Všeobecné, nerezové, membránové a amoniakové manometre."
+    },
+    "flow": {
+      "name": "Prietok",
+      "desc": "Elektromagnetické, vírivé a Coriolisove prietokomery."
+    },
+    "temperature": {
+      "name": "Teplota",
+      "desc": "Odporové snímače, termočlánky a bimetalové teplomery."
+    },
+    "level": {
+      "name": "Hladina",
+      "desc": "Radarové, magnetické a plavákové hladinomery pre nádrže a studne."
+    }
+  },
+  "features": [
+    {
+      "title": "Vhodnosť pre aplikáciu",
+      "desc": "Pred výberom meracieho princípu a rozsahu si potvrďte médium, normálny a maximálny tlak, teplotu procesu, okolité podmienky a miesto montáže."
+    },
+    {
+      "title": "Overiteľné údaje",
+      "desc": "Rozsahy, triedy presnosti, štítky a viditeľná konštrukcia sa uvádzajú tak, ako sú viditeľné na fotografiách; nepotvrdené hodnoty sa nezovšeobecňujú."
+    },
+    {
+      "title": "Materiály a prípojky",
+      "desc": "Špecifikujte materiály v kontakte s médiom, tesnenia, závitový alebo prírubový štandard a tlakovú triedu podľa média a potrubia."
+    },
+    {
+      "title": "Inštalácia a údržba",
+      "desc": "Počítajte s orientáciou, vibráciami, pulzáciami tlaku a priestorom pre údržbu; v prípade potreby doplňte tlmenie, oddelenie alebo ochranu."
+    }
+  ],
+  "applications": [
+    { "name": "Petrochémia", "desc": "Riadenie procesov v rafinériách a chémii" },
+    { "name": "Energetika", "desc": "Monitorovanie kotlov a chladiacich okruhov" },
+    { "name": "Úprava vôd", "desc": "Meranie príjmu, dávkovania a odpadu" },
+    { "name": "Metalurgia", "desc": "Meranie vo peciach a na holiach" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Produkty",
+    "subtitle": "Prezrite si naše rady prístrojov. Filtrujte podľa kategórie a nájdite ten správny.",
+    "filterAll": "Všetky kategórie",
+    "overview": "Prehľad produktu",
+    "specs": "Parametre overené fotografiami",
+    "specsNote": "Nižšie uvedené informácie sa obmedzujú na označenia, štítky a konštrukcie čitateľné na aktuálnych fotografiách produktov. Nečitateľné rozsahy, materiály a prípojky sa nedopĺňajú; záväzné objednacie údaje je potrebné potvrdiť podľa zvoleného modelu a výrobného štítku.",
+    "docs": "Na stiahnutie",
+    "inquire": "Opýtať sa na tento produkt",
+    "empty": "V tejto kategórii zatiaľ nie sú produkty.",
+    "downloadDatasheet": "Dátový list (PDF)",
+    "downloadManual": "Inštalačný manuál (PDF)",
+    "zoomImage": "Zväčšiť obrázok",
+    "closeImage": "Zavrieť obrázok"
+  },
+  "pricing": {
+    "title": "Ceny a modely",
+    "subtitle": "Porovnajte naše rady prístrojov. Procesné prístroje sa cenovo riešia individuálne — požiadajte o presnú ponuku.",
+    "inquireNote": "Ceny sa líšia podľa rozsahu, materiálov, certifikácií a množstva. Pošlite nám špecifikáciu a do jedného pracovného dňa dostanete ponuku na mieru.",
+    "tierBasic": "Základná",
+    "tierStandard": "Štandardná",
+    "tierPremium": "Prémiová",
+    "inquireButton": "Vyžiadať ponuku",
+    "features": "Zahrnuté"
+  },
+  "about": {
+    "title": "O spoločnosti Jingfeng Instruments",
+    "subtitle": "Od roku 2008 meriame to, čo je v priemyselných procesoch dôležité.",
+    "storyTitle": "Náš príbeh",
+    "story": "Spoločnosť Anhui Jingfeng Instrument Co., Ltd. bola založená v roku 2008 v meste Bengbu (provincia Anhui) a navrhuje a vyrába procesné meracie prístroje pre najnáročnejšie odvetvia. Od prvého tlakového prevodníka po dnešnú ponuku pre tlak, teplotu a hladinu dodávame na viac ako 40 trhov.",
+    "missionTitle": "Misia",
+    "mission": "Sprístupniť spoľahlivé certifikované procesné meranie každému priemyselnému prevádzkovateľovi — bez prémie za dovoz.",
+    "certsTitle": "Certifikáty a schválenia",
+    "teamTitle": "Vedenie",
+    "historyTitle": "Míľniky"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Zakladateľ a CEO" },
+    { "name": "Li Mei", "role": "VP pre inžinierstvo" },
+    { "name": "Chen Yu", "role": "Vedúci kvality" },
+    { "name": "Wang Lei", "role": "Riaditeľ predaja" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Založenie v meste Bengbu, provincia Anhui." },
+    { "year": "2013", "text": "Dodaný prvý elektromagnetický prietokomer." },
+    { "year": "2017", "text": "Certifikáty ATEX / IECEx pre ex-zóny." },
+    { "year": "2021", "text": "Uvedená rada radarových hladinomerov." },
+    { "year": "2024", "text": "Export do viac než 40 krajín." }
+  ],
+  "contact": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Popíšte nám svoju aplikáciu. Naši inžinieri odpovedia do jedného pracovného dňa.",
+    "formName": "Meno a priezvisko",
+    "formCompany": "Spoločnosť",
+    "formEmail": "E-mail",
+    "formPhone": "Telefón",
+    "formProduct": "Produkt, o ktorý sa zaujímate",
+    "formMessage": "Vaše požiadavky",
+    "formSubmit": "Odoslať dopyt",
+    "formSuccess": "Ďakujeme — ozveme sa do jedného pracovného dňa.",
+    "formError": "Niečo sa pokazilo. Napíšte nám prosím priamo e-mail.",
+    "infoTitle": "Priamy kontakt",
+    "addressLabel": "Adresa",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefón",
+    "hoursLabel": "Pracovná doba",
+    "hoursValue": "Po–Pi, 8:30–17:30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Technický blog",
+    "subtitle": "Aplikačné príručky, skúsenosti s výberom a postrehy našich inžinierov.",
+    "readMore": "Čítať článok",
+    "publishedOn": "Publikované",
+    "backToList": "Späť na články",
+    "tags": "Značky"
+  },
+  "docs": {
+    "title": "Dokumentácia",
+    "subtitle": "Príručky produktov, inštalačné príručky a materiály pre výber.",
+    "searchPlaceholder": "Hľadať v dokumentácii…",
+    "onThisPage": "Na tejto stránke",
+    "backToDocs": "Späť na dokumentáciu"
+  }
+}

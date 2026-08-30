@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Instrumen pengukuran proses berskala industri"
+  },
+  "nav": {
+    "home": "Utama",
+    "products": "Produk",
+    "pricing": "Harga",
+    "about": "Tentang kami",
+    "contact": "Hubungi kami",
+    "blog": "Blog",
+    "docs": "Dokumentasi",
+    "getQuote": "Minta sebut harga"
+  },
+  "common": {
+    "learnMore": "Ketahui lebih lanjut",
+    "viewAll": "Lihat semua",
+    "requestQuote": "Minta sebut harga",
+    "contactSales": "Hubungi jurujual",
+    "download": "Muat turun",
+    "specifications": "Spesifikasi",
+    "category": "Kategori",
+    "all": "Semua",
+    "back": "Kembali",
+    "searchPlaceholder": "Apa yang anda cari?"
+  },
+  "footer": {
+    "products": "Produk",
+    "company": "Syarikat",
+    "resources": "Sumber",
+    "followUs": "Ikuti kami",
+    "rights": "Hak cipta terpelihara.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "Pengukuran tepat untuk proses industri",
+    "heroSubtitle": "Instrumen tekanan, suhu dan aras yang dibina untuk persekitaran industri sukar — dipercayai di kilang petrokimia, kuasa, air dan metalurgi di seluruh dunia.",
+    "heroCtaPrimary": "Lihat produk",
+    "heroCtaSecondary": "Bercakap dengan jurutera",
+    "categoriesTitle": "Kategori produk",
+    "categoriesSubtitle": "Tiga keluarga instrumen utama meliputi keseluruhan spektrum pengukuran proses.",
+    "featuresTitle": "Pemilihan berdasarkan aplikasi untuk pengukuran yang boleh dipercayai",
+    "featuresSubtitle": "Julat hanyalah permulaan: media, suhu, sambungan, pemasangan dan keadaan operasi menentukan instrumen yang sesuai.",
+    "applicationsTitle": "Dibina untuk industri yang menuntut",
+    "applicationsSubtitle": "Terbukti dalam industri proses yang tidak mampu berhenti operasi.",
+    "certsTitle": "Pensijilan dan pengiktirafan",
+    "certsSubtitle": "Kelulusan corak, pengiktirafan industri dan anugerah syarikat — skrol automatik, halakan kursor untuk jeda.",
+    "blogTitle": "Dari blog kejuruteraan",
+    "blogSubtitle": "Panduan aplikasi, pengetahuan pemilihan dan catatan lapangan.",
+    "ctaTitle": "Bersedia untuk menentukan instrumen seterusnya?",
+    "ctaSubtitle": "Hantar keperluan anda — jurutera aplikasi kami akan membalas dalam satu hari bekerja.",
+    "ctaButton": "Minta sebut harga",
+    "salesTitle": "Hubungan jualan",
+    "salesDesc": "Bercakap dengan pasangan jualan kami tentang pemilihan, sijil dan sebut harga."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Tekanan",
+      "desc": "Tolok tekanan am, tahan karat, kapsul dan khusus ammonia."
+    },
+    "flow": {
+      "name": "Aliran",
+      "desc": "Pengukur aliran elektromagnet, vorteks dan Coriolis."
+    },
+    "temperature": {
+      "name": "Suhu",
+      "desc": "RTD, termokopel dan termometer bimetal."
+    },
+    "level": {
+      "name": "Aras",
+      "desc": "Pengukur aras radar, magnet dan apung untuk tangki dan telaga."
+    }
+  },
+  "features": [
+    {
+      "title": "Kesesuaian aplikasi",
+      "desc": "Sahkan media, tekanan normal dan maksimum, suhu proses, keadaan persekitaran dan lokasi pemasangan sebelum memilih prinsip pengukuran dan julat."
+    },
+    {
+      "title": "Data yang boleh disahkan",
+      "desc": "Julat, kelas kejituan, penanda plat nama dan struktur yang kelihatan dilaporkan seadanya; nilai yang tidak disahkan tidak digeneralisasi."
+    },
+    {
+      "title": "Bahan dan sambungan",
+      "desc": "Nyatakan bahan bersentuhan dengan media, get, standard benang atau fosena dan kelas tekanan mengikut media dan saluran paip."
+    },
+    {
+      "title": "Pemasangan dan penyelenggaraan",
+      "desc": "Ambil kira orientasi, getaran, denyutan tekanan dan ruang penyelenggaraan; tambahkan pelindam, pengasingan atau perlindungan jika perlu."
+    }
+  ],
+  "applications": [
+    { "name": "Petrokimia", "desc": "Kawalan proses kilang penapisan dan kimia" },
+    { "name": "Kuasa", "desc": "Pemantauan dandang dan litar penyejukan" },
+    { "name": "Rawatan air", "desc": "Pengukuran ambilan, dosing dan pelepasan" },
+    { "name": "Metalurgi", "desc": "Pengukuran tanur dan kilang getah" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Produk",
+    "subtitle": "Layari keluarga instrumen kami. Tapis mengikut kategori untuk mencari yang sesuai.",
+    "filterAll": "Semua kategori",
+    "overview": "Ringkasan produk",
+    "specs": "Spesifikasi sampel disahkan melalui foto",
+    "specsNote": "Maklumat di bawah terhad kepada penandaan tolok, label dan struktur yang boleh dibaca pada foto produk semasa. Julat, bahan dan sambungan yang tidak jelas tidak disimpulkan; data pesanan muktamad perlu disahkan dengan model terpilih dan plat nama produk.",
+    "docs": "Muat turun",
+    "inquire": "Pertanyaan tentang produk ini",
+    "empty": "Tiada produk dalam kategori ini buat masa ini.",
+    "downloadDatasheet": "Helaian data (PDF)",
+    "downloadManual": "Manual pemasangan (PDF)",
+    "zoomImage": "Lihat lebih besar",
+    "closeImage": "Tutup imej"
+  },
+  "pricing": {
+    "title": "Harga dan model",
+    "subtitle": "Bandingkan gred instrumen kami. Instrumen proses dinilai mengikut projek — minta sebut harga untuk harga tepat.",
+    "inquireNote": "Harga berbeza mengikut julat, bahan, pensijilan dan kuantiti. Hantar spesifikasi anda untuk sebut harga dalam satu hari bekerja.",
+    "tierBasic": "Asas",
+    "tierStandard": "Standard",
+    "tierPremium": "Premium",
+    "inquireButton": "Minta sebut harga",
+    "features": "Termasuk"
+  },
+  "about": {
+    "title": "Tentang Jingfeng Instruments",
+    "subtitle": "Sejak 2008, mengukur apa yang penting dalam proses industri.",
+    "storyTitle": "Kisah kami",
+    "story": "Ditubuhkan pada 2008 di Bengbu, Anhui, Anhui Jingfeng Instrument Co., Ltd. mereka dan mengeluarkan instrumen pengukuran proses untuk industri paling menuntut di dunia. Dari transmitter tekanan pertama sehingga juluk lengkap tekanan, suhu dan aras hari ini, produk kami dihantar ke kilang di lebih 40 negara.",
+    "missionTitle": "Misi",
+    "mission": "Menjadikan pengukuran proses yang boleh dipercayai dan bersijil mudah diakses oleh setiap operasi industri — tanpa harga import premium.",
+    "certsTitle": "Pensijilan dan kelulusan",
+    "teamTitle": "Kepimpinan",
+    "historyTitle": "Peristiwa penting"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Pengasas dan CEO" },
+    { "name": "Li Mei", "role": "Naib Presiden Kejuruteraan" },
+    { "name": "Chen Yu", "role": "Ketua Kualiti" },
+    { "name": "Wang Lei", "role": "Pengarah Jualan" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Ditubuhkan di Bengbu, Anhui." },
+    { "year": "2013", "text": "Pengukur aliran elektromagnet pertama dihantar." },
+    { "year": "2017", "text": "Pensijilan ATEX / IECEx kawasan berbahaya." },
+    { "year": "2021", "text": "Pelancaran rangkaian transmitter aras radar." },
+    { "year": "2024", "text": "Eksport ke lebih 40 negara." }
+  ],
+  "contact": {
+    "title": "Hubungi kami",
+    "subtitle": "Ceritakan aplikasi anda. Jurutera kami membalas dalam satu hari bekerja.",
+    "formName": "Nama penuh",
+    "formCompany": "Syarikat",
+    "formEmail": "E-mel",
+    "formPhone": "Telefon",
+    "formProduct": "Produk berminat",
+    "formMessage": "Keperluan anda",
+    "formSubmit": "Hantar pertanyaan",
+    "formSuccess": "Terima kasih — kami akan menghubungi anda dalam satu hari bekerja.",
+    "formError": "Sesuatu masalah berlaku. Sila e-mel kami secara langsung.",
+    "infoTitle": "Hubungi terus",
+    "addressLabel": "Alamat",
+    "emailLabel": "E-mel",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Waktu bekerja",
+    "hoursValue": "Isnin–Jumaat, 8:30–17:30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Blog kejuruteraan",
+    "subtitle": "Panduan aplikasi, pengetahuan pemilihan dan catatan lapangan jurutera kami.",
+    "readMore": "Baca artikel",
+    "publishedOn": "Diterbitkan pada",
+    "backToList": "Kembali ke semua artikel",
+    "tags": "Tag"
+  },
+  "docs": {
+    "title": "Dokumentasi",
+    "subtitle": "Manual produk, panduan pemasangan dan sumber pemilihan.",
+    "searchPlaceholder": "Cari dokumentasi…",
+    "onThisPage": "Di halaman ini",
+    "backToDocs": "Kembali ke dokumentasi"
+  }
+}

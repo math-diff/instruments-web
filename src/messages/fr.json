@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Instrumentation de mesure industriale pour procédés"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "pricing": "Tarifs",
+    "about": "À propos",
+    "contact": "Contact",
+    "blog": "Blog",
+    "docs": "Documentation",
+    "getQuote": "Demander un devis"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "requestQuote": "Demander un devis",
+    "contactSales": "Contacter le service commercial",
+    "download": "Télécharger",
+    "specifications": "Spécifications",
+    "category": "Catégorie",
+    "all": "Tout",
+    "back": "Retour",
+    "searchPlaceholder": "Que recherchez-vous ?"
+  },
+  "footer": {
+    "products": "Produits",
+    "company": "Entreprise",
+    "resources": "Ressources",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "La mesure de précision pour vos procédés industriels",
+    "heroSubtitle": "Instruments de pression, température et niveau conçus pour les environnements industriels sévères — appréciés dans la pétrochimie, l'énergie, le traitement de l'eau et la métallurgie.",
+    "heroCtaPrimary": "Découvrir les produits",
+    "heroCtaSecondary": "Parler à un ingénieur",
+    "categoriesTitle": "Familles de produits",
+    "categoriesSubtitle": "Trois familles d'instruments couvrant l'ensemble de la mesure de procédé.",
+    "featuresTitle": "Une sélection guidée par l'application pour une mesure fiable",
+    "featuresSubtitle": "La plage n'est qu'un point de départ : fluide, température, raccordement, installation et conditions d'exploitation déterminent l'instrument adapté.",
+    "applicationsTitle": "Conçu pour les industries exigeantes",
+    "applicationsSubtitle": "Éprouvé dans les industries de procédé qui ne tolèrent aucun arrêt.",
+    "certsTitle": "Certifications et distinctions",
+    "certsSubtitle": "Approbations de modèle, endorsements sectoriels et distinctions — défilement automatique, survolez pour mettre en pause.",
+    "blogTitle": "Depuis le blog technique",
+    "blogSubtitle": "Guides d'application, savoir-faire de sélection et notes de terrain.",
+    "ctaTitle": "Prêt à spécifier votre prochain instrument ?",
+    "ctaSubtitle": "Décrivez votre besoin : nos ingénieurs applications répondent sous un jour ouvré.",
+    "ctaButton": "Demander un devis",
+    "salesTitle": "Contact commercial",
+    "salesDesc": "Parlez à notre équipe commerciale : dimensionnement, certificats et devis."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Pression",
+      "desc": "Manomètres généraux, inox, à capsule et pour ammoniac."
+    },
+    "flow": {
+      "name": "Débit",
+      "desc": "Débitmètres électromagnétiques, à vortex et Coriolis."
+    },
+    "temperature": {
+      "name": "Température",
+      "desc": "Sondes à résistance, thermocouples et thermomètres bimétalliques."
+    },
+    "level": {
+      "name": "Niveau",
+      "desc": "Jauges de niveau radar, magnétiques et à flotteur pour cuves et puits."
+    }
+  },
+  "features": [
+    {
+      "title": "Adéquation à l'application",
+      "desc": "Confirmez le fluide, la pression normale et maximale, la température de procédé, l'environnement et le point de montage avant de choisir le principe de mesure et la plage."
+    },
+    {
+      "title": "Données vérifiables",
+      "desc": "Plages, classes de précision, marquages et constructions visibles sont rapportés tels qu'observés ; aucune valeur non confirmée n'est généralisée."
+    },
+    {
+      "title": "Matériaux et raccordements",
+      "desc": "Précisez matériaux au contact, joints, standard de filetage ou de bride et classe de pression selon le fluide et la tuyauterie."
+    },
+    {
+      "title": "Installation et maintenance",
+      "desc": "Prenez en compte l'orientation, les vibrations, les pulsations et l'accessibilité ; ajoutez amortissement, isolation ou protection si nécessaire."
+    }
+  ],
+  "applications": [
+    { "name": "Pétrochimie", "desc": "Contrôle des procédés de raffinage et de chimie" },
+    { "name": "Énergie", "desc": "Suivi des chaudières et circuits de refroidissement" },
+    { "name": "Traitement de l'eau", "desc": "Comptage d'admission, de dosage et de rejet" },
+    { "name": "Métallurgie", "desc": "Mesure en four et sur laminoirs" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Produits",
+    "subtitle": "Parcourez nos gammes d'instruments. Filtrez par catégorie pour trouver le bon produit.",
+    "filterAll": "Toutes catégories",
+    "overview": "Vue d'ensemble du produit",
+    "specs": "Spécifications vérifiées sur photos",
+    "specsNote": "Les informations ci-dessous se limitent aux indications, étiquettes et structures lisibles sur les photos actuelles. Les plages, matériaux et raccordements illisibles ne sont pas déduits ; les données définitives de commande doivent être confirmées avec le modèle retenu et la plaque signalétique.",
+    "docs": "Téléchargements",
+    "inquire": "Demander ce produit",
+    "empty": "Aucun produit dans cette catégorie pour le moment.",
+    "downloadDatasheet": "Fiche technique (PDF)",
+    "downloadManual": "Manuel d'installation (PDF)",
+    "zoomImage": "Agrandir l'image",
+    "closeImage": "Fermer l'image"
+  },
+  "pricing": {
+    "title": "Tarifs et modèles",
+    "subtitle": "Comparez nos gammes. Les instruments de procédé sont chiffrés au projet — demandez un devis pour un prix exact.",
+    "inquireNote": "Les prix varient selon la plage, les matériaux, les certifications et les quantités. Envoyez votre spécification pour un devis sous un jour ouvré.",
+    "tierBasic": "Essentiel",
+    "tierStandard": "Standard",
+    "tierPremium": "Premium",
+    "inquireButton": "Obtenir un devis",
+    "features": "Inclus"
+  },
+  "about": {
+    "title": "À propos de Jingfeng Instruments",
+    "subtitle": "La mesure qui compte dans les procédés industriels depuis 2008.",
+    "storyTitle": "Notre histoire",
+    "story": "Fondée en 2008 à Bengbu (Anhui), Anhui Jingfeng Instrument Co., Ltd. conçoit et fabrique des instruments de mesure de procédé pour les industries les plus exigeantes. De notre premier transmetteur de pression à la gamme actuelle pression-température-niveau, nos produits équipent des sites dans plus de 40 pays.",
+    "missionTitle": "Mission",
+    "mission": "Rendre la mesure de procédé fiable et certifiée accessible à chaque industrie — sans le prix des importations haut de gamme.",
+    "certsTitle": "Certifications et approbations",
+    "teamTitle": "Direction",
+    "historyTitle": "Étapes clés"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Fondateur et CEO" },
+    { "name": "Li Mei", "role": "Directrice de l'ingénierie" },
+    { "name": "Chen Yu", "role": "Responsable qualité" },
+    { "name": "Wang Lei", "role": "Directeur commercial" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Création à Bengbu, Anhui." },
+    { "year": "2013", "text": "Premier débitmètre électromagnétique livré." },
+    { "year": "2017", "text": "Certifications zones dangereuses ATEX / IECEx." },
+    { "year": "2021", "text": "Lancement de la gamme de transmetteurs de niveau radar." },
+    { "year": "2024", "text": "Exportations vers plus de 40 pays." }
+  ],
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Décrivez votre application. Nos ingénieurs répondent sous un jour ouvré.",
+    "formName": "Nom complet",
+    "formCompany": "Société",
+    "formEmail": "E-mail",
+    "formPhone": "Téléphone",
+    "formProduct": "Produit concerné",
+    "formMessage": "Votre besoin",
+    "formSubmit": "Envoyer la demande",
+    "formSuccess": "Merci — nous revenons vers vous sous un jour ouvré.",
+    "formError": "Une erreur est survenue. Écrivez-nous directement par e-mail.",
+    "infoTitle": "Nous joindre directement",
+    "addressLabel": "Adresse",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "hoursLabel": "Horaires",
+    "hoursValue": "Lun–Ven, 8h30–17h30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Blog technique",
+    "subtitle": "Guides d'application, sélection et retours de terrain de nos ingénieurs.",
+    "readMore": "Lire l'article",
+    "publishedOn": "Publié le",
+    "backToList": "Retour aux articles",
+    "tags": "Étiquettes"
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Manuels produits, guides d'installation et ressources de sélection.",
+    "searchPlaceholder": "Rechercher dans la documentation…",
+    "onThisPage": "Sur cette page",
+    "backToDocs": "Retour à la documentation"
+  }
+}

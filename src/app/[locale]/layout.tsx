@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/i18n";
 import {
   isLocale,
   locales,
+  localeMeta,
   defaultLocale,
   type Locale,
 } from "@/lib/i18n-config";
@@ -40,16 +41,38 @@ export async function generateMetadata({
     metadataBase: new URL("https://jingfeng-instrument.vercel.app"),
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        zh: "/zh",
-      },
+      languages: Object.fromEntries(
+        locales.map((l) => [l, l === defaultLocale ? "/" : `/${l}`]),
+      ),
     },
     openGraph: {
       title: `${dict.brand.name} — ${dict.brand.tagline}`,
       description: dict.home.heroSubtitle,
       siteName: dict.brand.name,
-      locale: locale === "zh" ? "zh_CN" : "en_US",
+      locale:
+        locale === "zh"
+          ? "zh_CN"
+          : locale === "ar"
+            ? "ar_AE"
+            : locale === "hi"
+              ? "hi_IN"
+              : locale === "ms"
+                ? "ms_MY"
+                : locale === "ru"
+                  ? "ru_RU"
+                  : locale === "tr"
+                    ? "tr_TR"
+                    : locale === "sv"
+                      ? "sv_SE"
+                      : locale === "sk"
+                        ? "sk_SK"
+                        : locale === "de"
+                          ? "de_DE"
+                          : locale === "fr"
+                            ? "fr_FR"
+                            : locale === "it"
+                              ? "it_IT"
+                              : "en_US",
       type: "website",
     },
   };
@@ -70,6 +93,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={currentLocale}
+      dir={localeMeta[currentLocale].dir}
       data-scroll-behavior="smooth"
       className={`${notoSC.variable} h-full antialiased`}
       suppressHydrationWarning

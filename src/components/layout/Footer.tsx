@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/lib/i18n-config";
 import { localizePath } from "@/lib/i18n-config";
 import { categories } from "@/lib/products";
+import { LangSwitch } from "./LangSwitch";
 import type { Dictionary } from "@/lib/i18n";
 
 export function Footer({
@@ -65,12 +66,7 @@ export function Footer({
           <p>
             © {new Date().getFullYear()} {dict.brand.name}
           </p>
-          <Link
-            href={localizePath(locale === "en" ? "zh" : "en", "/")}
-            className="font-bold text-link hover:text-brand hover:underline underline-offset-4"
-          >
-            {locale === "en" ? "中文" : "English"}
-          </Link>
+          <LangSwitch current={locale} />
         </div>
       </div>
     </footer>

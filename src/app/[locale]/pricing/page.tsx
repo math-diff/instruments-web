@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { tiers } from "@/lib/pricing";
+import { pick } from "@/lib/products";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
@@ -66,16 +67,16 @@ export default async function PricingPage({
                 {tierLabel[tier.id]}
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink-soft">
-                {tier.tagline[loc]}
+                {pick(tier.tagline, loc)}
               </p>
               <div className="mt-6">
                 <span className="text-3xl font-bold text-ink">
-                  {tier.priceFrom[loc]}
+                  {pick(tier.priceFrom, loc)}
                 </span>
                 <span className="text-sm text-ink-soft"> / from</span>
               </div>
               <ul className="mt-6 flex-1 space-y-3">
-                {tier.features[loc].map((f) => (
+                {pick(tier.features, loc).map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-ink">
                     <Check
                       className="mt-0.5 h-4 w-4 shrink-0 text-accent-green"

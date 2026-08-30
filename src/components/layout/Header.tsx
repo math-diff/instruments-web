@@ -62,10 +62,10 @@ export function Header({
   return (
     <header className="sticky top-0 z-50 bg-surface shadow-[0_2px_8px_rgba(70,70,70,0.06)]">
       {/* Top row: logo, search, meta links */}
-      <div className="container-page flex h-[4.5rem] items-center gap-6">
+      <div className="container-page flex h-[4.5rem] items-center gap-2 sm:gap-4 lg:gap-6">
         <Link
           href={localizePath(locale, "/")}
-          className="group flex shrink-0 items-center gap-3"
+          className="group flex shrink-0 items-center gap-2 sm:gap-3"
           aria-label={brandName}
         >
           {/* gauge-style mark: gradient dial arc, ticks and a needle that
@@ -76,7 +76,7 @@ export function Header({
             viewBox="0 0 48 48"
             fill="none"
             aria-hidden="true"
-            className="shrink-0"
+            className="h-10 w-10 shrink-0 sm:h-[46px] sm:w-[46px]"
           >
             <defs>
               <linearGradient
@@ -118,10 +118,10 @@ export function Header({
             <circle cx="24" cy="24" r="1.1" fill="#ffffff" />
           </svg>
           <span className="flex flex-col leading-none">
-            <span className="text-[1.5rem] font-bold tracking-[0.12em] text-brand">
+            <span className="text-[1.15rem] font-bold tracking-[0.08em] text-brand sm:text-[1.5rem] sm:tracking-[0.12em]">
               JINFENG
             </span>
-            <span className="mt-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-ink-soft">
+            <span className="mt-1.5 hidden text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-ink-soft sm:block">
               {brandName}
             </span>
           </span>
@@ -129,7 +129,7 @@ export function Header({
 
         <div className="hidden flex-1 justify-center md:flex">{searchForm}</div>
 
-        <div className="ml-auto flex shrink-0 items-center gap-5">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-4 lg:gap-5">
           <Link
             href={localizePath(locale, "/blog")}
             className="hidden text-[15px] font-bold text-brand transition-colors hover:text-link lg:block"

@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "name": "Jingfeng Instruments",
+    "full": "Anhui Jingfeng Instrument Co., Ltd.",
+    "tagline": "Industriell procesmätinstrument"
+  },
+  "nav": {
+    "home": "Hem",
+    "products": "Produkter",
+    "pricing": "Priser",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "blog": "Blogg",
+    "docs": "Dokumentation",
+    "getQuote": "Begär offert"
+  },
+  "common": {
+    "learnMore": "Läs mer",
+    "viewAll": "Visa alla",
+    "requestQuote": "Begär offert",
+    "contactSales": "Kontakta säljavdelningen",
+    "download": "Ladda ner",
+    "specifications": "Specifikationer",
+    "category": "Kategori",
+    "all": "Alla",
+    "back": "Tillbaka",
+    "searchPlaceholder": "Vad letar du efter?"
+  },
+  "footer": {
+    "products": "Produkter",
+    "company": "Företag",
+    "resources": "Resurser",
+    "followUs": "Följ oss",
+    "rights": "Alla rättigheter förbehållna.",
+    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
+    "email": "sales@jingfeng-instrument.com",
+    "phone": "+86 555 0000 000"
+  },
+  "home": {
+    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
+    "heroTitle": "Precisionsmätning för industriella processer",
+    "heroSubtitle": "Instrument för tryck, temperatur och nivå, konstruerade för tuffa industriella miljöer — betrodda inom petrokemi, energi, vattenrening och metallurgi världen över.",
+    "heroCtaPrimary": "Utforska produkter",
+    "heroCtaSecondary": "Prata med en ingenjör",
+    "categoriesTitle": "Produktfamiljer",
+    "categoriesSubtitle": "Tre kärnfamiljer av instrument som täcker hela spektrat av processmätning.",
+    "featuresTitle": "Applikationsstyrd valning för tillförlitlig mätning",
+    "featuresSubtitle": "Mätområdet är bara början: medium, temperatur, anslutning, installation och driftförhållanden avgör vilken instrument som passar.",
+    "applicationsTitle": "Byggd för krävande industrier",
+    "applicationsSubtitle": "Beprövad i processindustrier där stillestånd inte är ett alternativ.",
+    "certsTitle": "Certifieringar och utmärkelser",
+    "certsSubtitle": "Typgodkännanden, branscherkännanden och företagsutmärkelser — automatisk rullning, hovra för paus.",
+    "blogTitle": "Från teknikbloggen",
+    "blogSubtitle": "Tillämpningsguider, urvalskunskap och noteringar från fältet.",
+    "ctaTitle": "Redo att specificera din nästa instrument?",
+    "ctaSubtitle": "Skicka dina krav — våra applikationsingenjörer svarar inom en arbetsdag.",
+    "ctaButton": "Begär offert",
+    "salesTitle": "Säljkontakt",
+    "salesDesc": "Prata med vårt säljteam om dimensionering, certifikat och offert."
+  },
+  "categories": {
+    "pressure": {
+      "name": "Tryck",
+      "desc": "Allmänna, rostfria, kapsel- och ammoniakmanometrar."
+    },
+    "flow": {
+      "name": "Flöde",
+      "desc": "Elektromagnetiska, virvel- och Coriolisflödesmätare."
+    },
+    "temperature": {
+      "name": "Temperatur",
+      "desc": "Motstandstermometrar, termoelement och bimetalltermometrar."
+    },
+    "level": {
+      "name": "Nivå",
+      "desc": "Radar-, magnet- och flottörnivåmätare för tankar och brunnar."
+    }
+  },
+  "features": [
+    {
+      "title": "Passform för tillämpningen",
+      "desc": "Bekräfta medium, normalt och maximalt tryck, processtemperatur, omgivningsförhållanden och monteringsplats innan du väljer mätprincip och område."
+    },
+    {
+      "title": "Verifierbara data",
+      "desc": "Områden, noggrannhetsklasser, märkningar och synlig konstruktion redovisas som fotograferade; obekräftade värden generaliseras inte."
+    },
+    {
+      "title": "Material och anslutningar",
+      "desc": "Ange material i kontakt med mediet, tätningsmedel, gäng- eller flänshstandard och tryckklass utifrån medium och rörledning."
+    },
+    {
+      "title": "Installation och underhåll",
+      "desc": "Ta hänsyn till orientering, vibration, tryckpulsation och underhållsutrymme; lägg till dämpning, separation eller skydd vid behov."
+    }
+  ],
+  "applications": [
+    { "name": "Petrokemi", "desc": "Processstyrning i raffinaderier och kemi" },
+    { "name": "Energi", "desc": "Övervakning av pannor och kylkretsar" },
+    { "name": "Vattenrening", "desc": "Mätning av intag, dosering och utsläpp" },
+    { "name": "Metallurgi", "desc": "Mätning i ugnar och valsverk" }
+  ],
+  "certs": [
+    "ISO 9001",
+    "ISO 14001",
+    "CE / ATEX",
+    "IECEx",
+    "RoHS",
+    "CNEX"
+  ],
+  "products": {
+    "title": "Produkter",
+    "subtitle": "Bläddra bland våra instrumentfamiljer. Filtrera efter kategori för att hitta rätt.",
+    "filterAll": "Alla kategorier",
+    "overview": "Produktöversikt",
+    "specs": "Foto-verifierade exempelspecifikationer",
+    "specsNote": "Uppgifterna nedan begränsas till skylttexter, etiketter och konstruktioner som är läsbara på de aktuella produktfotona. Oläsbara områden, material och anslutningar härleds inte; slutliga orderdata ska bekräftas mot vald modell och märkplåt.",
+    "docs": "Nedladdningar",
+    "inquire": "Förfrågan om denna produkt",
+    "empty": "Inga produkter i denna kategori ännu.",
+    "downloadDatasheet": "Datablad (PDF)",
+    "downloadManual": "Installationsmanual (PDF)",
+    "zoomImage": "Visa större bild",
+    "closeImage": "Stäng bilden"
+  },
+  "pricing": {
+    "title": "Priser och modeller",
+    "subtitle": "Jämför våra instrumentklasser. Processinstrument prisas per projekt — begär offert för exakt pris.",
+    "inquireNote": "Priser varierar beroende på område, material, certifiering och kvantitet. Skicka din specifikation för skräddarsydd offert inom en arbetsdag.",
+    "tierBasic": "Basic",
+    "tierStandard": "Standard",
+    "tierPremium": "Premium",
+    "inquireButton": "Begär offert",
+    "features": "Ingår"
+  },
+  "about": {
+    "title": "Om Jingfeng Instruments",
+    "subtitle": "Sedan 2008 mäter vi det som spelar roll i industriella processer.",
+    "storyTitle": "Vår historia",
+    "story": "Anhui Jingfeng Instrument Co., Ltd. grundades 2008 i Bengbu, Anhui, och konstruerar och tillverkar procesinstrument för världens mest krävande industrier. Från vår första trycktransmitter till dagens kompletta sortiment för tryck, temperatur och nivå har vi levererat till anläggningar i över 40 länder.",
+    "missionTitle": "Mission",
+    "mission": "Göra tillförlitlig, certifierad procesmätning tillgänglig för varje industriell verksamhet — utan premiumpriset på importer.",
+    "certsTitle": "Certifieringar och godkännanden",
+    "teamTitle": "Ledning",
+    "historyTitle": "Milstolpar"
+  },
+  "team": [
+    { "name": "Zhang Wei", "role": "Grundare och VD" },
+    { "name": "Li Mei", "role": "VP teknik" },
+    { "name": "Chen Yu", "role": "Kvalitetschef" },
+    { "name": "Wang Lei", "role": "Försäljningsdirektör" }
+  ],
+  "history": [
+    { "year": "2008", "text": "Grundades i Bengbu, Anhui." },
+    { "year": "2013", "text": "Första elektromagnetiska flödesmätaren levererad." },
+    { "year": "2017", "text": "ATEX / IECEx-certifieringar för explosionsfarliga områden." },
+    { "year": "2021", "text": "Produktlinje för radarnivåtransmittern lanserad." },
+    { "year": "2024", "text": "Export till över 40 länder." }
+  ],
+  "contact": {
+    "title": "Kontakta oss",
+    "subtitle": "Berätta om din tillämpning. Våra ingenjörer svarar inom en arbetsdag.",
+    "formName": "Fullständigt namn",
+    "formCompany": "Företag",
+    "formEmail": "E-post",
+    "formPhone": "Telefon",
+    "formProduct": "Produkt av intresse",
+    "formMessage": "Dina krav",
+    "formSubmit": "Skicka förfrågan",
+    "formSuccess": "Tack — vi hör av oss inom en arbetsdag.",
+    "formError": "Något gick fel. Mejla oss gärna direkt.",
+    "infoTitle": "Kontakta oss direkt",
+    "addressLabel": "Adress",
+    "emailLabel": "E-post",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Öppettider",
+    "hoursValue": "Mån–fre, 8:30–17:30 (GMT+8)"
+  },
+  "blog": {
+    "title": "Teknikblogg",
+    "subtitle": "Tillämpningsguider, urvalskunskap och fältnoteringar från våra ingenjörer.",
+    "readMore": "Läs artikeln",
+    "publishedOn": "Publicerad",
+    "backToList": "Tillbaka till artiklarna",
+    "tags": "Taggar"
+  },
+  "docs": {
+    "title": "Dokumentation",
+    "subtitle": "Produktmanualer, installationsguider och urvalsmaterial.",
+    "searchPlaceholder": "Sök i dokumentationen…",
+    "onThisPage": "På denna sida",
+    "backToDocs": "Tillbaka till dokumentationen"
+  }
+}

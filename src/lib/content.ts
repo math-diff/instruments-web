@@ -19,6 +19,22 @@ function dirFor(kind: "blog" | "docs", locale: Locale) {
   return path.join(CONTENT_ROOT, kind, locale);
 }
 
+/** true when the locale has its own content folder with articles */
+export function hasOwnContent(kind: "blog" | "docs", locale: Locale): boolean {
+  const dir = dirFor(kind, locale);
+  return fs.existsSync(dir) && readDir(dir).length > 0;
+}
+
+/**
+ * Locales without their own content folder (everything except zh/en)
+ * fall back to the English articles.
+ */
+function dirWithFallback(kind: "blog" | "docs", locale: Locale) {
+  const dir = dirFor(kind, locale);
+  if (fs.existsSync(dir) && readDir(dir).length > 0) return dir;
+  return dirFor(kind, "en");
+}
+
 function readDir(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
   return fs
@@ -31,7 +47,7 @@ export function listContent(
   kind: "blog" | "docs",
   locale: Locale,
 ): ContentMeta[] {
-  const dir = dirFor(kind, locale);
+  const dir = dirWithFallback(kind, locale);
   return readDir(dir)
     .map((slug) => {
       const file = path.join(dir, `${slug}.mdx`);
@@ -49,7 +65,7 @@ export function listContent(
 }
 
 export function getContent(kind: "blog" | "docs", locale: Locale, slug: string) {
-  const dir = dirFor(kind, locale);
+  const dir = dirWithFallback(kind, locale);
   const file = path.join(dir, `${slug}.mdx`);
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");

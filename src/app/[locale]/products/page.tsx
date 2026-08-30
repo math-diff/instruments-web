@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
-import { products, categories, type Category } from "@/lib/products";
+import { products, categories, pick, type Category } from "@/lib/products";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
@@ -41,10 +41,10 @@ export default async function ProductsPage({
     .filter((p) => {
       if (!query) return true;
       const haystack = [
-        p.name[loc],
-        p.summary[loc],
+        pick(p.name, loc),
+        pick(p.summary, loc),
         p.model,
-        ...p.highlights[loc],
+        ...pick(p.highlights, loc),
       ]
         .join(" ")
         .toLowerCase();
@@ -117,7 +117,7 @@ export default async function ProductsPage({
                   <div className="relative h-60 border-b border-line bg-surface">
                     <Image
                       src={p.image}
-                      alt={p.name[loc]}
+                      alt={pick(p.name, loc)}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-contain p-5 transition-transform duration-300 group-hover:scale-105"
@@ -131,10 +131,10 @@ export default async function ProductsPage({
                       </Badge>
                     </div>
                     <h3 className="text-lg font-bold text-brand">
-                      {p.name[loc]}
+                      {pick(p.name, loc)}
                     </h3>
                     <p className="mt-2 flex-1 text-sm leading-6 text-ink-soft">
-                      {p.summary[loc]}
+                      {pick(p.summary, loc)}
                     </p>
                     <span className="more-link mt-4 text-sm">
                       {dict.common.learnMore}

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
+import { formatDate } from "@/lib/date";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { getContent, listContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
@@ -65,7 +66,7 @@ export default async function BlogPostPage({
             <p className="mt-4 text-lg text-ink-soft">{post.meta.description}</p>
             <div className="mt-4 flex items-center gap-4 text-sm text-ink-soft">
               <time>
-                {dict.blog.publishedOn} {post.meta.date}
+                {dict.blog.publishedOn} {formatDate(post.meta.date, loc)}
               </time>
               {post.meta.tags && post.meta.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
