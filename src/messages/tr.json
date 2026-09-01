@@ -56,7 +56,28 @@
     "ctaSubtitle": "Gereksinimlerinizi gönderin — uygulama mühendislerimiz bir iş günü içinde yanıt verir.",
     "ctaButton": "Teklif isteyin",
     "salesTitle": "Satış iletişimi",
-    "salesDesc": "Seçim tavsiyesi, sertifikalar ve teklifler için satış ekibimizle görüşün."
+    "salesDesc": "Seçim tavsiyesi, sertifikalar ve teklifler için satış ekibimizle görüşün.",
+    "stats": {
+      "title": "Küresel endüstrinin ölçüm omurgası",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "hizmet verilen ülke ve bölge"
+        },
+        {
+          "value": "18+",
+          "copy": "yıl proses ölçüm deneyimi"
+        },
+        {
+          "value": "10+",
+          "copy": "sertifika ve ödül"
+        },
+        {
+          "value": "3",
+          "copy": "temel ürün ailesi"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrokimya", "desc": "Rafineri ve kimya proses kontrolü" },
-    { "name": "Enerji", "desc": "Kazan ve soğutma devresi izleme" },
-    { "name": "Su arıtma", "desc": "Alım, dozajlama ve deşarj ölçümü" },
-    { "name": "Metalurji", "desc": "Fırın ve haddene ölçümleri" }
+    {
+      "name": "Petrokimya",
+      "desc": "Rafineri ve kimya proses kontrolü"
+    },
+    {
+      "name": "Enerji",
+      "desc": "Kazan ve soğutma devresi izleme"
+    },
+    {
+      "name": "Su arıtma",
+      "desc": "Alım, dozajlama ve deşarj ölçümü"
+    },
+    {
+      "name": "Metalurji",
+      "desc": "Fırın ve haddene ölçümleri"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Kilometre taşları"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Kurucu ve CEO" },
-    { "name": "Li Mei", "role": "Mühendislik Başkan Yardımcısı" },
-    { "name": "Chen Yu", "role": "Kalite Direktörü" },
-    { "name": "Wang Lei", "role": "Satış Direktörü" }
+    {
+      "name": "Zhang Wei",
+      "role": "Kurucu ve CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "Mühendislik Başkan Yardımcısı"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Kalite Direktörü"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Satış Direktörü"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Bengbu, Anhui'de kuruluş." },
-    { "year": "2013", "text": "İlk elektromanyetik debimetre teslim edildi." },
-    { "year": "2017", "text": "ATEX / IECEx Ex-zona sertifikaları." },
-    { "year": "2021", "text": "Radar seviye transmitteri serisi lansmanı." },
-    { "year": "2024", "text": "40'tan fazla ülkeye ihracat." }
+    {
+      "year": "2008",
+      "text": "Bengbu, Anhui'de kuruluş."
+    },
+    {
+      "year": "2013",
+      "text": "İlk elektromanyetik debimetre teslim edildi."
+    },
+    {
+      "year": "2017",
+      "text": "ATEX / IECEx Ex-zona sertifikaları."
+    },
+    {
+      "year": "2021",
+      "text": "Radar seviye transmitteri serisi lansmanı."
+    },
+    {
+      "year": "2024",
+      "text": "40'tan fazla ülkeye ihracat."
+    }
   ],
   "contact": {
     "title": "Bize ulaşın",

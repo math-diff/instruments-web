@@ -56,7 +56,28 @@
     "ctaSubtitle": "Décrivez votre besoin : nos ingénieurs applications répondent sous un jour ouvré.",
     "ctaButton": "Demander un devis",
     "salesTitle": "Contact commercial",
-    "salesDesc": "Parlez à notre équipe commerciale : dimensionnement, certificats et devis."
+    "salesDesc": "Parlez à notre équipe commerciale : dimensionnement, certificats et devis.",
+    "stats": {
+      "title": "Le socle de mesure de l'industrie mondiale",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "pays et régions desservis"
+        },
+        {
+          "value": "18+",
+          "copy": "ans dans la mesure de procédé"
+        },
+        {
+          "value": "10+",
+          "copy": "certifications et distinctions"
+        },
+        {
+          "value": "3",
+          "copy": "familles d'instruments"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Pétrochimie", "desc": "Contrôle des procédés de raffinage et de chimie" },
-    { "name": "Énergie", "desc": "Suivi des chaudières et circuits de refroidissement" },
-    { "name": "Traitement de l'eau", "desc": "Comptage d'admission, de dosage et de rejet" },
-    { "name": "Métallurgie", "desc": "Mesure en four et sur laminoirs" }
+    {
+      "name": "Pétrochimie",
+      "desc": "Contrôle des procédés de raffinage et de chimie"
+    },
+    {
+      "name": "Énergie",
+      "desc": "Suivi des chaudières et circuits de refroidissement"
+    },
+    {
+      "name": "Traitement de l'eau",
+      "desc": "Comptage d'admission, de dosage et de rejet"
+    },
+    {
+      "name": "Métallurgie",
+      "desc": "Mesure en four et sur laminoirs"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Étapes clés"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Fondateur et CEO" },
-    { "name": "Li Mei", "role": "Directrice de l'ingénierie" },
-    { "name": "Chen Yu", "role": "Responsable qualité" },
-    { "name": "Wang Lei", "role": "Directeur commercial" }
+    {
+      "name": "Zhang Wei",
+      "role": "Fondateur et CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "Directrice de l'ingénierie"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Responsable qualité"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Directeur commercial"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Création à Bengbu, Anhui." },
-    { "year": "2013", "text": "Premier débitmètre électromagnétique livré." },
-    { "year": "2017", "text": "Certifications zones dangereuses ATEX / IECEx." },
-    { "year": "2021", "text": "Lancement de la gamme de transmetteurs de niveau radar." },
-    { "year": "2024", "text": "Exportations vers plus de 40 pays." }
+    {
+      "year": "2008",
+      "text": "Création à Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Premier débitmètre électromagnétique livré."
+    },
+    {
+      "year": "2017",
+      "text": "Certifications zones dangereuses ATEX / IECEx."
+    },
+    {
+      "year": "2021",
+      "text": "Lancement de la gamme de transmetteurs de niveau radar."
+    },
+    {
+      "year": "2024",
+      "text": "Exportations vers plus de 40 pays."
+    }
   ],
   "contact": {
     "title": "Contactez-nous",

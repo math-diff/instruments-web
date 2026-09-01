@@ -56,7 +56,28 @@
     "ctaSubtitle": "Skicka dina krav — våra applikationsingenjörer svarar inom en arbetsdag.",
     "ctaButton": "Begär offert",
     "salesTitle": "Säljkontakt",
-    "salesDesc": "Prata med vårt säljteam om dimensionering, certifikat och offert."
+    "salesDesc": "Prata med vårt säljteam om dimensionering, certifikat och offert.",
+    "stats": {
+      "title": "Mätryggraden för den globala industrin",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "länder och regioner med leveranser"
+        },
+        {
+          "value": "18+",
+          "copy": "år inom procesmätning"
+        },
+        {
+          "value": "10+",
+          "copy": "certifieringar och utmärkelser"
+        },
+        {
+          "value": "3",
+          "copy": "kärnproduktfamiljer"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrokemi", "desc": "Processstyrning i raffinaderier och kemi" },
-    { "name": "Energi", "desc": "Övervakning av pannor och kylkretsar" },
-    { "name": "Vattenrening", "desc": "Mätning av intag, dosering och utsläpp" },
-    { "name": "Metallurgi", "desc": "Mätning i ugnar och valsverk" }
+    {
+      "name": "Petrokemi",
+      "desc": "Processstyrning i raffinaderier och kemi"
+    },
+    {
+      "name": "Energi",
+      "desc": "Övervakning av pannor och kylkretsar"
+    },
+    {
+      "name": "Vattenrening",
+      "desc": "Mätning av intag, dosering och utsläpp"
+    },
+    {
+      "name": "Metallurgi",
+      "desc": "Mätning i ugnar och valsverk"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Milstolpar"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Grundare och VD" },
-    { "name": "Li Mei", "role": "VP teknik" },
-    { "name": "Chen Yu", "role": "Kvalitetschef" },
-    { "name": "Wang Lei", "role": "Försäljningsdirektör" }
+    {
+      "name": "Zhang Wei",
+      "role": "Grundare och VD"
+    },
+    {
+      "name": "Li Mei",
+      "role": "VP teknik"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Kvalitetschef"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Försäljningsdirektör"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Grundades i Bengbu, Anhui." },
-    { "year": "2013", "text": "Första elektromagnetiska flödesmätaren levererad." },
-    { "year": "2017", "text": "ATEX / IECEx-certifieringar för explosionsfarliga områden." },
-    { "year": "2021", "text": "Produktlinje för radarnivåtransmittern lanserad." },
-    { "year": "2024", "text": "Export till över 40 länder." }
+    {
+      "year": "2008",
+      "text": "Grundades i Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Första elektromagnetiska flödesmätaren levererad."
+    },
+    {
+      "year": "2017",
+      "text": "ATEX / IECEx-certifieringar för explosionsfarliga områden."
+    },
+    {
+      "year": "2021",
+      "text": "Produktlinje för radarnivåtransmittern lanserad."
+    },
+    {
+      "year": "2024",
+      "text": "Export till över 40 länder."
+    }
   ],
   "contact": {
     "title": "Kontakta oss",

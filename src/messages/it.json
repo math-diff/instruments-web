@@ -56,7 +56,28 @@
     "ctaSubtitle": "Invia i tuoi requisiti: i nostri ingegneri applicativi rispondono entro un giorno lavorativo.",
     "ctaButton": "Richiedi un preventivo",
     "salesTitle": "Contatto commerciale",
-    "salesDesc": "Parla con il nostro team commerciale per dimensionamento, certificati e preventivi."
+    "salesDesc": "Parla con il nostro team commerciale per dimensionamento, certificati e preventivi.",
+    "stats": {
+      "title": "L'ossatura della misura dell'industria globale",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "paesi e regioni serviti"
+        },
+        {
+          "value": "18+",
+          "copy": "anni nella misura di processo"
+        },
+        {
+          "value": "10+",
+          "copy": "certificazioni e riconoscimenti"
+        },
+        {
+          "value": "3",
+          "copy": "famiglie di strumenti"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrochimica", "desc": "Controllo di processo in raffineria e chimica" },
-    { "name": "Energia", "desc": "Monitoraggio di caldaie e circuiti di raffreddamento" },
-    { "name": "Trattamento acque", "desc": "Misura di prelievo, dosaggio e scarico" },
-    { "name": "Metallurgia", "desc": "Misura in fornaci e laminatoi" }
+    {
+      "name": "Petrochimica",
+      "desc": "Controllo di processo in raffineria e chimica"
+    },
+    {
+      "name": "Energia",
+      "desc": "Monitoraggio di caldaie e circuiti di raffreddamento"
+    },
+    {
+      "name": "Trattamento acque",
+      "desc": "Misura di prelievo, dosaggio e scarico"
+    },
+    {
+      "name": "Metallurgia",
+      "desc": "Misura in fornaci e laminatoi"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Tappe fondamentali"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Fondatore e CEO" },
-    { "name": "Li Mei", "role": "VP Ingegneria" },
-    { "name": "Chen Yu", "role": "Responsabile Qualità" },
-    { "name": "Wang Lei", "role": "Direttore Vendite" }
+    {
+      "name": "Zhang Wei",
+      "role": "Fondatore e CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "VP Ingegneria"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Responsabile Qualità"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Direttore Vendite"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Fondazione a Bengbu, Anhui." },
-    { "year": "2013", "text": "Consegnato il primo debimetro elettromagnetico." },
-    { "year": "2017", "text": "Certificazioni ATEX / IECEx per aree a rischio." },
-    { "year": "2021", "text": "Lanciata la linea di trasmettitori di livello radar." },
-    { "year": "2024", "text": "Esportazioni in oltre 40 paesi." }
+    {
+      "year": "2008",
+      "text": "Fondazione a Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Consegnato il primo debimetro elettromagnetico."
+    },
+    {
+      "year": "2017",
+      "text": "Certificazioni ATEX / IECEx per aree a rischio."
+    },
+    {
+      "year": "2021",
+      "text": "Lanciata la linea di trasmettitori di livello radar."
+    },
+    {
+      "year": "2024",
+      "text": "Esportazioni in oltre 40 paesi."
+    }
   ],
   "contact": {
     "title": "Contattaci",

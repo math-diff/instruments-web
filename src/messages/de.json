@@ -56,7 +56,28 @@
     "ctaSubtitle": "Senden Sie uns Ihre Anforderung — unsere Applikationsingenieure antworten innerhalb eines Werktags.",
     "ctaButton": "Angebot anfordern",
     "salesTitle": "Vertriebskontakt",
-    "salesDesc": "Sprechen Sie mit unserem Vertrieb über Auslegung, Zertifikate und Angebote."
+    "salesDesc": "Sprechen Sie mit unserem Vertrieb über Auslegung, Zertifikate und Angebote.",
+    "stats": {
+      "title": "Das Messrückgrat der globalen Industrie",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "belieferte Länder und Regionen"
+        },
+        {
+          "value": "18+",
+          "copy": "Jahre Prozess-Messtechnik"
+        },
+        {
+          "value": "10+",
+          "copy": "Zertifikate und Auszeichnungen"
+        },
+        {
+          "value": "3",
+          "copy": "Kernproduktfamilien"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrochemie", "desc": "Prozessleittechnik in Raffinerien und Chemieanlagen" },
-    { "name": "Energie", "desc": "Überwachung von Kesseln und Kühlkreisläufen" },
-    { "name": "Wasseraufbereitung", "desc": "Messung von Zulauf, Dosierung und Ablauf" },
-    { "name": "Metallurgie", "desc": "Messung an Öfen und Walzwerken" }
+    {
+      "name": "Petrochemie",
+      "desc": "Prozessleittechnik in Raffinerien und Chemieanlagen"
+    },
+    {
+      "name": "Energie",
+      "desc": "Überwachung von Kesseln und Kühlkreisläufen"
+    },
+    {
+      "name": "Wasseraufbereitung",
+      "desc": "Messung von Zulauf, Dosierung und Ablauf"
+    },
+    {
+      "name": "Metallurgie",
+      "desc": "Messung an Öfen und Walzwerken"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Meilensteine"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Gründer und CEO" },
-    { "name": "Li Mei", "role": "VP Engineering" },
-    { "name": "Chen Yu", "role": "Leiter Qualität" },
-    { "name": "Wang Lei", "role": "Vertriebsleiter" }
+    {
+      "name": "Zhang Wei",
+      "role": "Gründer und CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "VP Engineering"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Leiter Qualität"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Vertriebsleiter"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Gründung in Bengbu, Anhui." },
-    { "year": "2013", "text": "Erstes magnetisch-induktives Durchflussmessgerät ausgeliefert." },
-    { "year": "2017", "text": "ATEX / IECEx-Zertifizierungen für Ex-Bereiche." },
-    { "year": "2021", "text": "Produktlinie Radar-Füllstandtransmitter eingeführt." },
-    { "year": "2024", "text": "Export in über 40 Länder." }
+    {
+      "year": "2008",
+      "text": "Gründung in Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Erstes magnetisch-induktives Durchflussmessgerät ausgeliefert."
+    },
+    {
+      "year": "2017",
+      "text": "ATEX / IECEx-Zertifizierungen für Ex-Bereiche."
+    },
+    {
+      "year": "2021",
+      "text": "Produktlinie Radar-Füllstandtransmitter eingeführt."
+    },
+    {
+      "year": "2024",
+      "text": "Export in über 40 Länder."
+    }
   ],
   "contact": {
     "title": "Kontakt",

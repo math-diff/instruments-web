@@ -56,7 +56,28 @@
     "ctaSubtitle": "Hantar keperluan anda — jurutera aplikasi kami akan membalas dalam satu hari bekerja.",
     "ctaButton": "Minta sebut harga",
     "salesTitle": "Hubungan jualan",
-    "salesDesc": "Bercakap dengan pasangan jualan kami tentang pemilihan, sijil dan sebut harga."
+    "salesDesc": "Bercakap dengan pasangan jualan kami tentang pemilihan, sijil dan sebut harga.",
+    "stats": {
+      "title": "Tulang belakang pengukuran industri global",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "negara dan wilayah dilayani"
+        },
+        {
+          "value": "18+",
+          "copy": "tahun dalam pengukuran proses"
+        },
+        {
+          "value": "10+",
+          "copy": "pensijilan dan pengiktirafan"
+        },
+        {
+          "value": "3",
+          "copy": "keluarga produk utama"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrokimia", "desc": "Kawalan proses kilang penapisan dan kimia" },
-    { "name": "Kuasa", "desc": "Pemantauan dandang dan litar penyejukan" },
-    { "name": "Rawatan air", "desc": "Pengukuran ambilan, dosing dan pelepasan" },
-    { "name": "Metalurgi", "desc": "Pengukuran tanur dan kilang getah" }
+    {
+      "name": "Petrokimia",
+      "desc": "Kawalan proses kilang penapisan dan kimia"
+    },
+    {
+      "name": "Kuasa",
+      "desc": "Pemantauan dandang dan litar penyejukan"
+    },
+    {
+      "name": "Rawatan air",
+      "desc": "Pengukuran ambilan, dosing dan pelepasan"
+    },
+    {
+      "name": "Metalurgi",
+      "desc": "Pengukuran tanur dan kilang getah"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Peristiwa penting"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Pengasas dan CEO" },
-    { "name": "Li Mei", "role": "Naib Presiden Kejuruteraan" },
-    { "name": "Chen Yu", "role": "Ketua Kualiti" },
-    { "name": "Wang Lei", "role": "Pengarah Jualan" }
+    {
+      "name": "Zhang Wei",
+      "role": "Pengasas dan CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "Naib Presiden Kejuruteraan"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Ketua Kualiti"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Pengarah Jualan"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Ditubuhkan di Bengbu, Anhui." },
-    { "year": "2013", "text": "Pengukur aliran elektromagnet pertama dihantar." },
-    { "year": "2017", "text": "Pensijilan ATEX / IECEx kawasan berbahaya." },
-    { "year": "2021", "text": "Pelancaran rangkaian transmitter aras radar." },
-    { "year": "2024", "text": "Eksport ke lebih 40 negara." }
+    {
+      "year": "2008",
+      "text": "Ditubuhkan di Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Pengukur aliran elektromagnet pertama dihantar."
+    },
+    {
+      "year": "2017",
+      "text": "Pensijilan ATEX / IECEx kawasan berbahaya."
+    },
+    {
+      "year": "2021",
+      "text": "Pelancaran rangkaian transmitter aras radar."
+    },
+    {
+      "year": "2024",
+      "text": "Eksport ke lebih 40 negara."
+    }
   ],
   "contact": {
     "title": "Hubungi kami",

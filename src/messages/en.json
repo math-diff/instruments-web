@@ -56,7 +56,28 @@
     "ctaSubtitle": "Send your requirements and our application engineers will respond within one business day.",
     "ctaButton": "Request a quote",
     "salesTitle": "Sales contact",
-    "salesDesc": "Talk to our sales team for sizing advice, certificates and quotations."
+    "salesDesc": "Talk to our sales team for sizing advice, certificates and quotations.",
+    "stats": {
+      "title": "The measurement backbone of global industry",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "export countries and regions served"
+        },
+        {
+          "value": "18+",
+          "copy": "years in process measurement"
+        },
+        {
+          "value": "10+",
+          "copy": "certifications and industry honors"
+        },
+        {
+          "value": "3",
+          "copy": "core instrument families"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrochemical", "desc": "Refinery and chemical process control" },
-    { "name": "Power", "desc": "Boiler and cooling loop monitoring" },
-    { "name": "Water treatment", "desc": "Intake, dosing and discharge metering" },
-    { "name": "Metallurgy", "desc": "Furnace and rolling-mill measurement" }
+    {
+      "name": "Petrochemical",
+      "desc": "Refinery and chemical process control"
+    },
+    {
+      "name": "Power",
+      "desc": "Boiler and cooling loop monitoring"
+    },
+    {
+      "name": "Water treatment",
+      "desc": "Intake, dosing and discharge metering"
+    },
+    {
+      "name": "Metallurgy",
+      "desc": "Furnace and rolling-mill measurement"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Milestones"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Founder & CEO" },
-    { "name": "Li Mei", "role": "VP Engineering" },
-    { "name": "Chen Yu", "role": "Head of Quality" },
-    { "name": "Wang Lei", "role": "Director of Sales" }
+    {
+      "name": "Zhang Wei",
+      "role": "Founder & CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "VP Engineering"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Head of Quality"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Director of Sales"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Founded in Bengbu, Anhui." },
-    { "year": "2013", "text": "First electromagnetic flowmeter shipped." },
-    { "year": "2017", "text": "ATEX / IECEx hazardous-area certifications." },
-    { "year": "2021", "text": "Radar level transmitter line launched." },
-    { "year": "2024", "text": "Exports to 40+ countries." }
+    {
+      "year": "2008",
+      "text": "Founded in Bengbu, Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "First electromagnetic flowmeter shipped."
+    },
+    {
+      "year": "2017",
+      "text": "ATEX / IECEx hazardous-area certifications."
+    },
+    {
+      "year": "2021",
+      "text": "Radar level transmitter line launched."
+    },
+    {
+      "year": "2024",
+      "text": "Exports to 40+ countries."
+    }
   ],
   "contact": {
     "title": "Contact us",

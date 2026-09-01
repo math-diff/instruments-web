@@ -19,6 +19,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { HeroSlider, type HeroSlide } from "@/components/sections/HeroSlider";
 import { CertScroller } from "@/components/sections/CertScroller";
+import { StatsBackbone } from "@/components/sections/StatsBackbone";
 import type { Category } from "@/lib/products";
 
 const featureIcons = [GaugeIcon, ShieldCheck, Layers, Wrench];
@@ -161,6 +162,9 @@ export default async function HomePage({
           })}
         </div>
       </Section>
+
+      {/* Stats band with animated data-viz */}
+      <StatsBackbone stats={dict.home.stats} />
 
       {/* Applications + sales contact, WIKA 2/3 + 1/3 row */}
       <Section muted>

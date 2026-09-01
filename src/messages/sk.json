@@ -56,7 +56,28 @@
     "ctaSubtitle": "Pošlite nám požiadavky — naši aplikační inžinieri odpovedia do jedného pracovného dňa.",
     "ctaButton": "Vyžiadať ponuku",
     "salesTitle": "Obchodný kontakt",
-    "salesDesc": "Porozprávajte sa s náším obchodným tímom o dimenzovaní, certifikátoch a ponukách."
+    "salesDesc": "Porozprávajte sa s náším obchodným tímom o dimenzovaní, certifikátoch a ponukách.",
+    "stats": {
+      "title": "Merací základ svetového priemyslu",
+      "items": [
+        {
+          "value": "40+",
+          "copy": "krajín a regiónov s dodávkami"
+        },
+        {
+          "value": "18+",
+          "copy": "rokov v procesnom meraní"
+        },
+        {
+          "value": "10+",
+          "copy": "certifikátov a ocenení"
+        },
+        {
+          "value": "3",
+          "copy": "kľúčové rady produktov"
+        }
+      ]
+    }
   },
   "categories": {
     "pressure": {
@@ -95,10 +116,22 @@
     }
   ],
   "applications": [
-    { "name": "Petrochémia", "desc": "Riadenie procesov v rafinériách a chémii" },
-    { "name": "Energetika", "desc": "Monitorovanie kotlov a chladiacich okruhov" },
-    { "name": "Úprava vôd", "desc": "Meranie príjmu, dávkovania a odpadu" },
-    { "name": "Metalurgia", "desc": "Meranie vo peciach a na holiach" }
+    {
+      "name": "Petrochémia",
+      "desc": "Riadenie procesov v rafinériách a chémii"
+    },
+    {
+      "name": "Energetika",
+      "desc": "Monitorovanie kotlov a chladiacich okruhov"
+    },
+    {
+      "name": "Úprava vôd",
+      "desc": "Meranie príjmu, dávkovania a odpadu"
+    },
+    {
+      "name": "Metalurgia",
+      "desc": "Meranie vo peciach a na holiach"
+    }
   ],
   "certs": [
     "ISO 9001",
@@ -145,17 +178,44 @@
     "historyTitle": "Míľniky"
   },
   "team": [
-    { "name": "Zhang Wei", "role": "Zakladateľ a CEO" },
-    { "name": "Li Mei", "role": "VP pre inžinierstvo" },
-    { "name": "Chen Yu", "role": "Vedúci kvality" },
-    { "name": "Wang Lei", "role": "Riaditeľ predaja" }
+    {
+      "name": "Zhang Wei",
+      "role": "Zakladateľ a CEO"
+    },
+    {
+      "name": "Li Mei",
+      "role": "VP pre inžinierstvo"
+    },
+    {
+      "name": "Chen Yu",
+      "role": "Vedúci kvality"
+    },
+    {
+      "name": "Wang Lei",
+      "role": "Riaditeľ predaja"
+    }
   ],
   "history": [
-    { "year": "2008", "text": "Založenie v meste Bengbu, provincia Anhui." },
-    { "year": "2013", "text": "Dodaný prvý elektromagnetický prietokomer." },
-    { "year": "2017", "text": "Certifikáty ATEX / IECEx pre ex-zóny." },
-    { "year": "2021", "text": "Uvedená rada radarových hladinomerov." },
-    { "year": "2024", "text": "Export do viac než 40 krajín." }
+    {
+      "year": "2008",
+      "text": "Založenie v meste Bengbu, provincia Anhui."
+    },
+    {
+      "year": "2013",
+      "text": "Dodaný prvý elektromagnetický prietokomer."
+    },
+    {
+      "year": "2017",
+      "text": "Certifikáty ATEX / IECEx pre ex-zóny."
+    },
+    {
+      "year": "2021",
+      "text": "Uvedená rada radarových hladinomerov."
+    },
+    {
+      "year": "2024",
+      "text": "Export do viac než 40 krajín."
+    }
   ],
   "contact": {
     "title": "Kontaktujte nás",
