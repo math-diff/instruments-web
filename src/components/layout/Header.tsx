@@ -175,6 +175,7 @@ export function Header({
               }`}
             >
               {nav.contact}
+              <ChevronDown className="h-4 w-4" strokeWidth={2.5} />
             </Link>
           </nav>
 

@@ -56,19 +56,25 @@ export default async function HomePage({
       ctaLabel: dict.home.heroCtaPrimary,
       href: localizePath(loc, "/products"),
       theme: "navy",
+      image: "/shouye/hero-engineers.jpg",
+      imagePosition: "object-top",
+      cardSide: "right",
+      imageFit: "contain",
+    },
+    {
+      // the aerial photo of the Jinfeng campus belongs with the company story
+      title: dict.about.title,
+      text: dict.about.subtitle,
+      ctaLabel: dict.common.learnMore,
+      href: localizePath(loc, "/about"),
+      theme: "steel",
+      image: "/shouye/hero-factory-aerial.jpg",
     },
     {
       title: dict.home.categoriesTitle,
       text: dict.home.categoriesSubtitle,
       ctaLabel: dict.common.viewAll,
       href: localizePath(loc, "/products"),
-      theme: "steel",
-    },
-    {
-      title: dict.home.ctaTitle,
-      text: dict.home.ctaSubtitle,
-      ctaLabel: dict.home.ctaButton,
-      href: localizePath(loc, "/contact"),
       theme: "cyan",
     },
   ];
@@ -78,8 +84,9 @@ export default async function HomePage({
       {/* Hero */}
       <HeroSlider slides={slides} />
 
-      {/* Centered CTA, echoing the WIKA newsletter button */}
-      <div className="bg-surface py-12 text-center">
+      {/* Centered CTA, echoing the WIKA newsletter button — shares the muted
+          surface with the categories section below so they read as one band */}
+      <div className="bg-surface-muted py-12 text-center">
         <Reveal>
           <Link
             href={localizePath(loc, "/contact")}

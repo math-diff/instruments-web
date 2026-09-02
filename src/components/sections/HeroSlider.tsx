@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -10,6 +11,16 @@ export type HeroSlide = {
   ctaLabel: string;
   href: string;
   theme: "navy" | "steel" | "cyan";
+  /** photo background; falls back to the themed gradient when omitted */
+  image?: string;
+  /** Tailwind object-position class for the photo (default object-center) */
+  imagePosition?: string;
+  /** which side the caption card sits on (default left) — put it on the
+      quieter half of the photo so faces stay visible */
+  cardSide?: "left" | "right";
+  /** "contain" shows the whole photo (blur-filled sides) for a wider,
+      more distant framing; default "cover" fills the hero edge to edge */
+  imageFit?: "cover" | "contain";
 };
 
 const themeStyles: Record<HeroSlide["theme"], string> = {
@@ -49,28 +60,93 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
           }`}
           aria-hidden={i !== index}
         >
-          {/* gradient background with a slow Ken Burns zoom while active */}
+          {/* photo or gradient background with a slow Ken Burns zoom while active */}
+          {slide.image ? (
+            <>
+              <div
+                key={i === index ? `bg-active-${index}` : `bg-idle-${i}`}
+                className={`absolute inset-0 ${
+                  slide.imagePosition?.includes("top")
+                    ? "origin-top"
+                    : slide.imagePosition?.includes("bottom")
+                      ? "origin-bottom"
+                      : ""
+                } ${i === index ? "hero-zoom" : ""}`}
+              >
+                {slide.imageFit === "contain" ? (
+                  <>
+                    {/* blurred copy fills the letterbox bars around the
+                        contained photo so the whole scene stays visible */}
+                    <Image
+                      src={slide.image}
+                      alt=""
+                      fill
+                      aria-hidden
+                      sizes="100vw"
+                      className="scale-125 object-cover blur-2xl"
+                    />
+                    <Image
+                      src={slide.image}
+                      alt=""
+                      fill
+                      priority={i === 0}
+                      sizes="100vw"
+                      className="object-contain"
+                    />
+                  </>
+                ) : (
+                  <Image
+                    src={slide.image}
+                    alt=""
+                    fill
+                    priority={i === 0}
+                    sizes="100vw"
+                    className={`object-cover ${slide.imagePosition ?? "object-center"}`}
+                  />
+                )}
+              </div>
+              {/* brand-tinted scrim on the card side keeps the white card,
+                  arrows and dots readable */}
+              <div
+                className={`absolute inset-0 ${
+                  slide.cardSide === "right"
+                    ? "bg-[linear-gradient(270deg,rgba(0,37,101,0.55)_0%,rgba(0,37,101,0.18)_55%,rgba(0,37,101,0.05)_100%)]"
+                    : "bg-[linear-gradient(90deg,rgba(0,37,101,0.55)_0%,rgba(0,37,101,0.18)_55%,rgba(0,37,101,0.05)_100%)]"
+                }`}
+              />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent_0%,rgba(0,26,77,0.35)_100%)]" />
+            </>
+          ) : (
+            <>
+              <div
+                key={i === index ? `bg-active-${index}` : `bg-idle-${i}`}
+                className={`absolute inset-0 ${themeStyles[slide.theme]} ${
+                  i === index ? "hero-zoom" : ""
+                }`}
+              />
+
+              {/* decorative ribbons, echoing the flowing WIKA banner lines */}
+              <div className="absolute -right-40 -top-56 h-[46rem] w-[46rem] rounded-full border-[3rem] border-white/[0.08]" />
+              <div className="absolute -bottom-72 -right-24 h-[52rem] w-[52rem] rounded-full border-[3rem] border-cyan/25" />
+              <div className="absolute -left-32 -bottom-64 h-[36rem] w-[36rem] rounded-full border-[2.5rem] border-white/[0.06]" />
+              <div
+                className="absolute inset-0 opacity-[0.12]"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(90deg, rgba(255,255,255,0.35) 0 1px, transparent 1px 96px)",
+                }}
+              />
+            </>
+          )}
+
+          {/* floating white caption card — replays its entrance on every activation.
+              cardSide "right" pins to the visual right even under RTL mirroring
+              (justify-end would flip to the left and cover the photo subjects) */}
           <div
-            key={i === index ? `bg-active-${index}` : `bg-idle-${i}`}
-            className={`absolute inset-0 ${themeStyles[slide.theme]} ${
-              i === index ? "hero-zoom" : ""
+            className={`container-page relative flex h-full items-center ${
+              slide.cardSide === "right" ? "justify-end rtl:justify-start" : ""
             }`}
-          />
-
-          {/* decorative ribbons, echoing the flowing WIKA banner lines */}
-          <div className="absolute -right-40 -top-56 h-[46rem] w-[46rem] rounded-full border-[3rem] border-white/[0.08]" />
-          <div className="absolute -bottom-72 -right-24 h-[52rem] w-[52rem] rounded-full border-[3rem] border-cyan/25" />
-          <div className="absolute -left-32 -bottom-64 h-[36rem] w-[36rem] rounded-full border-[2.5rem] border-white/[0.06]" />
-          <div
-            className="absolute inset-0 opacity-[0.12]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(90deg, rgba(255,255,255,0.35) 0 1px, transparent 1px 96px)",
-            }}
-          />
-
-          {/* floating white caption card — replays its entrance on every activation */}
-          <div className="container-page relative flex h-full items-center">
+          >
             <div
               key={i === index ? `card-active-${index}` : `card-idle-${i}`}
               className="w-full max-w-[30rem] rounded-[0.8rem] bg-white p-7 shadow-[0_0.6rem_2.4rem_rgba(0,37,101,0.35)] sm:p-9 animate-fade-up"

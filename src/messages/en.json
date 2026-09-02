@@ -134,12 +134,18 @@
     }
   ],
   "certs": [
-    "ISO 9001",
-    "ISO 14001",
-    "CE / ATEX",
-    "IECEx",
-    "RoHS",
-    "CNEX"
+    "Pattern Approval (gauges/transmitters)",
+    "SIL Functional Safety",
+    "SAC/TC 124/SC2 Committee Member",
+    "National \"Little Giant\" Enterprise",
+    "Cable LVD ECM Certificates",
+    "GB/T19001 Quality Management",
+    "GB/T24001 Environmental Management",
+    "GB/T45001 Occupational Health & Safety",
+    "CCC Certification",
+    "EU CE Certification",
+    "Military Equipment Quality System",
+    "Business License"
   ],
   "products": {
     "title": "Products",
@@ -168,14 +174,16 @@
   },
   "about": {
     "title": "About Jingfeng Instruments",
-    "subtitle": "Measuring what matters in industrial processes since 2008.",
-    "storyTitle": "Our story",
-    "story": "Founded in Bengbu, Anhui in 2008, Anhui Jingfeng Instrument Co., Ltd. designs and manufactures process measurement instruments for the world's most demanding industries. From our first pressure transmitter to today's full range of pressure, temperature and level instruments, we have shipped to plants in over 40 countries.",
-    "missionTitle": "Mission",
-    "mission": "Make reliable, certified process measurement accessible to every industrial operation — without the premium import price tag.",
+    "subtitle": "Over 20 years in instrument cabling — an integrated group spanning R&D, manufacturing and trade.",
+    "storyTitle": "Group Profile",
+    "story": "Jingfeng Group Co., Ltd., founded in November 2005 with a registered capital of RMB 380.88 million, is a group enterprise integrating R&D, manufacturing and trade. Its subsidiaries cover instruments, electrical equipment and polymer materials, with products ranging from wire and cable to complete systems, cable trays, pipe fittings, valves and switchgear. A national \"Little Giant\", High-Tech Enterprise and Green Factory, the group holds 160+ patents, exports worldwide, and maintains long-term partnerships with State Grid, CNNC and Sinopec.",
+    "missionTitle": "Mission & Vision",
+    "mission": "To be the premium service provider of intelligent power transmission system solutions — striving for excellence in every crystal and every peak. With the vision of \"Building a century-lasting Jingfeng, striving to be the industry benchmark\", we uphold the core values of \"Integrity, Service, Win-Win\", create value for customers, power the industrial pulse, guard accurate measurement, and become your expert in cable, instrument and electrical solutions.",
     "certsTitle": "Certifications & approvals",
     "teamTitle": "Leadership",
-    "historyTitle": "Milestones"
+    "historyTitle": "Milestones",
+    "orgTitle": "Organization",
+    "orgIntro": "The group follows 6S standardized management with a clear, efficient structure covering production, sales, technology, quality inspection, equipment, finance, procurement and the group general office."
   },
   "team": [
     {
@@ -197,24 +205,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Founded in Bengbu, Anhui."
+      "year": "2005–2007",
+      "text": "Founded in 2005; became a key backbone enterprise of Tianchang City from the very start."
     },
     {
-      "year": "2013",
-      "text": "First electromagnetic flowmeter shipped."
+      "year": "2008–2011",
+      "text": "Ranked 11th among Tianchang's top 20 industrial enterprises."
     },
     {
-      "year": "2017",
-      "text": "ATEX / IECEx hazardous-area certifications."
+      "year": "2012–2016",
+      "text": "China Well-Known Trademark, national High-Tech Enterprise, national Contract-Honoring & Creditworthy Enterprise, Anhui Famous Brand products, municipal top 20."
     },
     {
-      "year": "2021",
-      "text": "Radar level transmitter line launched."
+      "year": "2017–2020",
+      "text": "Top 100 most competitive in China's cable industry and top 20 in Anhui; climbed into Tianchang's top 7."
     },
     {
-      "year": "2024",
-      "text": "Exports to 40+ countries."
+      "year": "2021–2024",
+      "text": "National specialized & sophisticated \"Little Giant\" enterprise (3rd and 6th batches), Anhui top 50, Wanmei Brand demonstration, digitalized factory, municipal green factory; IPO due diligence completed."
+    },
+    {
+      "year": "2025–",
+      "text": "A new journey begins: municipal top 20, provincial green factory, national green factory."
     }
   ],
   "contact": {
@@ -250,5 +262,37 @@
     "searchPlaceholder": "Search docs…",
     "onThisPage": "On this page",
     "backToDocs": "Back to docs"
-  }
+  },
+  "org": {
+    "title": "Organization",
+    "intro": "The group follows 6S standardized management with a clear, efficient structure. On the executive side, the Chairman oversees the General Manager and three Vice General Managers, who in turn manage eight departments. On the Party-mass side, a General Party Branch unites the Labor Union, the Working Committee for the Next Generation, the Youth League Branch, the Women's Committee and the Enterprise Science & Technology Association.",
+    "board": "Chairman",
+    "gm": "General Manager",
+    "gmAssistant": "GM Assistant",
+    "vp": "Vice General Manager",
+    "dept1": [
+      "Production",
+      "Sales",
+      "Technology",
+      "Quality Inspection",
+      "Equipment"
+    ],
+    "dept2": [
+      "Finance"
+    ],
+    "dept3": [
+      "Group General Office",
+      "Procurement"
+    ],
+    "partyTitle": "Party & Mass Organizations",
+    "party": "General Party Branch",
+    "partyOrgs": [
+      "Labor Union",
+      "Working Committee for the Next Generation",
+      "Youth League Branch",
+      "Women's Committee",
+      "Enterprise Science & Technology Association"
+    ]
+  },
+  "historyTitle": "Milestones"
 }
