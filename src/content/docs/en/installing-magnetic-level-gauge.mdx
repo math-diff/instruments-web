@@ -1,0 +1,83 @@
+---
+title: Magnetic level gauge installation and commissioning guide
+description: Verticality, valve operating sequence, density matching and transmitter module setup for bypass magnetic level gauges.
+date: 2025-06-05
+category: Installation
+---
+
+Magnetic bypass level gauges are rugged and nearly maintenance-free,
+but poor installation — verticality errors, wrong valve sequence,
+density mismatch — can still jam the float or distort the reading.
+This guide covers the complete path from unboxing to service.
+
+## Pre-installation checks
+
+- **Density match**: the float waterline depends on media density.
+  The density declared at order time must match the real service —
+  changes beyond roughly ±0.02 g/cm³ introduce visible error;
+- **Connection standard**: the chamber's upper and lower flanges mate
+  with the vessel side nozzles, forming a communicating vessel; check
+  flange standard and pressure rating against the vessel;
+- **Length**: the chamber center-to-center dimension is ordered to
+  the vessel level range and **must never be cut on site**.
+
+## Installation steps
+
+1. **Vertical mounting**: the chamber must be **truly vertical** —
+   check with a spirit level in two perpendicular directions; tilt
+   causes float binding against the wall and scale errors;
+2. **Isolation valves**: fit an **isolation valve at both the top and
+   bottom** connections (drain valve downstream of the bottom valve)
+   for commissioning and maintenance;
+3. **Flange sealing**: select gaskets per media and temperature
+   (oil-resistant asbestos / PTFE / spiral-wound metal), tighten
+   bolts evenly in a cross pattern;
+4. **Scale orientation**: rotate the indicator scale to face the
+   inspection walkway;
+5. **Transmitter module (optional)**: magnetic switches or the
+   4–20 mA module clip onto the chamber at the required setpoints;
+   the switch reed orientation must match the float magnet polarity.
+
+## Commissioning and drain sequence
+
+Correct valve sequencing protects the float from impact:
+
+**Putting into service (vessel from empty to pressurized):**
+
+1. Slowly open the **top valve** first — vapor or liquid enters the
+   chamber and equalizes pressure;
+2. Then slowly open the **bottom valve** — liquid rises in the
+   chamber and flags flip progressively;
+3. Fully open both valves and check flange tightness.
+
+**Draining / maintenance:**
+
+1. Close the bottom valve, then the top valve;
+2. Open the drain valve to depressurize and empty the chamber;
+3. Disassemble only after confirming zero pressure in the chamber.
+
+> Never disassemble any part of the chamber while pressurized.
+
+## Media suitability
+
+| Media condition | Recommendation |
+| --- | --- |
+| Water, oils, solvents (density ≥ 0.65 g/cm³) | Standard type |
+| Strong acids/bases and corrosives | Corrosion-protected type (PTFE/PFA lining or Hastelloy chamber) |
+| Crystallizing / fouling media | Periodic draining and flushing; for heavy crystallization prefer radar |
+| High temperature (e.g. saturated steam service) | High-temperature float with finned cooling section — state temperature at order |
+| Unstable density (mixing vessels) | Prefer radar or another non-contact principle |
+
+## Troubleshooting
+
+| Symptom | Likely cause and fix |
+| --- | --- |
+| Flags stuck over a section | Float jammed — drain and flush; or flag magnets degraded — replace scale |
+| Local reading offset by a fixed amount | Media density differs from order — re-zero or change float |
+| Reading varies strongly with temperature | Density varies with temperature — inherent principle; order for the actual service temperature |
+| Transmitted signal jumping | Module reed orientation wrong vs float magnet — flip and re-clip |
+| No flags move at all | Valves closed / chamber empty; or float magnet installed reversed |
+
+> When ordering, provide media name, density, operating temperature
+> and pressure, level range and flange standard via the
+> [contact page](/en/contact).

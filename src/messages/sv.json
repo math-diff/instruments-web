@@ -7,7 +7,6 @@
   "nav": {
     "home": "Hem",
     "products": "Produkter",
-    "pricing": "Priser",
     "about": "Om oss",
     "contact": "Kontakt",
     "blog": "Blogg",
@@ -32,12 +31,11 @@
     "resources": "Resurser",
     "followUs": "Följ oss",
     "rights": "Alla rättigheter förbehållna.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Precisionsmätning för industriella processer",
     "heroSubtitle": "Instrument för tryck, temperatur och nivå, konstruerade för tuffa industriella miljöer — betrodda inom petrokemi, energi, vattenrening och metallurgi världen över.",
     "heroCtaPrimary": "Utforska produkter",
@@ -156,26 +154,18 @@
     "zoomImage": "Visa större bild",
     "closeImage": "Stäng bilden"
   },
-  "pricing": {
-    "title": "Priser och modeller",
-    "subtitle": "Jämför våra instrumentklasser. Processinstrument prisas per projekt — begär offert för exakt pris.",
-    "inquireNote": "Priser varierar beroende på område, material, certifiering och kvantitet. Skicka din specifikation för skräddarsydd offert inom en arbetsdag.",
-    "tierBasic": "Basic",
-    "tierStandard": "Standard",
-    "tierPremium": "Premium",
-    "inquireButton": "Begär offert",
-    "features": "Ingår"
-  },
   "about": {
     "title": "Om Jingfeng Instruments",
     "subtitle": "Sedan 2008 mäter vi det som spelar roll i industriella processer.",
     "storyTitle": "Vår historia",
-    "story": "Anhui Jingfeng Instrument Co., Ltd. grundades 2008 i Bengbu, Anhui, och konstruerar och tillverkar procesinstrument för världens mest krävande industrier. Från vår första trycktransmitter till dagens kompletta sortiment för tryck, temperatur och nivå har vi levererat till anläggningar i över 40 länder.",
+    "story": "Jingfeng Group Co., Ltd. grundades i november 2005 med ett registrerat kapital på 380,88 miljoner RMB och är en koncern som förenar forskning, tillverkning och handel. Dotterbolagen täcker instrument, elutrustning och polymermaterial, med produkter från kablar och ledningar till kompletta system, kabelställ, rörbeslag, ventiler och växelskåp. Nationellt specialiserat \"Little Giant\", nationellt högteknologiskt företag och nationell grön fabrik – koncernen innehar över 160 patent, exporterar världen över och har långsiktiga partnerskap med State Grid, CNNC och Sinopec.",
     "missionTitle": "Mission",
     "mission": "Göra tillförlitlig, certifierad procesmätning tillgänglig för varje industriell verksamhet — utan premiumpriset på importer.",
     "certsTitle": "Certifieringar och godkännanden",
     "teamTitle": "Ledning",
-    "historyTitle": "Milstolpar"
+    "historyTitle": "Milstolpar",
+    "orgTitle": "Organisationsstruktur",
+    "orgIntro": "Koncernen tillämpar standardiserad 6S-hantering med en tydlig och effektiv struktur som omfattar produktion, försäljning, teknik, kvalitetskontroll, utrustning, ekonomi, inköp och koncernens allmänna kansli."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Grundades i Bengbu, Anhui."
+      "year": "2005–2007",
+      "text": "Grundades 2005; från början ett nyckelföretag i staden Tianchang."
     },
     {
-      "year": "2013",
-      "text": "Första elektromagnetiska flödesmätaren levererad."
+      "year": "2008–2011",
+      "text": "11:a bland Tianchangs topp 20 industriella företag."
     },
     {
-      "year": "2017",
-      "text": "ATEX / IECEx-certifieringar för explosionsfarliga områden."
+      "year": "2012–2016",
+      "text": "Kinesiskt känt varumärke, nationellt högteknologiskt företag, nationellt avtalsenligt och kreditvärdigt företag, kända varumärkesprodukter från Anhui, kommunal topp 20."
     },
     {
-      "year": "2021",
-      "text": "Produktlinje för radarnivåtransmittern lanserad."
+      "year": "2017–2020",
+      "text": "Topp 100 av Kinas mest konkurrenskraftiga kabelindustri och topp 20 i Anhui; kliv in i Tianchangs topp 7."
     },
     {
-      "year": "2024",
-      "text": "Export till över 40 länder."
+      "year": "2021–2024",
+      "text": "Nationellt specialiserat \"Little Giant\" (3:e och 6:e omgången), Anhui topp 50, digitaliserad fabrik, kommunal grön fabrik; IPO Due Diligence slutförd."
+    },
+    {
+      "year": "2025–",
+      "text": "En ny resa börjar: kommunal topp 20, provinsiell grön fabrik, nationell grön fabrik."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Sök i dokumentationen…",
     "onThisPage": "På denna sida",
     "backToDocs": "Tillbaka till dokumentationen"
+  },
+  "org": {
+    "title": "Organisationsstruktur",
+    "intro": "Koncernen tillämpar standardiserad 6S-hantering med en tydlig och effektiv struktur. På den administrativa sidan har styrelseordföranden tillsyn över verkställande direktören och tre vice verkställande direktörer som leder åtta avdelningar. På parti- och masssidan förenar en partiförening facket, arbetsutskottet för den kommande generationen, ungdomsförbundet, kvinnokommittén och företagets vetenskaps- och teknologiförening.",
+    "board": "Styrelseordförande",
+    "gm": "Verkställande direktör",
+    "gmAssistant": "VD-assistent",
+    "vp": "Vice verkställande direktör",
+    "dept1": [
+      "Produktion",
+      "Försäljning",
+      "Teknik",
+      "Kvalitetskontroll",
+      "Utrustning"
+    ],
+    "dept2": [
+      "Ekonomi"
+    ],
+    "dept3": [
+      "Koncernens allmänna kansli",
+      "Inköp"
+    ],
+    "partyTitle": "Parti- och massorganisationer",
+    "party": "Partiförening",
+    "partyOrgs": [
+      "Facket",
+      "Arbetsutskottet för den kommande generationen",
+      "Ungdomsförbundet",
+      "Kvinnokommittén",
+      "Företagets vetenskaps- och teknologiförening"
+    ]
   }
 }

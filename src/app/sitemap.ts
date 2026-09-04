@@ -11,7 +11,7 @@ function url(locale: string, path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["", "/products", "/pricing", "/about", "/contact", "/blog", "/docs"];
+  const staticPaths = ["", "/products", "/about", "/contact", "/blog", "/docs"];
   const productPaths = products.map((p) => `/products/${p.slug}`);
 
   const entries: MetadataRoute.Sitemap = [];

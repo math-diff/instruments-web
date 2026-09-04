@@ -1,0 +1,113 @@
+---
+title: "Magnetic level gauge, radar or sight glass: choosing the right level instrument"
+description: "How bypass magnetic level gauges, radar, float switches and sight glasses differ — principles, service fit and a selection comparison."
+date: 2025-03-18
+tags: [selection, level]
+category: Selection guides
+---
+
+Level is the most intuitive of process parameters, yet level instruments
+come in more varieties than any other — magnetic bypass gauges, radar,
+floats and sight glasses each have their own stage. A wrong choice
+means unreliable readings at best and seal failures at worst. This
+guide follows the decision path used in real projects.
+
+## 1. Ask three questions first
+
+1. **Media**: corrosive? viscous? foaming? crystallizing? Is density
+   stable?
+2. **Purpose**: local indication only, or transmission to the DCS and
+   interlocks?
+3. **Vessel**: any agitator or heating coil? Is a bypass chamber
+   mounting acceptable? Pressure/temperature rating of the nozzles?
+
+These answers mostly determine the candidates.
+
+## 2. The four families
+
+### Magnetic bypass level gauge
+
+**Principle**: a bypass chamber connects to the vessel flanges
+(communicating-vessel principle); a magnetized float inside follows
+the level and flips dual-color flags on the external scale (red/white).
+Magnetic switches or a 4–20 mA module can be clipped on for alarms
+and transmission.
+
+- **Strengths**: bold, unambiguous local display; mechanically
+  rugged; nearly maintenance-free. High temperature/pressure and
+  corrosive (PTFE-lined) versions cover most services.
+- **Limits**: the media **density must be stable** and above the
+  float rating — density changes shift the float waterline; viscous,
+  crystallizing or fouling media can jam the float.
+- **Typical**: storage tanks, drums, boiler-drum local indication,
+  dosing tanks.
+
+### Radar (non-contact)
+
+**Principle**: the antenna transmits a microwave toward the surface
+and times the echo; level is computed from the flight time, largely
+independent of density and (within limits) dielectric constant.
+
+- **Strengths**: **non-contact, no wear**, nearly immune to media
+  properties; excellent for corrosive, viscous, hot and hygienic
+  services.
+- **Limits**: foam (especially conductive foam) absorbs or falsely
+  reflects microwaves; the antenna must avoid filling streams,
+  agitators, heating coils and wall echoes.
+- **Typical**: chemical storage tanks, effluent pits, corrosive
+  media requiring continuous transmission.
+
+### Float switches / top-mounted floats
+
+**Principle**: a float rides the surface and actuates magnetic
+switches along a guide stem — discrete level points, or a continuous
+signal via a shaft coupling.
+
+- **Strengths**: simple, inexpensive; discrete outputs suit
+  high/low alarms and interlocks.
+- **Limits**: contact type; media should be clean; floats can jam
+  with fouling; continuous accuracy is modest.
+- **Typical**: high/low alarms on water and oil tanks, simple vessel
+  interlocks.
+
+### Sight glass (glass-tube / flat-glass)
+
+**Principle**: the most direct communicating vessel — a glass tube
+or flat-glass window shows the liquid column directly.
+
+- **Strengths**: the **most trustworthy** local reading, commonly
+  used as the reference against magnetic and radar instruments;
+  the designated instrument for boiler drums in many codes.
+- **Limits**: glass is fragile; media must not crystallize on or
+  attack the glass; high-pressure service requires flat-glass
+  versions with protective frames — never bare glass tube.
+- **Typical**: boiler water level, cross-check readings on storage
+  tanks, sampling confirmation.
+
+## 3. Quick comparison
+
+| | Magnetic bypass | Radar | Float | Sight glass |
+| --- | --- | --- | --- | --- |
+| Reading | Local (+ optional TX) | Transmission | Switch / TX | Local only |
+| Contact with media | Yes (float in chamber) | **No** | Yes | Yes (media in glass) |
+| Corrosive media | Lined versions | Excellent | Moderate | Limited by glass |
+| Foam / vapor effect | Small | Large (foam absorbs) | Small | Site-dependent |
+| High T/P | Good | Good | Moderate | Flat-glass good |
+| Maintenance | Very low | Low | Medium (jam-prone float) | Periodic glass checks |
+| Cost | Low–mid | Mid–high | Low | Low |
+
+## 4. Rules of thumb
+
+- **Bold local reading, rugged service** → magnetic bypass gauge;
+- **Continuous transmission, dirty/viscous/corrosive media** → radar;
+- **Only high/low alarms or interlocks** → float switch;
+- **Boiler drums and "seeing is believing" cross-checks** → sight
+  glass.
+
+The most common real-world combination is **magnetic gauge for local
++ radar for transmission**: field reading and DCS signal mutually
+redundant.
+
+Still deciding? Send us the media name, density, operating temperature
+and pressure, vessel height and connection standard — our application
+engineers will reply with a configuration within one working day.

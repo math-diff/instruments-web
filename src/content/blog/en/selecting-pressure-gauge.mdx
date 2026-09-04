@@ -1,0 +1,107 @@
+---
+title: "Industrial pressure gauge selection: range, accuracy class and service conditions"
+description: "Selection essentials for Bourdon-tube and capsule pressure gauges — range margin, accuracy class, media compatibility, pulsation protection and certification."
+date: 2025-01-15
+tags: [selection, pressure]
+category: Selection guides
+---
+
+Pressure gauges are the most common field instrument, yet the classic
+failure modes — bent pointers, ruptured Bourdon tubes, drifting
+readings — keep showing up in after-sales cases. This article walks
+through the five selection decisions that matter most in engineering
+practice for mechanical pressure gauges.
+
+## 1. Range: leave a one-third margin
+
+The fundamental rule of pressure gauge range selection: **normal
+operating pressure should sit between one-third and two-thirds of
+span**.
+
+- Steady pressure: normal pressure ideally at 50–67% of span;
+- Pulsating service (pump discharge): normal pressure should not
+  exceed two-thirds of span, leaving margin for surges;
+- Continuous operation near the top of span accelerates fatigue of
+  the elastic element (elastic hysteresis); operation below one-third
+  of span reduces effective resolution and increases relative error.
+
+Example: pump discharge at 0.9 MPa normally, surging to 1.1 MPa —
+a 0–1.6 MPa gauge (normal at ~56% of span) is correct. A 0–1.0 MPa
+gauge would be over-ranged; a 0–2.5 MPa gauge would read in the lower
+third of the dial.
+
+## 2. Accuracy class: fit for purpose
+
+Industrial pressure gauges per GB/T 1226:2017 (general-purpose pressure
+gauges) come in classes 1.0, 1.6, 2.5 and 4.0. The class number is
+the **percentage of full-span error** — a class 1.6 gauge on a
+0–1.6 MPa range has a permissible error of ±1.6% × 1.6 MPa =
+±0.026 MPa.
+
+| Service | Recommended class |
+| --- | --- |
+| General monitoring (compressed air, cooling water) | 2.5 |
+| General process lines, pump discharge | 1.6 |
+| Custody transfer, test benches | 1.0 or better |
+
+Note that higher classes cost more and are more sensitive to mounting
+attitude and vibration. Specifying an unnecessarily high class does
+not improve system reliability.
+
+## 3. Sensing element by media and range
+
+- **Bourdon tube (C-spring)**: the general-purpose element for gases,
+  liquids and steam from roughly 0.1 MPa up to 60 MPa. Ranges like
+  0–1.6 MPa and 0–2.5 MPa cover most line monitoring. 316L stainless
+  wetted parts handle water, steam and mildly corrosive media.
+- **Capsule (corrugated diaphragm)**: for low and very low pressures,
+  from a few hundred pascals up to tens of kPa — gas regulator
+  monitoring, furnace draft. Typical accuracy class 2.5.
+- **Special media**: ammonia service **requires an ammonia-rated
+  gauge** (different Bourdon-tube material to avoid ammonia stress
+  corrosion); oxygen service **requires an oil-free oxygen gauge**
+  marked "oil-free" — a safety requirement, not an option.
+
+## 4. Service protection: pulsation, vibration and heat
+
+After-sales statistics show the top three causes of gauge failure are
+pulsation shock, ambient vibration and over-temperature media — not
+manufacturing defects:
+
+- **Pressure pulsation**: install a **snubber (restrictor or needle
+  orifice)** on pump discharge and compressor lines, or specify a
+  **liquid-filled (glycerin-damped) vibration-resistant gauge**.
+- **Ambient vibration**: choose the damped case, or isolate with a
+  flexible siphon / remote mounting.
+- **Hot media** (steam above ~60 °C reaching the Bourdon tube
+  directly damages the movement): install a **siphon (pigtail) loop**
+  so steam condenses before reaching the element.
+- **Corrosion**: specify 316L or Hastelloy wetted parts, or a
+  **diaphragm-seal (chemical) gauge** where the diaphragm isolates
+  the media and a filled capillary transmits the pressure.
+
+## 5. Connection, case and certification
+
+- **Connection orientation**: lower-back (radial) is most common;
+  panel mounting uses axial connection with back flange.
+- **Case diameter**: 100 mm and 150 mm are standard; 60 mm for dense
+  panel layouts.
+- **Ingress protection**: IP54 suffices for general indoor service;
+  outdoor dusty/wet locations use IP65 liquid-filled cases.
+- **Safety release**: the case back must provide a **pressure-relief
+  opening**, so a ruptured Bourdon tube vents through the back
+  instead of bursting the front glass. GB/T 1226 specifies case
+  construction and relief requirements — check the relief opening
+  is unobstructed (do not tape over the back).
+- **Legal metrology**: gauges used for safety protection or custody
+  transfer fall under mandatory verification — schedule periodic
+  calibration accordingly.
+
+## Summary
+
+A correct gauge selection = correct range margin + adequate accuracy
+class + element matched to the media + protection against pulsation,
+vibration and heat. Put these four items into your inquiry and you
+will avoid the vast majority of field problems. When in doubt, send
+your process parameters to our application engineers — we will
+recommend a model against the actual media and installation.

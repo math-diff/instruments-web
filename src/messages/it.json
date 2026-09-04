@@ -7,7 +7,6 @@
   "nav": {
     "home": "Home",
     "products": "Prodotti",
-    "pricing": "Prezzi",
     "about": "Chi siamo",
     "contact": "Contatti",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Risorse",
     "followUs": "Seguici",
     "rights": "Tutti i diritti riservati.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Misurazione di precisione per i processi industriali",
     "heroSubtitle": "Strumenti per pressione, temperatura e livello progettati per ambienti industriali difficili — affidati in petrochimica, energia, trattamento acque e metallurgia.",
     "heroCtaPrimary": "Esplora i prodotti",
@@ -156,26 +154,18 @@
     "zoomImage": "Ingrandisci immagine",
     "closeImage": "Chiudi immagine"
   },
-  "pricing": {
-    "title": "Prezzi e modelli",
-    "subtitle": "Confronta le nostre fasce. Gli strumenti di processo si quotano per progetto — richiedi un preventivo per il prezzo esatto.",
-    "inquireNote": "I prezzi variano in base a campo, materiali, certificazioni e quantità. Invia la tua specifica e riceverai un preventivo entro un giorno lavorativo.",
-    "tierBasic": "Essential",
-    "tierStandard": "Standard",
-    "tierPremium": "Premium",
-    "inquireButton": "Ottieni un preventivo",
-    "features": "Incluso"
-  },
   "about": {
     "title": "Chi è Jingfeng Instruments",
     "subtitle": "Dal 2008 misuriamo ciò che conta nei processi industriali.",
     "storyTitle": "La nostra storia",
-    "story": "Fondata nel 2008 a Bengbu (Anhui), Anhui Jingfeng Instrument Co., Ltd. progetta e produce strumenti per la misura di processo per le industrie più esigenti. Dal primo trasmettitore di pressione all'attuale gamma pressione-temperatura-livello, abbiamo fornito impianti in oltre 40 paesi.",
+    "story": "Fondato nel novembre 2005 con un capitale sociale di 380,88 milioni di RMB, Jingfeng Group Co., Ltd. è un gruppo che integra R&S, produzione e commercio. Le controllate coprono strumentazione, apparecchiature elettriche e materiali polimerici, con prodotti che vanno da cavi e condutture a sistemi completi, passacavi, raccordi, valvole e quadri elettrici. «Piccolo Gigante» nazionale specializzato, impresa high-tech nazionale e fabbrica verde nazionale, il gruppo detiene oltre 160 brevetti, esporta in tutto il mondo e collabora stabilmente con State Grid, CNNC e Sinopec.",
     "missionTitle": "Missione",
     "mission": "Rendere la misura di processo affidabile e certificata accessibile a ogni industria — senza il prezzo delle importazioni premium.",
     "certsTitle": "Certificazioni e approvazioni",
     "teamTitle": "Dirigenza",
-    "historyTitle": "Tappe fondamentali"
+    "historyTitle": "Tappe fondamentali",
+    "orgTitle": "Struttura organizzativa",
+    "orgIntro": "Il gruppo applica una gestione standardizzata 6S con una struttura chiara ed efficiente che copre produzione, vendite, tecnologia, controllo qualità, attrezzature, finanza, acquisti e l'ufficio generale di gruppo."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Fondazione a Bengbu, Anhui."
+      "year": "2005–2007",
+      "text": "Fondazione nel 2005; fin dall'inizio impresa chiave della città di Tianchang."
     },
     {
-      "year": "2013",
-      "text": "Consegnato il primo debimetro elettromagnetico."
+      "year": "2008–2011",
+      "text": "11ª tra le prime 20 imprese industriali di Tianchang."
     },
     {
-      "year": "2017",
-      "text": "Certificazioni ATEX / IECEx per aree a rischio."
+      "year": "2012–2016",
+      "text": "Marchio celebre cinese, impresa high-tech nazionale, impresa nazionale rispettosa dei contratti, prodotti di marca famosa dell'Anhui, top 20 municipale."
     },
     {
-      "year": "2021",
-      "text": "Lanciata la linea di trasmettitori di livello radar."
+      "year": "2017–2020",
+      "text": "Top 100 di competitività nel settore cavi in Cina e top 20 in Anhui; ingresso nella top 7 di Tianchang."
     },
     {
-      "year": "2024",
-      "text": "Esportazioni in oltre 40 paesi."
+      "year": "2021–2024",
+      "text": "«Piccolo Gigante» nazionale specializzato (3ª e 6ª tornata), top 50 dell'Anhui, fabbrica digitale, fabbrica verde municipale; due diligence per IPO completata."
+    },
+    {
+      "year": "2025–",
+      "text": "Inizia un nuovo capitolo: top 20 municipale, fabbrica verde provinciale, fabbrica verde nazionale."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Cerca nella documentazione…",
     "onThisPage": "In questa pagina",
     "backToDocs": "Torna alla documentazione"
+  },
+  "org": {
+    "title": "Struttura organizzativa",
+    "intro": "Il gruppo applica una gestione standardizzata 6S con una struttura chiara ed efficiente. Sul piano amministrativo, il Presidente del Consiglio sovrintende al Direttore Generale e a tre Vice Direttori Generali che gestiscono otto reparti. Sul piano di partito e di massa, una Sezione generale del Partito riunisce il Sindacato dei lavoratori, il Comitato di lavoro per le nuove generazioni, la Lega giovanile, il Comitato delle donne e l'Associazione di scienza e tecnologia d'impresa.",
+    "board": "Presidente del Consiglio",
+    "gm": "Direttore Generale",
+    "gmAssistant": "Assistente del DG",
+    "vp": "Vice Direttore Generale",
+    "dept1": [
+      "Produzione",
+      "Vendite",
+      "Tecnologia",
+      "Controllo qualità",
+      "Attrezzature"
+    ],
+    "dept2": [
+      "Finanza"
+    ],
+    "dept3": [
+      "Ufficio generale di gruppo",
+      "Acquisti"
+    ],
+    "partyTitle": "Organizzazioni di partito e di massa",
+    "party": "Sezione generale del Partito",
+    "partyOrgs": [
+      "Sindacato dei lavoratori",
+      "Comitato di lavoro per le nuove generazioni",
+      "Lega giovanile",
+      "Comitato delle donne",
+      "Associazione di scienza e tecnologia d'impresa"
+    ]
   }
 }

@@ -7,7 +7,6 @@
   "nav": {
     "home": "Domov",
     "products": "Produkty",
-    "pricing": "Cenník",
     "about": "O nás",
     "contact": "Kontakt",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Zdroje",
     "followUs": "Sledujte nás",
     "rights": "Všetky práva vyhradené.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Presné meranie pre priemyselné procesy",
     "heroSubtitle": "Meracie prístroje na tlak, teplotu a hladinu navrhnuté pre náročné priemyselné prostredie — osvedčené v petrochémii, energetike, úprave vône a metalurgii.",
     "heroCtaPrimary": "Prezrieť produkty",
@@ -156,26 +154,18 @@
     "zoomImage": "Zväčšiť obrázok",
     "closeImage": "Zavrieť obrázok"
   },
-  "pricing": {
-    "title": "Ceny a modely",
-    "subtitle": "Porovnajte naše rady prístrojov. Procesné prístroje sa cenovo riešia individuálne — požiadajte o presnú ponuku.",
-    "inquireNote": "Ceny sa líšia podľa rozsahu, materiálov, certifikácií a množstva. Pošlite nám špecifikáciu a do jedného pracovného dňa dostanete ponuku na mieru.",
-    "tierBasic": "Základná",
-    "tierStandard": "Štandardná",
-    "tierPremium": "Prémiová",
-    "inquireButton": "Vyžiadať ponuku",
-    "features": "Zahrnuté"
-  },
   "about": {
     "title": "O spoločnosti Jingfeng Instruments",
     "subtitle": "Od roku 2008 meriame to, čo je v priemyselných procesoch dôležité.",
     "storyTitle": "Náš príbeh",
-    "story": "Spoločnosť Anhui Jingfeng Instrument Co., Ltd. bola založená v roku 2008 v meste Bengbu (provincia Anhui) a navrhuje a vyrába procesné meracie prístroje pre najnáročnejšie odvetvia. Od prvého tlakového prevodníka po dnešnú ponuku pre tlak, teplotu a hladinu dodávame na viac ako 40 trhov.",
+    "story": "Spoločnosť Jingfeng Group Co., Ltd. bola založená v novembri 2005 s registrovaným kapitálom 380,88 milióna juanov a je skupinovým podnikom integrujúcim výskum, výrobu a obchod. Jej dcérske spoločnosti pokrývajú prístroje, elektrické zariadenia a polymérové materiály, produkty zahŕňajú káble a vodiče, kompletné systémy, káblové kanály, armatúry, ventily a rozvádzače. Národný špecializovaný „Malý obor“ (Little Giant), národné high-tech podniky a národná zelená továreň – skupina vlastní viac ako 160 patentov, vyváža do celého sveta a dlhodobo spolupracuje so State Grid, CNNC a Sinopec.",
     "missionTitle": "Misia",
     "mission": "Sprístupniť spoľahlivé certifikované procesné meranie každému priemyselnému prevádzkovateľovi — bez prémie za dovoz.",
     "certsTitle": "Certifikáty a schválenia",
     "teamTitle": "Vedenie",
-    "historyTitle": "Míľniky"
+    "historyTitle": "Míľniky",
+    "orgTitle": "Organizačná štruktúra",
+    "orgIntro": "Skupina uplatňuje štandardizované riadenie 6S s jasnou a efektívnou štruktúrou pokrývajúcou výrobu, predaj, technológiu, kontrolu kvality, zariadenia, financie, nákup a všeobecnú kanceláriu skupiny."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Založenie v meste Bengbu, provincia Anhui."
+      "year": "2005–2007",
+      "text": "Založené v roku 2005; od začiatku kľúčový podnik mesta Tianchang."
     },
     {
-      "year": "2013",
-      "text": "Dodaný prvý elektromagnetický prietokomer."
+      "year": "2008–2011",
+      "text": "11. miesto medzi top 20 priemyselnými podnikmi mesta Tianchang."
     },
     {
-      "year": "2017",
-      "text": "Certifikáty ATEX / IECEx pre ex-zóny."
+      "year": "2012–2016",
+      "text": "Známa čínska ochranná známka, národný high-tech podnik, národný podnik dodržiavajúci zmluvy, produkty známej značky Anhui, mestská top 20."
     },
     {
-      "year": "2021",
-      "text": "Uvedená rada radarových hladinomerov."
+      "year": "2017–2020",
+      "text": "Top 100 najkonkurencieschopnejších v čínskom káblovom priemysle a top 20 v Anhui; postup do top 7 v Tianchangu."
     },
     {
-      "year": "2024",
-      "text": "Export do viac než 40 krajín."
+      "year": "2021–2024",
+      "text": "Národný špecializovaný „Malý obor“ (3. a 6. dávka), top 50 v Anhui, digitalizovaná továreň, mestská zelená továreň; due diligence IPO dokončené."
+    },
+    {
+      "year": "2025–",
+      "text": "Začíná nová etapa: mestská top 20, provinčná zelená továreň, národná zelená továreň."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Hľadať v dokumentácii…",
     "onThisPage": "Na tejto stránke",
     "backToDocs": "Späť na dokumentáciu"
+  },
+  "org": {
+    "title": "Organizačná štruktúra",
+    "intro": "Skupina uplatňuje štandardizované riadenie 6S s jasnou a efektívnou štruktúrou. Na administratívnej linke predseda predstavenstva dohliada na generálneho riaditeľa a troch zástupcov generálneho riaditeľa, ktorí riadia osem oddelení. Na strane strany a mas sa všeobecná stranícka organizácia spája s odborovým zväzom, pracovným výborom pre nastupujúcu generáciu, mládežníckou ligou, ženským výborom a podnikovým vedecko-technickým spolkom.",
+    "board": "Predseda predstavenstva",
+    "gm": "Generálny riaditeľ",
+    "gmAssistant": "Asistent generálneho riaditeľa",
+    "vp": "Zástupca generálneho riaditeľa",
+    "dept1": [
+      "Výroba",
+      "Predaj",
+      "Technológia",
+      "Kontrola kvality",
+      "Zariadenia"
+    ],
+    "dept2": [
+      "Financie"
+    ],
+    "dept3": [
+      "Všeobecná kancelária skupiny",
+      "Nákup"
+    ],
+    "partyTitle": "Stranícke a masové organizácie",
+    "party": "Všeobecná stranícka organizácia",
+    "partyOrgs": [
+      "Odborový zväz",
+      "Pracovný výbor pre nastupujúcu generáciu",
+      "Mládežnícka liga",
+      "Ženský výbor",
+      "Podnikový vedecko-technický spolok"
+    ]
   }
 }

@@ -7,7 +7,6 @@
   "nav": {
     "home": "Home",
     "products": "Products",
-    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Resources",
     "followUs": "Follow Us",
     "rights": "All rights reserved.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Precision measurement for industrial processes",
     "heroSubtitle": "Pressure, temperature and level instruments engineered for harsh industrial environments — trusted in petrochemical, power, water and metallurgy plants worldwide.",
     "heroCtaPrimary": "Explore products",
@@ -162,16 +160,6 @@
     "zoomImage": "View larger",
     "closeImage": "Close image"
   },
-  "pricing": {
-    "title": "Pricing & models",
-    "subtitle": "Compare our instrument tiers. Process instruments are quoted per project — request a quote for exact pricing.",
-    "inquireNote": "Prices vary by range, material, certification and quantity. Send your spec for a tailored quote within one business day.",
-    "tierBasic": "Essential",
-    "tierStandard": "Standard",
-    "tierPremium": "Premium",
-    "inquireButton": "Get a quote",
-    "features": "Included"
-  },
   "about": {
     "title": "About Jingfeng Instruments",
     "subtitle": "Over 20 years in instrument cabling — an integrated group spanning R&D, manufacturing and trade.",
@@ -293,6 +281,5 @@
       "Women's Committee",
       "Enterprise Science & Technology Association"
     ]
-  },
-  "historyTitle": "Milestones"
+  }
 }

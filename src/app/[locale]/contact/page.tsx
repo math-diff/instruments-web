@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
+import { MapEmbed } from "@/components/ui/MapEmbed";
 
 export async function generateMetadata({
   params,
@@ -109,9 +110,7 @@ export default async function ContactPage({
                 />
               </ul>
 
-              <div className="mt-8 flex h-48 items-center justify-center rounded-xl border border-line bg-surface-muted text-sm text-ink-soft">
-                Map placeholder
-              </div>
+              <MapEmbed locale={locale as Locale} />
             </div>
           </Reveal>
         </div>

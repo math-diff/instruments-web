@@ -1,0 +1,90 @@
+---
+title: RTD and thermocouple installation and wiring guide
+description: Insertion depth, three-wire RTD wiring, compensation cable and hazardous-area practice for assembly and mineral-insulated temperature sensors.
+date: 2025-05-20
+category: Installation
+---
+
+RTDs and thermocouples convert temperature into an electrical signal;
+wiring and installation quality directly determine signal quality.
+This guide covers assembly and mineral-insulated (MI) sensors,
+three-wire wiring, compensation cable and hazardous-area practice.
+
+## Installation essentials
+
+- **Insertion depth**: the measuring tip should sit near the pipe
+  centerline; in liquids, effective immersion ≥ 15–20 sheath
+  diameters, more in gases. Shallow insertion produces a systematic
+  low reading.
+- **Orientation**: insert at 45° against the flow or in an elbow
+  downstream, ensuring good contact with the media.
+- **Thermowell selection**:
+  - Water, steam and mild media: 304/316L stainless;
+  - High-velocity dusty flows (coal milling, powder conveying):
+    **wear-resistant** type with reinforced tip;
+  - Strong corrosion: Hastelloy or ceramic protection per media.
+- **Response time**: mineral-insulated (MI) elements are slim and
+  respond fast, suited to dynamic measurements; assembly versions
+  with thermowells suit high pressure and erosion.
+
+## RTD wiring: why three wires
+
+A Pt100 element changes only ~0.39 Ω/°C — the same order as lead
+resistance. Two 10 m copper leads of 1 mm² add ~0.36 Ω total, nearly
+1 °C of error that drifts with ambient temperature.
+
+**Three-wire** connection places one lead in each of two adjacent
+bridge arms so lead resistance cancels; **four-wire** (constant
+current + Kelvin measurement) eliminates it entirely and is reserved
+for laboratory-grade accuracy. Field junction boxes are normally
+wired three-wire.
+
+Wiring checklist:
+
+1. Connect the three leads to the matching terminals (A/B/C or
+   1/2/3) — **swapping two leads on the same side cancels the
+   compensation**;
+2. Tighten all terminals; contact resistance must be minimal;
+3. Ground the cable shield at **one end only** (usually at the
+   instrument or cabinet side, never at the sensor end).
+
+## Thermocouple wiring: compensation cable is critical
+
+Thermocouples output millivolts and the reference (cold) junction
+temperature participates in the calculation:
+
+1. **Always use the matching compensation cable** (KX-type cable for
+   Type K) with strict polarity — reversing it doubles the error;
+2. Keep the thermocouple-to-cable junction within the cable rating
+   (standard compensation cable insulation is rated 70 °C or
+   105 °C); above that, use high-temperature extension cable;
+3. **Never run compensation cable in the same conduit as power
+   cables** — coupling noise corrupts the millivolt signal;
+4. Enable cold-junction compensation in the display instrument or
+   PLC.
+
+## Hazardous-area installation
+
+Flameproof (Ex d) RTDs and thermocouples in explosive atmospheres
+must be installed per their certificates and the GB/T 3836 series:
+
+- **Flameproof joints must never be painted, scratched or damaged**;
+  replace aged sealing rings;
+- Use cable glands rated for the protection level; plug unused
+  entries with certified stoppers;
+- After maintenance, restore the integrity of the flameproof paths;
+  never open covers live.
+
+## Troubleshooting quick table
+
+| Symptom | RTD likely cause | Thermocouple likely cause |
+| --- | --- | --- |
+| Jumping reading | Loose terminal / shield grounded both ends | Loose compensation joint / coupled noise |
+| Consistent low offset | Shallow insertion / fouling | Compensation cable polarity reversed |
+| Over-range display | Open circuit (incl. one lead of three) | Open thermocouple |
+| Drift with load | Lead resistance varying (two-wire) | Cold-junction compensation disabled |
+
+> For MI vs assembly selection, insertion-depth calculation or
+> hazardous-area configuration, send your point parameters via the
+> [contact page](/en/contact) — our application engineers reply
+> within one working day.

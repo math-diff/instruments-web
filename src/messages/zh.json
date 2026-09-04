@@ -7,7 +7,6 @@
   "nav": {
     "home": "首页",
     "products": "产品",
-    "pricing": "定价",
     "about": "关于我们",
     "contact": "联系我们",
     "blog": "博客",
@@ -32,12 +31,11 @@
     "resources": "资源",
     "followUs": "关注我们",
     "rights": "保留所有权利。",
-    "address": "中国安徽省蚌埠市仪表大道 1 号",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "中国安徽省滁州市天长市滁州高新技术产业开发区610号",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "安徽晶锋仪表有限公司",
     "heroTitle": "为工业过程提供精准测量",
     "heroSubtitle": "压力、温度与液位仪表,专为苛刻工业环境设计 — 广泛应用于石化、电力、水处理与冶金行业,深得全球客户信赖。",
     "heroCtaPrimary": "浏览产品",
@@ -162,16 +160,6 @@
     "zoomImage": "点击放大",
     "closeImage": "关闭图片"
   },
-  "pricing": {
-    "title": "定价与型号",
-    "subtitle": "对比我们的仪表档次。过程仪表按项目报价 — 申请报价获取准确价格。",
-    "inquireNote": "价格因量程、材质、认证与数量而异。提交您的规格,我们将在一个工作日内提供定制报价。",
-    "tierBasic": "基础型",
-    "tierStandard": "标准型",
-    "tierPremium": "高端型",
-    "inquireButton": "获取报价",
-    "features": "包含内容"
-  },
   "about": {
     "title": "关于晶锋仪表",
     "subtitle": "深耕仪表电缆行业 20 余年,科、工、贸一体的集团企业。",
@@ -293,6 +281,5 @@
       "妇女委员会",
       "企业科学技术协会"
     ]
-  },
-  "historyTitle": "发展历程"
+  }
 }

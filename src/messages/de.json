@@ -7,7 +7,6 @@
   "nav": {
     "home": "Startseite",
     "products": "Produkte",
-    "pricing": "Preise",
     "about": "Über uns",
     "contact": "Kontakt",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Ressourcen",
     "followUs": "Folgen Sie uns",
     "rights": "Alle Rechte vorbehalten.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Präzisionsmessung für industrielle Prozesse",
     "heroSubtitle": "Druck-, Temperatur- und Füllstandmessgeräte für raue Industrieumgebungen — vertraut in Petrochemie, Energie, Wasser- und Metallurgieanlagen weltweit.",
     "heroCtaPrimary": "Produkte entdecken",
@@ -156,26 +154,18 @@
     "zoomImage": "Bild vergrößern",
     "closeImage": "Bild schließen"
   },
-  "pricing": {
-    "title": "Preise und Modelle",
-    "subtitle": "Vergleichen Sie unsere Geräteklassen. Prozessgeräte werden projektspezifisch angeboten — fordern Sie ein Angebot an.",
-    "inquireNote": "Preise variieren je nach Bereich, Werkstoff, Zertifizierung und Menge. Senden Sie Ihre Spezifikation für ein Angebot innerhalb eines Werktags.",
-    "tierBasic": "Essential",
-    "tierStandard": "Standard",
-    "tierPremium": "Premium",
-    "inquireButton": "Angebot anfordern",
-    "features": "Enthalten"
-  },
   "about": {
     "title": "Über Jingfeng Instruments",
     "subtitle": "Seit 2008 messen wir, was in Industrieprozessen zählt.",
     "storyTitle": "Unsere Geschichte",
-    "story": "Anhui Jingfeng Instrument Co., Ltd. wurde 2008 in Bengbu (Anhui) gegründet und entwickelt und fertigt Prozess-Messtechnik für die anspruchsvollsten Industrien der Welt. Vom ersten Drucktransmitter bis zur heutigen Produktpalette für Druck, Temperatur und Füllstand liefern wir in über 40 Länder.",
+    "story": "Jingfeng Group Co., Ltd. wurde im November 2005 mit einem eingetragenen Kapital von 380,88 Millionen RMB gegründet und ist ein Gruppenunternehmen, das Forschung & Entwicklung, Fertigung und Handel vereint. Die Tochtergesellschaften decken Messgeräte, Elektroausstattung und Polymerwerkstoffe ab; das Produktspektrum reicht von Kabeln und Leitungen über Komplettsysteme, Kabeltrassen und Armaturen bis zu Schaltanlagen. Als nationales „Hidden Champion“-Unternehmen (Little Giant), High-Tech-Unternehmen und grünes Werk hält die Gruppe über 160 Patente, exportiert weltweit und pflegt langjährige Partnerschaften mit State Grid, CNNC und Sinopec.",
     "missionTitle": "Mission",
     "mission": "Zuverlässige, zertifizierte Prozessmessung für jeden Industriebetrieb zugänglich machen — ohne Aufpreis wie bei Importprodukten.",
     "certsTitle": "Zertifikate und Zulassungen",
     "teamTitle": "Führung",
-    "historyTitle": "Meilensteine"
+    "historyTitle": "Meilensteine",
+    "orgTitle": "Organisationsstruktur",
+    "orgIntro": "Die Gruppe folgt einem standardisierten 6S-Management mit klarer, effizienter Struktur, die Produktion, Vertrieb, Technologie, Qualitätsprüfung, Anlagen, Finanzen, Einkauf und das Generalsekretariat der Gruppe umfasst."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Gründung in Bengbu, Anhui."
+      "year": "2005–2007",
+      "text": "Gründung 2005; von Beginn an ein Schlüsselunternehmen der Stadt Tianchang."
     },
     {
-      "year": "2013",
-      "text": "Erstes magnetisch-induktives Durchflussmessgerät ausgeliefert."
+      "year": "2008–2011",
+      "text": "Platz 11 unter den Top-20-Industrieunternehmen von Tianchang."
     },
     {
-      "year": "2017",
-      "text": "ATEX / IECEx-Zertifizierungen für Ex-Bereiche."
+      "year": "2012–2016",
+      "text": "Chinesische bekannte Marke, nationales High-Tech-Unternehmen, nationaler vertragstreuer und kreditwürdiger Betrieb, Anhui-Markenprodukte, kommunale Top 20."
     },
     {
-      "year": "2021",
-      "text": "Produktlinie Radar-Füllstandtransmitter eingeführt."
+      "year": "2017–2020",
+      "text": "Top 100 der wettbewerbsfähigsten Kabelunternehmen Chinas und Top 20 in Anhui; Sprung in die Top 7 von Tianchang."
     },
     {
-      "year": "2024",
-      "text": "Export in über 40 Länder."
+      "year": "2021–2024",
+      "text": "Nationales spezialisiertes „Little Giant“-Unternehmen (3. und 6. Tranche), Anhui Top 50, digitalisierte Fabrik, kommunales grünes Werk; IPO-Due-Diligence abgeschlossen."
+    },
+    {
+      "year": "2025–",
+      "text": "Ein neues Kapitel: kommunale Top 20, provinziales grünes Werk, nationales grünes Werk."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Dokumentation durchsuchen…",
     "onThisPage": "Auf dieser Seite",
     "backToDocs": "Zurück zur Dokumentation"
+  },
+  "org": {
+    "title": "Organisationsstruktur",
+    "intro": "Die Gruppe folgt einem standardisierten 6S-Management mit klarer, effizienter Struktur. In der Verwaltungslinie beaufsichtigt der Vorsitzende des Verwaltungsrats den Generalmanager und drei stellvertretende Generalmanager, die acht Abteilungen leiten. Auf der Partei- und Massenseite vereint eine Parteigruppe den Gewerkschaftsbund, den Arbeitsausschuss für die kommende Generation, den Jugendverband, den Frauenausschuss und den Betriebswissenschaftsverband.",
+    "board": "Vorsitzender",
+    "gm": "Generalmanager",
+    "gmAssistant": "Assistent des Generalmanagers",
+    "vp": "Stellvertretender Generalmanager",
+    "dept1": [
+      "Produktion",
+      "Vertrieb",
+      "Technologie",
+      "Qualitätsprüfung",
+      "Anlagen"
+    ],
+    "dept2": [
+      "Finanzen"
+    ],
+    "dept3": [
+      "Generalsekretariat der Gruppe",
+      "Einkauf"
+    ],
+    "partyTitle": "Partei- und Massenorganisationen",
+    "party": "Parteigruppe",
+    "partyOrgs": [
+      "Gewerkschaftsbund",
+      "Arbeitsausschuss für die kommende Generation",
+      "Jugendverband",
+      "Frauenausschuss",
+      "Betriebswissenschaftsverband"
+    ]
   }
 }

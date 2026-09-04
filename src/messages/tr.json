@@ -7,7 +7,6 @@
   "nav": {
     "home": "Ana Sayfa",
     "products": "Ürünler",
-    "pricing": "Fiyatlandırma",
     "about": "Hakkımızda",
     "contact": "İletişim",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Kaynaklar",
     "followUs": "Bizi takip edin",
     "rights": "Tüm hakları saklıdır.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Endüstriyel süreçler için hassas ölçüm",
     "heroSubtitle": "Zorlu endüstriyel ortamlar için tasarlanmış basınç, sıcaklık ve seviye ölçüm cihazları — petrokimya, enerji, su arıtma ve metalurji tesislerinde dünya çapında güvenilir.",
     "heroCtaPrimary": "Ürünleri keşfedin",
@@ -156,26 +154,18 @@
     "zoomImage": "Büyüt",
     "closeImage": "Görseli kapat"
   },
-  "pricing": {
-    "title": "Fiyatlandırma ve modeller",
-    "subtitle": "Cihaz sınıflarımızı karşılaştırın. Proses cihazları projeye göre fiyatlanır — kesin fiyat için teklif isteyin.",
-    "inquireNote": "Fiyatlar aralık, malzeme, sertifikasyon ve miktara göre değişir. Şartnamenizi gönderin, bir iş günü içinde özel teklif alın.",
-    "tierBasic": "Temel",
-    "tierStandard": "Standart",
-    "tierPremium": "Premium",
-    "inquireButton": "Teklif isteyin",
-    "features": "Dahil olanlar"
-  },
   "about": {
     "title": "Jingfeng Instruments Hakkında",
     "subtitle": "2008'den beri endüstriyel süreçlerde önemli olanı ölçüyoruz.",
     "storyTitle": "Hikâyemiz",
-    "story": "2008 yılında Çin'in Anhui eyaletindeki Bengbu şehrinde kurulan Anhui Jingfeng Instrument Co., Ltd., dünyanın en zorlu endüstrileri için proses ölçüm cihazları tasarlar ve üretir. İlk basınç transmitterimizden bugünkü basınç-sıcaklık-seviye ürün gamına kadar, ürünlerimiz 40'tan fazla ülkedeki tesislere ulaştı.",
+    "story": "Jingfeng Group Co., Ltd., Kasım 2005'te 380,88 milyon RMB kayıtlı sermaye ile kurulmuş olup Ar-Ge, üretim ve ticareti birleştiren bir grup kuruluşudur. Yan kuruluşları cihazlar, elektrikli ekipmanlar ve polimer malzemeleri kapsamakta; ürünler kablolar ve tellerden komple sistemlere, kablo kanallarına, boru bağlantılarına, vanalara ve şalt panolarına kadar uzanmaktadır. Ulusal uzman \"Küçük Dev\", ulusal yüksek teknoloji kuruluşu ve ulusal yeşil fabrika olan grup 160'tan fazla patente sahiptir, ürünleri dünyaya ihmal edilmekte ve State Grid, CNNC ve Sinopec ile uzun vadeli işbirlikleri sürdürmektedir.",
     "missionTitle": "Misyon",
     "mission": "Güvenilir, sertifikalı proses ölçümünü her endüstriyel işletme için erişilebilir kılmak — yüksek ithalat fiyatı olmadan.",
     "certsTitle": "Sertifikalar ve onaylar",
     "teamTitle": "Yönetim",
-    "historyTitle": "Kilometre taşları"
+    "historyTitle": "Kilometre taşları",
+    "orgTitle": "Organizasyon Yapısı",
+    "orgIntro": "Grup, net ve verimli bir yapıyla 6S standartlaştırılmış yönetimi uygulamakta olup üretim, satış, teknoloji, kalite kontrol, ekipman, finans, satın alma ve Grup Genel Müdürlük Ofisi'ni kapsamaktadır."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Bengbu, Anhui'de kuruluş."
+      "year": "2005–2007",
+      "text": "2005'te kuruldu; başlangıçtan itibaren Tianchang şehrinin öncü kuruluşu oldu."
     },
     {
-      "year": "2013",
-      "text": "İlk elektromanyetik debimetre teslim edildi."
+      "year": "2008–2011",
+      "text": "Tianchang'ın ilk 20 sanayi kuruluşu arasında 11. sırada."
     },
     {
-      "year": "2017",
-      "text": "ATEX / IECEx Ex-zona sertifikaları."
+      "year": "2012–2016",
+      "text": "Çin'de tanınmış marka, ulusal yüksek teknoloji kuruluşu, ulusal sözleşmelerine sadık kuruluş, Anhui tanınmış marka ürünleri, belediye ilk 20."
     },
     {
-      "year": "2021",
-      "text": "Radar seviye transmitteri serisi lansmanı."
+      "year": "2017–2020",
+      "text": "Çin kablo endüstrisinin en rekabetçi ilk 100'ü ve Anhui ilk 20'si; Tianchang ilk 7'sine girdi."
     },
     {
-      "year": "2024",
-      "text": "40'tan fazla ülkeye ihracat."
+      "year": "2021–2024",
+      "text": "Ulusal uzman \"Küçük Dev\" (3. ve 6. grup), Anhui ilk 50, dijital fabrika, belediye yeşil fabrikası; IPO durum tespiti tamamlandı."
+    },
+    {
+      "year": "2025–",
+      "text": "Yeni bir yolculuk başlıyor: belediye ilk 20, il yeşil fabrikası, ulusal yeşil fabrika."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Dokümantasyonda ara…",
     "onThisPage": "Bu sayfada",
     "backToDocs": "Dokümantasyona dön"
+  },
+  "org": {
+    "title": "Organizasyon Yapısı",
+    "intro": "Grup, net ve verimli bir yapıyla 6S standartlaştırılmış yönetimi uygulamaktadır. İdari hatta, Yönetim Kurulu Başkanı Genel Müdür ve sekiz departmanı yöneten üç Genel Müdür Yardımcısını denetlemektedir. Parti ve kitle hattında ise Genel Parti Örgütü; İşçi Sendikası, Yetişen Nesil için Çalışma Komitesi, Gençlik Birliği, Kadın Komitesi ve İşletme Bilim ve Teknoloji Derneğini bir araya getirmektedir.",
+    "board": "Yönetim Kurulu Başkanı",
+    "gm": "Genel Müdür",
+    "gmAssistant": "Genel Müdür Asistanı",
+    "vp": "Genel Müdür Yardımcısı",
+    "dept1": [
+      "Üretim",
+      "Satış",
+      "Teknoloji",
+      "Kalite Kontrol",
+      "Ekipman"
+    ],
+    "dept2": [
+      "Finans"
+    ],
+    "dept3": [
+      "Grup Genel Müdürlük Ofisi",
+      "Satın Alma"
+    ],
+    "partyTitle": "Parti ve Kitle Örgütleri",
+    "party": "Genel Parti Örgütü",
+    "partyOrgs": [
+      "İşçi Sendikası",
+      "Yetişen Nesil için Çalışma Komitesi",
+      "Gençlik Birliği",
+      "Kadın Komitesi",
+      "İşletme Bilim ve Teknoloji Derneği"
+    ]
   }
 }

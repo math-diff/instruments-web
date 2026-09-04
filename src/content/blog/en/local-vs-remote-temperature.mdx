@@ -1,0 +1,102 @@
+---
+title: "Bimetal thermometers vs RTDs and thermocouples: dividing the temperature measurement task"
+description: "Local indication calls for a bimetal thermometer; signal transmission calls for an RTD or thermocouple. How industrial temperature instruments divide the work."
+date: 2025-02-20
+tags: [selection, temperature]
+category: Selection guides
+---
+
+Industrial temperature points answer two questions: **what does the
+operator see in the field**, and **what does the control system
+receive**. Different instruments serve each purpose — bimetal
+thermometers for local indication, RTDs (Pt100) or thermocouples for
+signal transmission. This guide explains the division of labor and
+the selection essentials.
+
+## 1. Who does what
+
+| Instrument | Role | Typical use |
+| --- | --- | --- |
+| Bimetal thermometer | Local indication, no power needed | Pumps, tanks, piping, bearing housings |
+| RTD (Pt100 etc.) | Transmitted signal, high accuracy at low-to-mid temperatures | Reactors, thermal-oil heaters, bearings and windings |
+| Thermocouple (TC) | Transmitted signal, high-temperature service | Furnaces, power-plant boilers, hot chemical lines |
+
+A **dual installation** at the same point — one bimetal thermometer
+for the field plus one RTD for the DCS — is the most common engineering
+configuration: the control room gets the signal, operators get a
+local reading, and each checks the other.
+
+## 2. Bimetal thermometers: construction and selection
+
+A bimetal thermometer winds two metal strips with different expansion
+coefficients into a helix; temperature change rotates the helix and
+drives the pointer directly. No power supply, mechanically rugged —
+a pure field instrument.
+
+Selection points:
+
+- **Range**: normal operating temperature between one-third and
+  two-thirds of span. Common spans: 0–150 °C, 0–300 °C, 0–500 °C.
+- **Accuracy class**: classes 1.5 and 2.5 are typical; 2.5 is
+  generally sufficient for local monitoring.
+- **Stem diameter and insertion depth**: effective insertion depth
+  should be ≥ 15–20 stem diameters to limit conduction error;
+  sheath in 304/316L stainless per the media.
+- **Connection**: threaded (M27×2 common) for direct pipe insertion;
+  union-nut versions allow periodic withdrawal for calibration.
+- **Dial orientation**: axial (pointer parallel to stem) for panel
+  mounting; radial (pointer perpendicular to stem) for vertical pipe
+  installation facing the walkway.
+- **Vibration**: near pumps and rotating machinery, specify the
+  **liquid-filled (damped) type** — an undamped pointer will blur.
+
+## 3. RTD or thermocouple: decide by temperature, then accuracy
+
+**Step 1: temperature range**
+
+| Range | First choice |
+| --- | --- |
+| −50 °C to +400 °C | RTD (Pt100) |
+| +400 °C to +850 °C | RTD upper limit or Type K thermocouple |
+| Above +850 °C | Thermocouple (Type K continuous to ~1000 °C, Type S to ~1300 °C) |
+
+**Step 2: within the same range, compare accuracy and stability**
+
+- The Pt100 RTD is **more accurate** in the −50 to 400 °C band,
+  more stable, and needs no cold junction — the default choice for
+  low and mid temperatures. A Class A Pt100 tolerates
+  ±(0.15 + 0.002·|t|) °C (per IEC 60751; Class A applies from about
+  −30 to 350 °C) — i.e. ±0.15 °C at 0 °C and ±0.85 °C at 350 °C.
+- Thermocouples are simple and tolerate heat and shock, but are less
+  accurate (Type K Class 1 per IEC 60584: ±1.5 °C from −40 to 375 °C,
+  ±0.004·|t| above), need cold-junction compensation, and their
+  millivolt signals are more noise-prone.
+
+**Step 3: wiring**
+
+RTDs come in two-, three- and four-wire versions. **Three-wire is the
+industrial standard** — the lead resistance is cancelled by measuring
+through two arms of the bridge. Long leads without three-wire
+compensation add lead resistance directly as measurement error.
+Four-wire is for laboratory-grade accuracy.
+
+## 4. Installation and common problems
+
+- **Insertion**: against the flow or perpendicular to it, with the
+  measuring tip near the pipe centerline.
+- **Thermowells**: high-velocity dusty flows (coal milling, powder
+  conveying) need **wear-resistant** elements with reinforced tips;
+  plain wells erode quickly.
+- **Hazardous areas**: use flameproof junction boxes (Ex d) selected
+  and installed per GB/T 3836 (IEC 60079 series).
+- **Typical faults**: jumping readings point to loose terminals or
+  mixing compensation cable with ordinary cable; a consistent offset
+  points to insufficient insertion depth or sheath fouling.
+
+## Summary
+
+Local reading → bimetal thermometer. Into the DCS, with interlocks →
+RTD (low/mid temperature) or thermocouple (high temperature). Send the
+media, temperature range, installation orientation and area
+classification in your inquiry and our engineers will return a model
+with insertion-depth recommendation.

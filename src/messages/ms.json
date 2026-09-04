@@ -7,7 +7,6 @@
   "nav": {
     "home": "Utama",
     "products": "Produk",
-    "pricing": "Harga",
     "about": "Tentang kami",
     "contact": "Hubungi kami",
     "blog": "Blog",
@@ -32,12 +31,11 @@
     "resources": "Sumber",
     "followUs": "Ikuti kami",
     "rights": "Hak cipta terpelihara.",
-    "address": "No. 1 Instrument Road, Bengbu, Anhui, China",
-    "email": "sales@jingfeng-instrument.com",
+    "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
+    "email": "yuefeng_yang@mail.ustc.edu.cn",
     "phone": "+86 555 0000 000"
   },
   "home": {
-    "heroEyebrow": "Anhui Jingfeng Instrument Co., Ltd.",
     "heroTitle": "Pengukuran tepat untuk proses industri",
     "heroSubtitle": "Instrumen tekanan, suhu dan aras yang dibina untuk persekitaran industri sukar — dipercayai di kilang petrokimia, kuasa, air dan metalurgi di seluruh dunia.",
     "heroCtaPrimary": "Lihat produk",
@@ -156,26 +154,18 @@
     "zoomImage": "Lihat lebih besar",
     "closeImage": "Tutup imej"
   },
-  "pricing": {
-    "title": "Harga dan model",
-    "subtitle": "Bandingkan gred instrumen kami. Instrumen proses dinilai mengikut projek — minta sebut harga untuk harga tepat.",
-    "inquireNote": "Harga berbeza mengikut julat, bahan, pensijilan dan kuantiti. Hantar spesifikasi anda untuk sebut harga dalam satu hari bekerja.",
-    "tierBasic": "Asas",
-    "tierStandard": "Standard",
-    "tierPremium": "Premium",
-    "inquireButton": "Minta sebut harga",
-    "features": "Termasuk"
-  },
   "about": {
     "title": "Tentang Jingfeng Instruments",
     "subtitle": "Sejak 2008, mengukur apa yang penting dalam proses industri.",
     "storyTitle": "Kisah kami",
-    "story": "Ditubuhkan pada 2008 di Bengbu, Anhui, Anhui Jingfeng Instrument Co., Ltd. mereka dan mengeluarkan instrumen pengukuran proses untuk industri paling menuntut di dunia. Dari transmitter tekanan pertama sehingga juluk lengkap tekanan, suhu dan aras hari ini, produk kami dihantar ke kilang di lebih 40 negara.",
+    "story": "Jingfeng Group Co., Ltd. ditubuhkan pada November 2005 dengan modal dibenarkan 380.88 juta RMB dan merupakan syarikat kumpulan yang mengintegrasikan R&D, pembuatan dan perdagangan. Anak syarikatnya merangkumi instrumen, peralatan elektrik dan material polimer, dengan produk dari kabel dan wayar hingga sistem lengkap, tray kabel, kelengkapan paip, injap dan suis utama. \"Little Giant\" kebangsaan khusus, syarikat teknologi tinggi kebangsaan dan kilang hijau kebangsaan, kumpulan memegang 160+ paten, mengeksport ke seluruh dunia dan mengekalkan perkongsian jangka panjang dengan State Grid, CNNC dan Sinopec.",
     "missionTitle": "Misi",
     "mission": "Menjadikan pengukuran proses yang boleh dipercayai dan bersijil mudah diakses oleh setiap operasi industri — tanpa harga import premium.",
     "certsTitle": "Pensijilan dan kelulusan",
     "teamTitle": "Kepimpinan",
-    "historyTitle": "Peristiwa penting"
+    "historyTitle": "Peristiwa penting",
+    "orgTitle": "Struktur Organisasi",
+    "orgIntro": "Kumpulan ini mengamalkan pengurusan piawai 6S dengan struktur yang jelas dan cekap merangkumi jabatan pengeluaran, jualan, teknologi, pemeriksaan kualiti, peralatan, kewangan, pembelian dan pejabat am kumpulan."
   },
   "team": [
     {
@@ -197,24 +187,28 @@
   ],
   "history": [
     {
-      "year": "2008",
-      "text": "Ditubuhkan di Bengbu, Anhui."
+      "year": "2005–2007",
+      "text": "Ditubuhkan pada 2005; sejak awal menjadi syarikat utama bandar Tianchang."
     },
     {
-      "year": "2013",
-      "text": "Pengukur aliran elektromagnet pertama dihantar."
+      "year": "2008–2011",
+      "text": "Kedudukan ke-11 antara 20 syarikat industri teratas Tianchang."
     },
     {
-      "year": "2017",
-      "text": "Pensijilan ATEX / IECEx kawasan berbahaya."
+      "year": "2012–2016",
+      "text": "Jenama terkenal China, syarikat teknologi tinggi kebangsaan, syarikat patuh kontrak kebangsaan, produk jenama terkenal Anhui, top 20 perbandaran."
     },
     {
-      "year": "2021",
-      "text": "Pelancaran rangkaian transmitter aras radar."
+      "year": "2017–2020",
+      "text": "Top 100 paling berdaya saing dalam industri kabel China dan top 20 Anhui; masuk top 7 Tianchang."
     },
     {
-      "year": "2024",
-      "text": "Eksport ke lebih 40 negara."
+      "year": "2021–2024",
+      "text": "\"Little Giant\" kebangsaan khusus (kumpulan ke-3 dan ke-6), top 50 Anhui, kilang digital, kilang hijau perbandaran; usaha wajar IPO selesai."
+    },
+    {
+      "year": "2025–",
+      "text": "Perjalanan baharu bermula: top 20 perbandaran, kilang hijau wilayah, kilang hijau kebangsaan."
     }
   ],
   "contact": {
@@ -250,5 +244,36 @@
     "searchPlaceholder": "Cari dokumentasi…",
     "onThisPage": "Di halaman ini",
     "backToDocs": "Kembali ke dokumentasi"
+  },
+  "org": {
+    "title": "Struktur Organisasi",
+    "intro": "Kumpulan ini mengamalkan pengurusan piawai 6S dengan struktur yang jelas dan cekap. Dari segi pentadbiran, Pengerusi menyelia Pengurus Besar dan tiga Pengurus Besar Kanan yang mengurus lapan jabatan. Dari segi parti dan massa, Cawangan Besar Parti menyatukan Kesatuan Pekerja, Jawatankuasa Kerja untuk Generasi Akan Datang, Liga Belia, Jawatankuasa Wanita dan Persatuan Sains & Teknologi Perusahaan.",
+    "board": "Pengerusi",
+    "gm": "Pengurus Besar",
+    "gmAssistant": "Pembantu Pengurus Besar",
+    "vp": "Timbalan Pengurus Besar",
+    "dept1": [
+      "Jabatan Pengeluaran",
+      "Jabatan Jualan",
+      "Jabatan Teknologi",
+      "Jabatan Pemeriksaan Kualiti",
+      "Jabatan Peralatan"
+    ],
+    "dept2": [
+      "Jabatan Kewangan"
+    ],
+    "dept3": [
+      "Pejabat Am Kumpulan",
+      "Jabatan Pembelian"
+    ],
+    "partyTitle": "Organisasi Parti dan Massa",
+    "party": "Cawangan Besar Parti",
+    "partyOrgs": [
+      "Kesatuan Pekerja",
+      "Jawatankuasa Kerja untuk Generasi Akan Datang",
+      "Liga Belia",
+      "Jawatankuasa Wanita",
+      "Persatuan Sains & Teknologi Perusahaan"
+    ]
   }
 }

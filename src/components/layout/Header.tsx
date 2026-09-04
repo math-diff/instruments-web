@@ -19,7 +19,7 @@ export function Header({
   searchPlaceholder,
 }: {
   locale: Locale;
-  nav: { home: string; products: string; pricing: string; about: string; contact: string; blog: string; docs: string };
+  nav: { home: string; products: string; about: string; contact: string; blog: string; docs: string };
   brandName: string;
   quoteLabel: string;
   contactLabel: string;
@@ -29,8 +29,8 @@ export function Header({
   const [open, setOpen] = useState(false);
 
   const items: NavItem[] = [
+    { key: "home", label: nav.home, path: "/" },
     { key: "products", label: nav.products, path: "/products" },
-    { key: "pricing", label: nav.pricing, path: "/pricing" },
     { key: "about", label: nav.about, path: "/about" },
     { key: "blog", label: nav.blog, path: "/blog" },
     { key: "docs", label: nav.docs, path: "/docs" },
@@ -38,6 +38,8 @@ export function Header({
 
   const isActive = (path: string) => {
     const local = localizePath(locale, path);
+    // home ("/") must not prefix-match: /zh is a prefix of every localized path
+    if (path === "/") return pathname === local || pathname === `${local}/`;
     return pathname === local || pathname.startsWith(local + "/");
   };
 
@@ -181,7 +183,7 @@ export function Header({
 
           <div className="flex items-center gap-3">
             <Link
-              href={localizePath(locale, "/pricing")}
+              href={localizePath(locale, "/contact")}
               className="inline-flex h-10 items-center rounded-full border border-brand px-5 text-sm font-bold text-brand transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_0.3rem_0.8rem_rgba(0,37,101,0.18)]"
             >
               {quoteLabel}
@@ -217,17 +219,6 @@ export function Header({
                   </Link>
                 ),
               )}
-              <Link
-                href={localizePath(locale, "/pricing")}
-                onClick={() => setOpen(false)}
-                className={`rounded-lg px-3 py-2.5 text-base font-bold ${
-                  isActive("/pricing")
-                    ? "bg-brand-soft text-link"
-                    : "text-brand hover:bg-surface-muted"
-                }`}
-              >
-                {quoteLabel}
-              </Link>
             </nav>
           </div>
         </div>

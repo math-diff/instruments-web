@@ -1,41 +1,124 @@
 ---
-title: Understanding hazardous-area certifications for instruments
-description: Ex d, Ex i, ATEX, IECEx — what each means and how to match them to your zone.
-date: 2024-09-18
+title: "Reading the Ex nameplate: area classification, groups and temperature classes"
+description: "What Ex d, Ex i, zone classification (0/1/2), gas groups and temperature classes mean — how to read a hazardous-area instrument nameplate."
+date: 2025-04-10
 tags: [safety, certification]
 category: Application notes
 ---
 
-If your instrument sits in a classified area, the certification markings on
-the nameplate are not optional decoration — they are the legal basis for
-installation. Here is a concise reference.
+Every electrical instrument in an explosive atmosphere carries an Ex
+marking on its nameplate — the instrument's license to operate.
+Misreading it can fail an inspection at best and plant an incident
+at worst. This article explains each segment of the marking under
+the GB/T 3836 series (harmonized with IEC 60079) and the selection
+logic behind it.
 
-## Zones and divisions
+## 1. The fire triangle and the two protection strategies
 
-| Zone | Description | Typical marking |
+Combustion or explosion needs three things simultaneously: fuel
+(gas/dust), oxygen, and an ignition source (spark or hot surface).
+Explosion protection is about **keeping these three apart** — since
+electrical instruments cannot avoid carrying energy, the design
+strategies are:
+
+1. **Contain the ignition source** — an internal explosion must not
+   ignite the surrounding atmosphere (e.g. flameproof Ex d);
+2. **Starve the ignition source** — the instrument simply cannot
+   store enough energy to ignite (e.g. intrinsic safety Ex i).
+
+## 2. Area classification: gases and dusts use different systems
+
+**Gas/vapour atmospheres (GB/T 3836.14 / IEC 60079-10-1):**
+
+| Zone | Definition | Example |
 | --- | --- | --- |
-| Zone 0 | Continuous explosive atmosphere | Ex ia |
-| Zone 1 | Likely in normal operation | Ex d / Ex ib |
-| Zone 2 | Unlikely, short duration | Ex n / Ex ec |
+| Zone 0 | Explosive gas mixture present **continuously** or for long periods | Inside a closed storage tank |
+| Zone 1 | Likely to occur in **normal operation** | Fuel stations, pump rooms |
+| Zone 2 | Not likely in normal operation; if it occurs, only briefly | General process areas |
 
-## Ex d vs Ex i — the key difference
+**Combustible dust atmospheres (GB/T 12476 / IEC 60079-10-2):**
 
-- **Ex d (flameproof)** contains the explosion inside a heavy enclosure. The
-  housing survives an internal ignition and cools escaping gases below the
-  ignition temperature.
-- **Ex i (intrinsic safety)** limits electrical energy so the circuit **cannot**
-  produce a spark hot enough to ignite.
+| Zone | Definition |
+| --- | --- |
+| Zone 20 | Dust cloud present continuously or frequently |
+| Zone 21 | Dust cloud occasionally present in normal operation |
+| Zone 22 | Not likely in normal operation, short duration only; dust layers possible |
 
-## ATEX vs IECEx
+**The first selection rule: the instrument's protection level must
+meet or exceed the zone requirement.** Only Ex ia intrinsic safety is
+acceptable in Zone 0; Zone 1 allows Ex d and Ex ib; Zone 2 is the
+least restrictive (Ex n / Ex ec acceptable).
 
-| | ATEX | IECEx |
-| --- | --- | --- |
-| Region | EU | Global |
-| Standard | EN/ATEX directives | IEC 60079 |
-| Acceptance | EU mandatory | Widely accepted |
+## 3. Common protection types compared
 
-## What we ship
+| Mark | Name | Principle | Typical equipment |
+| --- | --- | --- | --- |
+| Ex d | Flameproof | Enclosure withstands internal explosion and quenches the flame | Junction boxes, switches, power equipment |
+| Ex ia / ib | Intrinsic safety | Energy limited so sparks cannot ignite | Transmitters, RTDs/TCs and other low-power instruments |
+| Ex e | Increased safety | Enhanced construction prevents sparks and hot spots | Junction boxes, motors |
+| Ex n / ec | Non-sparking (Zone 2 only) | No sparks in normal operation | General Zone 2 equipment |
+| Ex t | Dust ignition protection by enclosure | Enclosure limits surface temperature and dust ingress | Dust atmospheres |
 
-The transmitter carries **Ex ia IIC T4** (intrinsic safety), suitable
-for Zone 1 with an appropriate safety barrier. Premium models add **Ex d**
-flameproof housings. Every unit ships with a conformity certificate.
+**The key companion for intrinsic safety (Ex i) is the safety
+barrier**: an energy-limiting device installed between the safe area
+and the hazardous area. When specifying Ex ia instruments, verify that
+the barrier's output parameters (Uo, Io, Po) match the instrument's
+input parameters (Ui, Ii, Pi), and that the permitted cable
+parameters (Co, Lo) cover the field cable capacitance and inductance.
+
+## 4. Reading a complete Ex nameplate
+
+Example marking of a typical flameproof RTD assembly:
+
+**Ex d IIC T6 Gb**
+
+| Segment | Meaning |
+| --- | --- |
+| Ex | Explosion-protected |
+| d | Protection type: flameproof |
+| IIC | Gas group: Group IIC gases (hydrogen, acetylene — hardest to ignite) |
+| T6 | Temperature class: maximum surface temperature ≤ 85 °C |
+| Gb | Equipment Protection Level (EPL): suitable for Zone 1 (Gb); only Ga is acceptable in Zone 0 |
+
+**Gas groups**: Group I (mine methane) → IIA (propane-like) → IIB
+(ethylene-like) → IIC (hydrogen, acetylene). IIC is the most
+demanding and is downward compatible with IIB and IIA areas.
+
+**Temperature classes**: classified by the instrument's maximum
+surface temperature, which must stay **below** the ignition
+temperature of the site gas:
+
+| Class | Max surface temperature |
+| --- | --- |
+| T1 | 450 °C |
+| T2 | 300 °C |
+| T3 | 200 °C |
+| T4 | 135 °C |
+| T5 | 100 °C |
+| T6 | 85 °C |
+
+**Quick rule**: the lower the gas ignition temperature (diethyl ether,
+for example, is T6 territory), the higher the required temperature
+class; a hydrogen atmosphere = Group IIC plus a high temperature
+class — the most stringent combination.
+
+## 5. Certification systems and documentation
+
+- **China**: CCC certification (mandatory; explosion-protected
+  electrical equipment included since 2020), per the GB/T 3836
+  series, certified by authorized testing bodies.
+- **International**: IECEx (multi-country mutual recognition);
+  European CE-ATEX (Directive 2014/34/EU); North American FM/UL
+  (Division system with a different zoning concept).
+- **Three things to check at purchase**: the certificate number and
+  validity, nameplate marking matching the purchase order, and the
+  **termination and sealing requirements** in the installation
+  instructions (flameproof joints must never be painted or damaged).
+
+## Summary
+
+Hazardous-area selection order: **classify the area → choose the
+protection type → verify gas group and temperature class → check the
+certificates**. Send us your area classification drawing (or media
+list) and our application engineers will help verify the nameplate
+marking against your site classification.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { MapPrefetch } from "@/components/ui/MapPrefetch";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n";
 import {
@@ -110,6 +111,7 @@ export default async function LocaleLayout({
         <main className="flex-1">{children}</main>
         <Footer locale={currentLocale} dict={dict} />
         <Analytics />
+        <MapPrefetch />
       </body>
     </html>
   );
