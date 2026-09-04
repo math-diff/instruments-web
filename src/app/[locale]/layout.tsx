@@ -39,7 +39,7 @@ export async function generateMetadata({
       template: `%s | ${dict.brand.name}`,
     },
     description: dict.home.heroSubtitle,
-    metadataBase: new URL("https://jfinternational.vercel.app"),
+    metadataBase: new URL("https://jf-international.vercel.app"),
     alternates: {
       canonical: `/${locale}`,
       languages: Object.fromEntries(
