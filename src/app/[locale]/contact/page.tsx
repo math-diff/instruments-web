@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { pageAlternates } from "@/lib/seo";
+import { Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
@@ -17,7 +18,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : "en");
-  return { title: dict.contact.title, description: dict.contact.subtitle };
+  return {
+    title: dict.contact.title,
+    description: dict.contact.subtitle,
+    alternates: pageAlternates(isLocale(locale) ? locale : "en", "/contact"),
+  };
 }
 
 export default async function ContactPage({
@@ -96,12 +101,6 @@ export default async function ContactPage({
                   label={dict.contact.emailLabel}
                   value={dict.footer.email}
                   href={`mailto:${dict.footer.email}`}
-                />
-                <InfoRow
-                  icon={<Phone className="h-5 w-5" strokeWidth={1.5} />}
-                  label={dict.contact.phoneLabel}
-                  value={dict.footer.phone}
-                  href={`tel:${dict.footer.phone.replace(/\s/g, "")}`}
                 />
                 <InfoRow
                   icon={<Clock className="h-5 w-5" strokeWidth={1.5} />}

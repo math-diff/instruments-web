@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import { Award, Target, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
@@ -52,8 +53,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : (locale as Locale));
-  return { title: dict.about.title, description: dict.about.subtitle };
+  const dict = await getDictionary(isLocale(locale) ? locale : "en");
+  return {
+    title: dict.about.title,
+    description: dict.about.subtitle,
+    alternates: pageAlternates(isLocale(locale) ? locale : "en", "/about"),
+  };
 }
 
 export default async function AboutPage({

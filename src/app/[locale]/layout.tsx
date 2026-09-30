@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 import { Noto_Sans_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -39,13 +40,7 @@ export async function generateMetadata({
       template: `%s | ${dict.brand.name}`,
     },
     description: dict.home.heroSubtitle,
-    metadataBase: new URL("https://jf-international.vercel.app"),
-    alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, l === defaultLocale ? "/" : `/${l}`]),
-      ),
-    },
+    metadataBase: new URL(SITE_URL),
     openGraph: {
       title: `${dict.brand.name} — ${dict.brand.tagline}`,
       description: dict.home.heroSubtitle,

@@ -80,14 +80,6 @@ export function Footer({
               <li>{dict.footer.address}</li>
               <li>
                 <a
-                  href={`tel:${dict.footer.phone.replace(/\s/g, "")}`}
-                  className="text-ink hover:text-link"
-                >
-                  {dict.footer.phone}
-                </a>
-              </li>
-              <li>
-                <a
                   href={`mailto:${dict.footer.email}`}
                   className="font-bold text-link hover:text-brand hover:underline underline-offset-4"
                 >

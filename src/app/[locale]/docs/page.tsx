@@ -1,3 +1,4 @@
+import { contentAlternates } from "@/lib/seo";
 import Link from "next/link";
 import { FileText, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -14,8 +15,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : (locale as Locale));
-  return { title: dict.docs.title, description: dict.docs.subtitle };
+  const dict = await getDictionary(isLocale(locale) ? locale : "en");
+  return {
+    title: dict.docs.title,
+    description: dict.docs.subtitle,
+    alternates: contentAlternates("docs", isLocale(locale) ? locale : "en"),
+  };
 }
 
 export default async function DocsPage({

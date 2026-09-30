@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -16,8 +17,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : (locale as Locale));
-  return { title: dict.products.title, description: dict.products.subtitle };
+  const dict = await getDictionary(isLocale(locale) ? locale : "en");
+  return {
+    title: dict.products.title,
+    description: dict.products.subtitle,
+    alternates: pageAlternates(isLocale(locale) ? locale : "en", "/products"),
+  };
 }
 
 export default async function ProductsPage({

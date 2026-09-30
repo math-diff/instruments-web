@@ -1,17 +1,17 @@
+import { contentAlternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
 import { formatDate } from "@/lib/date";
-import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
-import { getContent, listContent } from "@/lib/content";
+import { isLocale, locales, localizePath, type Locale } from "@/lib/i18n-config";
+import { getContent, hasOwnContent, listContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
 
 export async function generateStaticParams() {
-  const locales = ["en", "zh"] as const;
   return locales.flatMap((locale) =>
     listContent("blog", locale).map((post) => ({ locale, slug: post.slug })),
   );
@@ -29,6 +29,7 @@ export async function generateMetadata({
   return {
     title: post.meta.title,
     description: post.meta.description,
+    alternates: contentAlternates("blog", loc, slug),
   };
 }
 
@@ -43,7 +44,8 @@ export default async function BlogPostPage({
   const post = getContent("blog", loc, slug);
   if (!post) notFound();
 
-  const { default: Post } = await import(`@/content/blog/${loc}/${slug}.mdx`);
+  const contentLocale = hasOwnContent("blog", loc) ? loc : "en";
+  const { default: Post } = await import(`@/content/blog/${contentLocale}/${slug}.mdx`);
 
   return (
     <>

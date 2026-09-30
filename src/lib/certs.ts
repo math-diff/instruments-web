@@ -35,33 +35,6 @@ export const certificates: Certificate[] = [
     statusLabel: labels.valid,
   },
   {
-    file: "/certs/cert-03.jpg",
-    title: {
-      en: "SIL Functional Safety Certification (Pressure Gauges)",
-      zh: "SIL 功能安全认证(压力表)",
-    },
-    status: "expired",
-    statusLabel: labels.expired,
-  },
-  {
-    file: "/certs/cert-04.jpg",
-    title: {
-      en: "SIL Functional Safety Certification (Level Gauges)",
-      zh: "SIL 功能安全认证(液位计)",
-    },
-    status: "expired",
-    statusLabel: labels.expired,
-  },
-  {
-    file: "/certs/cert-05.jpg",
-    title: {
-      en: "SIL Functional Safety Certification (Temperature Transmitter)",
-      zh: "SIL 功能安全认证(一体化温度变送器)",
-    },
-    status: "expired",
-    statusLabel: labels.expired,
-  },
-  {
     file: "/certs/cert-06.jpg",
     title: {
       en: "Member, National TC on Industrial Process Measurement & Automation",

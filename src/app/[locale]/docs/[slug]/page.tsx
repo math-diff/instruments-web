@@ -1,17 +1,17 @@
+import { contentAlternates } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
-import { docTree, getContent, listContent } from "@/lib/content";
+import { isLocale, locales, localizePath, type Locale } from "@/lib/i18n-config";
+import { docTree, getContent, hasOwnContent, listContent } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Card";
 import { DocsSidebar } from "@/components/layout/DocsSidebar";
 
 export async function generateStaticParams() {
-  const locales = ["en", "zh"] as const;
   return locales.flatMap((locale) =>
     listContent("docs", locale).map((doc) => ({ locale, slug: doc.slug })),
   );
@@ -31,6 +31,7 @@ export async function generateMetadata({
   return {
     title: doc.meta.title,
     description: doc.meta.description,
+    alternates: contentAlternates("docs", loc, slug),
   };
 }
 
@@ -46,7 +47,8 @@ export default async function DocPage({
   if (!doc) notFound();
 
   const tree = docTree(loc);
-  const { default: Doc } = await import(`@/content/docs/${loc}/${slug}.mdx`);
+  const contentLocale = hasOwnContent("docs", loc) ? loc : "en";
+  const { default: Doc } = await import(`@/content/docs/${contentLocale}/${slug}.mdx`);
 
   return (
     <>

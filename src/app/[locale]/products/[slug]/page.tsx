@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -30,6 +31,7 @@ export async function generateMetadata({
   return {
     title: pick(product.name, loc),
     description: pick(product.summary, loc),
+    alternates: pageAlternates(loc, `/products/${slug}`),
   };
 }
 

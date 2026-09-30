@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -10,7 +12,7 @@ import {
   Globe,
 } from "lucide-react";
 import { getDictionary } from "@/lib/i18n";
-import { localizePath, type Locale } from "@/lib/i18n-config";
+import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { listContent, hasOwnContent } from "@/lib/content";
 import { formatDate } from "@/lib/date";
 import { certificates } from "@/lib/certs";
@@ -30,6 +32,15 @@ const categoryCover: Record<Category, string> = {
   temperature: "/products/bimetal-thermometer.jpg",
   level: "/products/magnetic-level.jpg",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return { alternates: pageAlternates(isLocale(locale) ? locale : "en") };
+}
 
 export default async function HomePage({
   params,

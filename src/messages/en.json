@@ -32,8 +32,7 @@
     "followUs": "Follow Us",
     "rights": "All rights reserved.",
     "address": "No. 610, Chuzhou High-Tech Industrial Development Zone, Tianchang, Chuzhou, Anhui, China",
-    "email": "yuefeng_yang@mail.ustc.edu.cn",
-    "phone": "+86 555 0000 000"
+    "email": "yuefeng_yang@mail.ustc.edu.cn"
   },
   "home": {
     "heroTitle": "Precision measurement for industrial processes",
@@ -133,7 +132,6 @@
   ],
   "certs": [
     "Pattern Approval (gauges/transmitters)",
-    "SIL Functional Safety",
     "SAC/TC 124/SC2 Committee Member",
     "National \"Little Giant\" Enterprise",
     "Cable LVD ECM Certificates",

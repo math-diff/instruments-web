@@ -32,8 +32,7 @@
     "followUs": "关注我们",
     "rights": "保留所有权利。",
     "address": "中国安徽省滁州市天长市滁州高新技术产业开发区610号",
-    "email": "yuefeng_yang@mail.ustc.edu.cn",
-    "phone": "+86 555 0000 000"
+    "email": "yuefeng_yang@mail.ustc.edu.cn"
   },
   "home": {
     "heroTitle": "为工业过程提供精准测量",
@@ -133,7 +132,6 @@
   ],
   "certs": [
     "计量器具型式批准证书(压力表/变送器)",
-    "SIL 功能安全认证",
     "SAC/TC 124/SC2 标委会成员单位",
     "国家级专精特新“小巨人”企业",
     "电力/控制电缆 LVD ECM 证书",

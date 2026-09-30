@@ -1,3 +1,4 @@
+import { contentAlternates } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -16,8 +17,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : (locale as Locale));
-  return { title: dict.blog.title, description: dict.blog.subtitle };
+  const dict = await getDictionary(isLocale(locale) ? locale : "en");
+  return {
+    title: dict.blog.title,
+    description: dict.blog.subtitle,
+    alternates: contentAlternates("blog", isLocale(locale) ? locale : "en"),
+  };
 }
 
 export default async function BlogPage({
