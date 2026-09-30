@@ -1,0 +1,2 @@
+# Preserve generated PDF bytes, including ReportLab cross-reference offsets.
+*.pdf binary

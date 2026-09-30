@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:seo": "node scripts/analytics-unit.cjs && node scripts/domain-config-unit.cjs && node scripts/seo-smoke.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

@@ -12,7 +12,7 @@ import {
   Globe,
 } from "lucide-react";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
+import { categoryPath, isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { listContent, hasOwnContent } from "@/lib/content";
 import { formatDate } from "@/lib/date";
 import { certificates } from "@/lib/certs";
@@ -120,7 +120,7 @@ export default async function HomePage({
           {categoryItems.map((cat, i) => (
             <Reveal key={cat} delay={i * 90} className="h-full">
               <Link
-                href={localizePath(loc, `/products?cat=${cat}`)}
+                href={categoryPath(loc, cat)}
                 className="card card-hover group flex h-full flex-col overflow-hidden"
               >
                 <div className="relative h-44 border-b border-line bg-surface">

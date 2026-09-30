@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
+import { categoryPath, isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { products, categories, pick, type Category } from "@/lib/products";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -13,15 +13,19 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ q?: string | string[] }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const query = await searchParams;
   const dict = await getDictionary(isLocale(locale) ? locale : "en");
   return {
     title: dict.products.title,
     description: dict.products.subtitle,
     alternates: pageAlternates(isLocale(locale) ? locale : "en", "/products"),
+    ...(query.q !== undefined ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -30,10 +34,12 @@ export default async function ProductsPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ cat?: string; q?: string }>;
+  searchParams: Promise<{ cat?: string | string[]; q?: string | string[] }>;
 }) {
   const { locale } = await params;
-  const { cat, q } = await searchParams;
+  const search = await searchParams;
+  const cat = Array.isArray(search.cat) ? search.cat[0] : search.cat;
+  const q = Array.isArray(search.q) ? search.q[0] : search.q;
   const loc = locale as Locale;
   const dict = await getDictionary(loc);
 
@@ -61,7 +67,7 @@ export default async function ProductsPage({
     ...categories.map((c) => ({
       key: c,
       label: dict.categories[c].name,
-      href: localizePath(loc, `/products?cat=${c}`),
+      href: categoryPath(loc, c),
     })),
   ];
 

@@ -24,6 +24,10 @@ export function LangSwitch({ current }: { current: Locale }) {
   function switchTo(target: Locale) {
     setOpen(false);
     if (target === current) return;
+    if (pathname === "/en/pressure-gauges") {
+      window.location.assign(`/${target}/products?cat=pressure`);
+      return;
+    }
     const segments = pathname.split("/").filter(Boolean);
     if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
       segments[0] = target;

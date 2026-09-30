@@ -15,6 +15,13 @@ export type ContentMeta = {
 
 const CONTENT_ROOT = path.join(process.cwd(), "src", "content");
 
+// YAML parses unquoted dates as Date objects. Keep machine-readable dates stable
+// across the build host's timezone and sort posts chronologically, not by weekday.
+function contentDate(value: unknown): string {
+  const date = value instanceof Date ? value : typeof value === "string" ? new Date(value) : null;
+  return date && !Number.isNaN(date.getTime()) ? date.toISOString().slice(0, 10) : "";
+}
+
 function dirFor(kind: "blog" | "docs", locale: Locale) {
   return path.join(CONTENT_ROOT, kind, locale);
 }
@@ -56,7 +63,7 @@ export function listContent(
         slug,
         title: String(data.title ?? slug),
         description: String(data.description ?? ""),
-        date: String(data.date ?? ""),
+        date: contentDate(data.date),
         tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
         category: data.category ? String(data.category) : undefined,
       };
@@ -77,7 +84,7 @@ export function getContent(kind: "blog" | "docs", locale: Locale, slug: string) 
       slug,
       title: String(data.title ?? slug),
       description: String(data.description ?? ""),
-      date: String(data.date ?? ""),
+      date: contentDate(data.date),
       tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
       category: data.category ? String(data.category) : undefined,
     },

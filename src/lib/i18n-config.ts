@@ -43,6 +43,11 @@ export const isLocale = (value: string): value is Locale =>
 
 export function localizePath(locale: Locale, path = "") {
   const normalized = path.startsWith("/") ? path : `/${path}`;
-  if (locale === defaultLocale) return normalized === "/" ? "/" : normalized;
   return normalized === "/" ? `/${locale}` : `/${locale}${normalized}`;
+}
+
+export function categoryPath(locale: Locale, category: string) {
+  return locale === "en" && category === "pressure"
+    ? "/en/pressure-gauges"
+    : localizePath(locale, `/products?cat=${encodeURIComponent(category)}`);
 }

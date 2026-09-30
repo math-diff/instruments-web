@@ -1,4 +1,5 @@
-import { contentAlternates } from "@/lib/seo";
+import { contentAlternates, pageUrl, SITE_URL } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -30,6 +31,7 @@ export async function generateMetadata({
     title: post.meta.title,
     description: post.meta.description,
     alternates: contentAlternates("blog", loc, slug),
+    openGraph: { title: post.meta.title, description: post.meta.description, type: "article", url: pageUrl(hasOwnContent("blog", loc) ? loc : "en", `/blog/${slug}`) },
   };
 }
 
@@ -46,11 +48,27 @@ export default async function BlogPostPage({
 
   const contentLocale = hasOwnContent("blog", loc) ? loc : "en";
   const { default: Post } = await import(`@/content/blog/${contentLocale}/${slug}.mdx`);
+  const breadcrumbs = [
+    { name: dict.nav.home, url: pageUrl(loc) },
+    { name: dict.nav.blog, url: pageUrl(loc, "/blog") },
+    { name: post.meta.title, url: pageUrl(contentLocale, `/blog/${slug}`) },
+  ];
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      <JsonLd data={{
+        "@context": "https://schema.org", "@type": "Article",
+        headline: post.meta.title, description: post.meta.description,
+        mainEntityOfPage: pageUrl(contentLocale, `/blog/${slug}`), inLanguage: contentLocale,
+        ...(post.meta.date ? { datePublished: post.meta.date } : {}),
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      }} />
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-16 sm:py-20">
+          <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap gap-2 text-xs text-ink-soft">
+            {breadcrumbs.map((item, index) => <span key={item.url}>{index > 0 && <span aria-hidden="true"> / </span>}{index < breadcrumbs.length - 1 ? <Link href={new URL(item.url).pathname}>{item.name}</Link> : <span aria-current="page">{item.name}</span>}</span>)}
+          </nav>
           <Link
             href={localizePath(loc, "/blog")}
             className="inline-flex items-center gap-1 text-sm font-medium text-ink-soft hover:text-brand"
@@ -67,7 +85,7 @@ export default async function BlogPostPage({
             </h1>
             <p className="mt-4 text-lg text-ink-soft">{post.meta.description}</p>
             <div className="mt-4 flex items-center gap-4 text-sm text-ink-soft">
-              <time>
+              <time dateTime={post.meta.date}>
                 {dict.blog.publishedOn} {formatDate(post.meta.date, loc)}
               </time>
               {post.meta.tags && post.meta.tags.length > 0 && (

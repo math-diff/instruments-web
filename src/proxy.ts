@@ -4,6 +4,12 @@ import { defaultLocale, locales, type Locale } from "@/lib/i18n-config";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  if (pathname === "/en/products" && request.nextUrl.searchParams.get("cat") === "pressure" && !request.nextUrl.searchParams.has("q")) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/en/pressure-gauges";
+    url.searchParams.delete("cat");
+    return NextResponse.redirect(url, 308);
+  }
   const hasLocale = locales.some(
     (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`,
   );

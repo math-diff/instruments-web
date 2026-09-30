@@ -1,119 +1,84 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useId, useState } from "react";
+import { ArrowUpRight, Globe2, Activity, ShieldCheck, Layers3 } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
+import { useBackboneScene } from "./useBackboneScene";
 
-const SCRIPT_SRC = "/backbone/stripe-dataviz-original.js";
+const icons = [Globe2, Activity, ShieldCheck, Layers3];
 
-type Controller = {
-  setColorPalette: (palette: unknown, animate: boolean) => void;
-  initScene: () => void;
-  setAnimationIndex: (index: number, animate: boolean) => void;
-  resize: () => void;
-  paused: boolean;
-};
-
-type StripeBackboneGlobal = {
-  Controller: new (canvas: HTMLCanvasElement) => Controller;
-  palettes: Record<string, unknown>;
-};
-
-declare global {
-  interface Window {
-    StripeBackboneOriginal?: StripeBackboneGlobal;
-  }
-}
-
-function loadScriptOnce(src: string): Promise<void> {
-  if (document.querySelector(`script[src="${src}"]`)) {
-    return Promise.resolve();
-  }
-  return new Promise((resolve, reject) => {
-    const el = document.createElement("script");
-    el.src = src;
-    el.onload = () => resolve();
-    el.onerror = () => reject(new Error(`Failed to load ${src}`));
-    document.body.appendChild(el);
-  });
+/** A measurement dial frames the original particle scene without replacing it. */
+function InstrumentDial({ active }: { active: number }) {
+  return (
+    <svg className="sb-dial" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+      <circle cx="300" cy="300" r="248" className="sb-dial-ring" />
+      <circle cx="300" cy="300" r="213" className="sb-dial-inner" />
+      {Array.from({ length: 80 }, (_, i) => (
+        <line key={i} x1="300" y1="52" x2="300" y2={i % 5 === 0 ? 66 : 58}
+          transform={`rotate(${i * 4.5} 300 300)`} className={i % 5 === 0 ? "sb-tick-major" : "sb-tick"} />
+      ))}
+      <g className="sb-dial-pointer" style={{ transform: `rotate(${active * 90 + 28}deg)` }}>
+        <path d="M300 38 L295 27 L305 27 Z" fill="currentColor" />
+        <path d="M300 80 V100" stroke="currentColor" />
+      </g>
+      <path d="M288 300 H312 M300 288 V312" className="sb-crosshair" />
+    </svg>
+  );
 }
 
 export function StatsBackbone({ stats }: { stats: Dictionary["home"]["stats"] }) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const controllerRef = useRef<Controller | null>(null);
   const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    let cancelled = false;
-    const section = sectionRef.current;
-    const canvas = canvasRef.current;
-    if (!section || !canvas) return;
-
-    loadScriptOnce(SCRIPT_SRC)
-      .then(() => {
-        if (cancelled) return;
-        const lib = window.StripeBackboneOriginal;
-        if (!lib) throw new Error("StripeBackboneOriginal missing");
-        const controller = new lib.Controller(canvas);
-        controller.setColorPalette(lib.palettes.daytime, false);
-        controller.initScene();
-        controller.paused = false;
-        controllerRef.current = controller;
-      })
-      .catch(() => {
-        // WebGL / script unavailable: the section still works as plain stats
-        section.classList.add("sb-error");
-      });
-
-    const onResize = () => controllerRef.current?.resize();
-    const onVisibility = () => {
-      if (controllerRef.current) controllerRef.current.paused = document.hidden;
-    };
-    window.addEventListener("resize", onResize);
-    document.addEventListener("visibilitychange", onVisibility);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("resize", onResize);
-      document.removeEventListener("visibilitychange", onVisibility);
-      if (controllerRef.current) controllerRef.current.paused = true;
-    };
-  }, []);
-
-  const select = (index: number) => {
-    setActive(index);
-    sectionRef.current?.style.setProperty("--hover-index", String(index));
-    controllerRef.current?.setAnimationIndex(index, true);
-  };
+  const { canvasRef, sceneRef, failed } = useBackboneScene(active);
+  const panelId = useId();
+  const current = stats.items[active];
+  const ActiveIcon = icons[active % icons.length];
 
   return (
-    <section ref={sectionRef} className="sb-section" aria-label={stats.title}>
-      <div className="sb-shell">
-        <h2 className="sb-title">
-          <span>{stats.title}</span>
-        </h2>
-        <div className="sb-menu" role="tablist" aria-label={stats.title}>
-          {stats.items.map((item, index) => (
-            <button
-              key={item.copy}
-              role="tab"
-              aria-selected={index === active}
-              className="sb-stat"
-              onClick={() => select(index)}
-              onMouseEnter={() =>
-                sectionRef.current?.style.setProperty("--hover-index", String(index))
-              }
-              onMouseLeave={() =>
-                sectionRef.current?.style.setProperty("--hover-index", String(active))
-              }
-            >
-              <span className="sb-stat-value">{item.value}</span>
-              <span className="sb-stat-copy">{item.copy}</span>
-            </button>
-          ))}
-          <span className="sb-indicator" aria-hidden="true" />
+    <section className="sb-section" aria-label={stats.title}>
+      <div className="sb-shell" data-active={active}>
+        <div className="sb-topline" aria-hidden="true">
+          <span><span className="sb-status-dot" /> JINGFENG / PRECISION IN MOTION</span>
+          <span>01 — 04</span>
         </div>
-        <div className="sb-visual">
-          <canvas ref={canvasRef} className="sb-canvas" aria-hidden="true" />
+        <div className="sb-stage" id={panelId}>
+          <div className="sb-story">
+            <div className="sb-eyebrow" aria-hidden="true">JF <span> / </span> {String(active + 1).padStart(2, "0")}</div>
+            <h2 className="sb-title">{stats.title}</h2>
+            <div className="sb-readout" key={active} aria-live="polite" aria-atomic="true">
+              <span className="sb-main-value">{current.value}</span>
+              <p className="sb-main-copy">{current.copy}</p>
+            </div>
+            <div className="sb-story-foot" aria-hidden="true">
+              <ActiveIcon size={21} strokeWidth={1.25} />
+              <span className="sb-signal-line" />
+              <span>{String(active + 1).padStart(2, "0")} / {String(stats.items.length).padStart(2, "0")}</span>
+            </div>
+          </div>
+          <div ref={sceneRef} className={`sb-visual${failed ? " sb-fallback" : ""}`} aria-hidden="true">
+            <div className="sb-grid" />
+            <div className="sb-orb" />
+            <canvas ref={canvasRef} className="sb-canvas" />
+            <InstrumentDial active={active} />
+            <span className="sb-coordinate sb-coordinate-top">JF / {String(active + 1).padStart(2, "0")}</span>
+            <span className="sb-coordinate sb-coordinate-bottom">+ &nbsp; PRECISION / ∞</span>
+            <div className="sb-waveform">
+              {Array.from({ length: 36 }, (_, i) => <i key={i} style={{ height: `${8 + Math.sin(i * .52 + active) ** 2 * 24}px` }} />)}
+            </div>
+          </div>
+        </div>
+        <div className="sb-menu" role="group" aria-label={stats.title}>
+          {stats.items.map((item, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <button key={item.copy} type="button" aria-pressed={index === active} aria-controls={panelId}
+                className="sb-stat" onClick={() => setActive(index)}>
+                <span className="sb-stat-top"><span>{String(index + 1).padStart(2, "0")}</span><Icon size={19} strokeWidth={1.4} aria-hidden="true" /></span>
+                <span className="sb-stat-value">{item.value}<ArrowUpRight size={21} strokeWidth={1.5} aria-hidden="true" /></span>
+                <span className="sb-stat-copy">{item.copy}</span>
+                <span className="sb-stat-track" aria-hidden="true" />
+              </button>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 import { SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 import { Noto_Sans_SC } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import { MapPrefetch } from "@/components/ui/MapPrefetch";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { AnalyticsConsent } from "@/components/analytics/AnalyticsConsent";
+import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n";
 import {
@@ -41,6 +42,7 @@ export async function generateMetadata({
     },
     description: dict.home.heroSubtitle,
     metadataBase: new URL(SITE_URL),
+    verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
     openGraph: {
       title: `${dict.brand.name} — ${dict.brand.tagline}`,
       description: dict.home.heroSubtitle,
@@ -95,6 +97,12 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col bg-surface text-ink">
+        <JsonLd data={{
+          "@context": "https://schema.org", "@type": "Organization",
+          "@id": `${SITE_URL}/#organization`, name: dict.brand.name,
+          legalName: dict.brand.full, url: `${SITE_URL}/${currentLocale}`,
+          email: dict.footer.email, address: dict.footer.address,
+        }} />
         <Header
           locale={currentLocale}
           nav={dict.nav}
@@ -105,8 +113,7 @@ export default async function LocaleLayout({
         />
         <main className="flex-1">{children}</main>
         <Footer locale={currentLocale} dict={dict} />
-        <Analytics />
-        <MapPrefetch />
+        <AnalyticsConsent locale={currentLocale} productSlugs={products.map((product) => product.slug)} />
       </body>
     </html>
   );

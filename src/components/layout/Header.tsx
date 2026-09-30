@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Menu, Search, X } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import { localizePath } from "@/lib/i18n-config";
@@ -40,6 +40,7 @@ export function Header({
     const local = localizePath(locale, path);
     // home ("/") must not prefix-match: /zh is a prefix of every localized path
     if (path === "/") return pathname === local || pathname === `${local}/`;
+    if (path === "/products" && pathname === "/en/pressure-gauges") return true;
     return pathname === local || pathname.startsWith(local + "/");
   };
 
@@ -153,8 +154,10 @@ export function Header({
       {/* Bottom row: primary nav + actions */}
       <div className="hidden border-b border-line lg:block">
         <div className="container-page flex h-14 items-center justify-between gap-4">
-          <nav className="flex items-center gap-7">
-            {items.map((item) => (
+          <nav className="flex h-full items-center gap-7">
+            {items.map((item) => item.key === "products" && locale === "en" ? (
+              <ProductNavigation key={item.key} active={isActive(item.path)} />
+            ) : (
               <Link
                 key={item.key}
                 href={localizePath(locale, item.path)}
@@ -204,7 +207,9 @@ export function Header({
             {searchForm}
             <nav className="flex flex-col gap-1">
               {[...items, { key: "contact", label: nav.contact, path: "/contact" }].map(
-                (item) => (
+                (item) => item.key === "products" && locale === "en" ? (
+                  <ProductNavigation key={item.key} active={isActive(item.path)} mobile onNavigate={() => setOpen(false)} />
+                ) : (
                   <Link
                     key={item.key}
                     href={localizePath(locale, item.path)}
@@ -224,5 +229,76 @@ export function Header({
         </div>
       )}
     </header>
+  );
+}
+
+/** Desktop hover/focus opens the submenu; the disclosure also supports touch. */
+function ProductNavigation({ active, mobile = false, onNavigate }: {
+  active: boolean;
+  mobile?: boolean;
+  onNavigate?: () => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const catalogueRef = useRef<HTMLAnchorElement>(null);
+  const categoryRef = useRef<HTMLAnchorElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
+
+  useEffect(() => {
+    if (!expanded) return;
+    const outside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !ref.current?.contains(event.target)) setExpanded(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, [expanded]);
+
+  const navigate = () => { setExpanded(false); onNavigate?.(); };
+  return (
+    <div ref={ref} className={`relative ${mobile ? "" : "h-full"}`}
+      onPointerEnter={(event) => {
+        if (!mobile && event.pointerType === "mouse") setExpanded(true);
+      }}
+      onPointerLeave={(event) => {
+        if (!mobile && event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) {
+          setExpanded(false);
+        }
+      }}
+      onFocus={(event) => {
+        if (!mobile && !event.currentTarget.contains(event.relatedTarget)) setExpanded(true);
+      }}
+      onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setExpanded(false); }}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && expanded) {
+          event.preventDefault();
+          setExpanded(false);
+          (mobile ? triggerRef : catalogueRef).current?.focus();
+        }
+        if (event.key === "ArrowDown" && event.target !== categoryRef.current) {
+          event.preventDefault();
+          setExpanded(true);
+          requestAnimationFrame(() => categoryRef.current?.focus());
+        }
+      }}>
+      <div className={`flex items-center ${mobile ? `rounded-lg px-3 ${active ? "bg-brand-soft" : ""}` : "h-full gap-1"}`}>
+        <Link ref={catalogueRef} href="/en/products" onClick={navigate}
+          className={`${mobile ? "flex-1 py-2.5 text-base" : "nav-link relative py-1 text-[15px]"} font-bold ${active ? "is-active text-link" : "text-brand hover:text-link"}`}>
+          Products
+        </Link>
+        <button ref={triggerRef} type="button" aria-label="Product categories" aria-expanded={expanded} aria-controls={panelId}
+          onClick={() => setExpanded((value) => !value)}
+          className={`${mobile ? "h-11 w-11" : "h-8 w-5"} inline-flex items-center justify-center rounded text-brand hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-link`}>
+          <ChevronDown aria-hidden="true" className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} strokeWidth={2.5} />
+        </button>
+      </div>
+      <div id={panelId} hidden={!expanded}
+        className={mobile ? "ms-5 mt-1 border-s border-line ps-3" : "absolute start-0 top-full z-50 min-w-56 rounded-xl border border-line bg-surface p-2 shadow-lg"}>
+        <Link ref={categoryRef} href="/en/pressure-gauges" onClick={navigate}
+          className="block rounded-lg px-4 py-3 text-sm font-medium text-brand hover:bg-brand-soft hover:text-link focus-visible:outline-2 focus-visible:outline-link">
+          Pressure gauges
+        </Link>
+      </div>
+    </div>
   );
 }

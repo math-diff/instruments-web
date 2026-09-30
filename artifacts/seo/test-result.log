@@ -1,0 +1,20 @@
+
+> instruments-web@0.1.0 test:seo
+> node scripts/analytics-unit.cjs && node scripts/domain-config-unit.cjs && node scripts/seo-smoke.mjs
+
+Analytics sanitizer tests passed: 76 assertions; no network or Google tag used.
+Domain configuration tests passed: 37 assertions; no DNS or network changes.
+PASS English topic: canonical, language alternatives, server content
+PASS Untranslated pressure topic returns 404
+PASS Pure English pressure category permanently redirects
+PASS Search requests, including empty search, stay searchable and noindex
+PASS English homepage and topic use explicit locale paths
+PASS Four pressure products: metadata, breadcrumbs and model enquiry
+PASS Valid enquiry preselection derives hidden metadata from catalogue
+PASS Invalid product does not populate trusted form metadata
+PASS Topic inquiry accepts only the known source identifier
+PASS Direct success URL does not claim a delivered enquiry
+PASS Sitemap lists the topic and excludes unpublished drafts/search
+PASS French fallback document has English canonical
+PASS Article JSON-LD uses real ISO dates and matching canonical
+All 13 SEO smoke checks passed (http://127.0.0.1:3000).

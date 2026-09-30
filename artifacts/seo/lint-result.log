@@ -1,0 +1,38 @@
+
+> instruments-web@0.1.0 lint
+> eslint --quiet
+
+
+C:\Users\28624\instruments-web\public\backbone\stripe-dataviz-original.js
+  3510:160521  error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3682:23818   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3706:723     error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3706:19009   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3722:123310  error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3757:24220   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3757:51172   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3757:76734   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3757:77666   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3757:78162   error  Unexpected aliasing of 'this' to local variable                                                          @typescript-eslint/no-this-alias
+  3759:135     error  Do not assign to the variable `module`. See: https://nextjs.org/docs/messages/no-assign-module-variable  @next/next/no-assign-module-variable
+
+C:\Users\28624\instruments-web\src\components\sections\CertLightbox.tsx
+  57:19  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\28624\instruments-web\src\components\sections\CertLightbox.tsx:57:19
+  55 |   // portal target only exists client-side
+  56 |   const [mounted, setMounted] = useState(false);
+> 57 |   useEffect(() => setMounted(true), []);
+     |                   ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  58 |   if (!mounted || !open || index === null) return null;
+  59 |
+  60 |   const cert = items[index];  react-hooks/set-state-in-effect
+
+✖ 12 problems (12 errors, 0 warnings)
+

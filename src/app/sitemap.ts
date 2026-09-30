@@ -6,6 +6,10 @@ import { contentLocales, pageUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
+  entries.push({ url: pageUrl("en", "/pressure-gauges"), changeFrequency: "monthly", priority: 0.9 });
+  for (const locale of ["en", "zh"] as const) {
+    entries.push({ url: pageUrl(locale, "/privacy"), changeFrequency: "yearly", priority: 0.2 });
+  }
   const staticPaths = ["", "/products", "/about", "/contact"];
   const productPaths = products.map((product) => `/products/${product.slug}`);
 

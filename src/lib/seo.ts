@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { defaultLocale, locales, type Locale } from "@/lib/i18n-config";
 import { hasOwnContent, listContent } from "@/lib/content";
 
-export const SITE_URL = "https://jf-international.vercel.app";
+import { SITE_URL } from "@/lib/site-config";
+export { SITE_URL } from "@/lib/site-config";
 
 /** Explicit language prefixes avoid Accept-Language redirects in search results. */
 export function pageUrl(locale: Locale, path = "") {

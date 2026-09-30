@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n-config";
-import { localizePath } from "@/lib/i18n-config";
+import { categoryPath, localizePath } from "@/lib/i18n-config";
 import { categories } from "@/lib/products";
 import { LangSwitch } from "./LangSwitch";
 import type { Dictionary } from "@/lib/i18n";
@@ -51,7 +51,7 @@ export function Footer({
 }) {
   const productLinks = categories.map((c) => ({
     label: dict.categories[c].name,
-    href: localizePath(locale, `/products?cat=${c}`),
+    href: categoryPath(locale, c),
   }));
 
   const companyLinks = [
@@ -62,6 +62,7 @@ export function Footer({
   const resourceLinks = [
     { label: dict.nav.blog, href: localizePath(locale, "/blog") },
     { label: dict.nav.docs, href: localizePath(locale, "/docs") },
+    { label: locale === "zh" ? "隐私说明" : "Privacy notice", href: localizePath(locale === "zh" ? "zh" : "en", "/privacy") },
   ];
 
   return (

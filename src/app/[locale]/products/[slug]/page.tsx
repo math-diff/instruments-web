@@ -1,4 +1,6 @@
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageUrl } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { pressureConfirmationFields, pressureSelection } from "@/lib/pressure-content";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -29,9 +31,16 @@ export async function generateMetadata({
   const loc = (isLocale(locale) ? locale : "en") as Locale;
   if (!product) return { title: "Product" };
   return {
-    title: pick(product.name, loc),
+    title: loc === "en" && product.category === "pressure"
+      ? `${product.slug === "pressure-gauge" ? "Bourdon Tube Pressure Gauge" : product.name.en} | ${product.model}`
+      : pick(product.name, loc),
     description: pick(product.summary, loc),
     alternates: pageAlternates(loc, `/products/${slug}`),
+    openGraph: {
+      title: `${pick(product.name, loc)} | ${product.model}`,
+      description: pick(product.summary, loc), url: pageUrl(loc, `/products/${slug}`),
+      images: [{ url: product.image, alt: pick(product.name, loc) }],
+    },
   };
 }
 
@@ -46,23 +55,40 @@ export default async function ProductDetailPage({
   const product = getProduct(slug);
   if (!product) notFound();
 
+  const pressureContext = loc === "en" ? pressureSelection[product.slug] : undefined;
+  const cataloguePath = pressureContext ? "/pressure-gauges" : "/products";
+  const catalogueName = pressureContext ? "Pressure gauges" : dict.nav.products;
+  const breadcrumbs = [
+    { name: dict.nav.home, url: pageUrl(loc) },
+    { name: catalogueName, url: pageUrl(loc, cataloguePath) },
+    { name: pick(product.name, loc), url: pageUrl(loc, `/products/${product.slug}`) },
+  ];
+
   const related = products
     .filter((p) => p.category === product.category && p.slug !== product.slug)
     .slice(0, 3);
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <section className="border-b border-line bg-surface-muted">
         <Container className="py-12">
+          <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap gap-2 text-sm text-ink-soft">
+            <Link href={localizePath(loc, "/")}>{dict.nav.home}</Link>
+            <span aria-hidden="true">/</span>
+            <Link href={localizePath(loc, cataloguePath)}>{catalogueName}</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{pick(product.name, loc)}</span>
+          </nav>
           <Button
-            href={localizePath(loc, "/products")}
+            href={localizePath(loc, cataloguePath)}
             variant="secondary"
             className="group w-fit border-line px-3.5 shadow-[0_0.15rem_0.55rem_rgba(0,37,101,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-link hover:shadow-[0_0.35rem_1rem_rgba(0,37,101,0.14)]"
           >
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand text-white transition-transform duration-200 group-hover:-translate-x-0.5">
               <ArrowLeft className="h-3.5 w-3.5" strokeWidth={2.25} />
             </span>
-            <span>{dict.nav.products}</span>
+            <span>{catalogueName}</span>
           </Button>
           <div className="mt-6 grid gap-8 lg:grid-cols-2">
             <Reveal>
@@ -97,7 +123,9 @@ export default async function ProductDetailPage({
                 </ul>
                 <div className="mt-8">
                   <Link
-                    href={localizePath(loc, "/contact")}
+                    href={localizePath(loc, `/contact?product=${product.slug}`)}
+                    data-track="quote_click"
+                    data-product={product.slug}
                     className="inline-flex h-12 items-center rounded-full bg-brand px-6 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0.4rem_1rem_rgba(0,37,101,0.3)]"
                   >
                     {dict.products.inquire}
@@ -136,6 +164,28 @@ export default async function ProductDetailPage({
           </Reveal>
         </div>
       </Section>
+
+      {pressureContext && (
+        <Section muted>
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="text-2xl font-bold text-brand">Confirm the ordered configuration</h2>
+              <p className="mt-4 leading-7 text-ink-soft">The specifications above describe the pictured catalogue sample. They are not a complete ordering specification or confirmation of every available option.</p>
+              <p className="mt-4 leading-7 text-ink-soft">{pressureContext.confirm}</p>
+              <p className="mt-4 leading-7 text-ink-soft">Request a configuration-specific drawing and the inspection, calibration or certification documents required by your project. Their availability and scope must be confirmed before ordering.</p>
+              <Link href="/en/blog/selecting-pressure-gauge" className="mt-6 inline-block font-bold text-link underline underline-offset-4">Read the pressure gauge selection guide</Link>
+            </div>
+            <div className="rounded-2xl border border-line bg-surface p-6">
+              <h3 className="text-lg font-bold text-brand">Details to include in your enquiry</h3>
+              <ul className="mt-4 list-disc space-y-3 pl-5 text-sm leading-6 text-ink-soft">
+                {pressureConfirmationFields.map((field) => <li key={field}>{field}</li>)}
+                <li>Quantity, destination and required delivery date</li>
+              </ul>
+              <Link href={localizePath(loc, `/contact?product=${product.slug}`)} data-track="quote_click" data-product={product.slug} className="mt-6 inline-block rounded-full bg-brand px-6 py-3 font-bold text-white">Discuss {product.model}</Link>
+            </div>
+          </div>
+        </Section>
+      )}
 
       {related.length > 0 && (
         <Section muted>
