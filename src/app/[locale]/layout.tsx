@@ -44,7 +44,11 @@ export async function generateMetadata({
     },
     description: dict.home.heroSubtitle,
     metadataBase: new URL(SITE_URL),
-    verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
+    verification: {
+      google:
+        process.env.GOOGLE_SITE_VERIFICATION ||
+        "3_b6C8-PGK2fnKFiUQqhHStbjD9OwcYlR1qrVRfkiHg",
+    },
     openGraph: {
       title: `${dict.brand.name} — ${dict.brand.tagline}`,
       description: dict.home.heroSubtitle,
