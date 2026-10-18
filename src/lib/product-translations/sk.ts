@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug Slovak overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Manometer",
-    summary: "Bourdonov tlakomer na lokálne ukazovanie tlaku procesných médií.",
-    description: "Bourdonova rúra premieňa tlak procesu na pružnú výchylku; prevodový mechanizmus poháňa ručičku na lokálne ukazovanie bez vonkajšieho napájania. Vhodné pre čerpadlá, stlačený vzduch, procesné potrubia a nádoby so stabilným tlakom. Potvrďte rozsah, kompatibilitu média, teplotu, orientáciu prípojky a vibrácie; pri pulzáciách predvidzte dusič alebo tlmič.",
-    highlights: ["Rozsahy 0–60 MPa", "Presnosť ±1,6 % FS", "Radiálne / axiálne usporiadanie"],
-    specs: [["Rozsah", "0–0,1 až 0–60 MPa"], ["Presnosť", "±1,6 % FS"], ["Prípojka", "M20×1,5, radiálne alebo axiálne"], ["Kryt", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Nerezový manometer",
-    summary: "Celonerezový manometer pre korozívne médiá a náročné prostredie.",
-    description: "Celonerezové vyhotovenie (304/316L) odolné voči korózii, s voliteľným glycerínovým plnením proti vibráciám. Vhodné pre chemický, petrochemický priemysel a vonkajšie inštalácie. Pred objednaním potvrďte kompatibilitu média, rozsah a prípojku.",
-    highlights: ["Diely v kontakte s médiom 316L", "Glycerínové plnenie ako možnosť", "Do 100 MPa"],
-    specs: [["Rozsah", "0–0,1 až 0–100 MPa"], ["Presnosť", "±1,6 % FS"], ["Diely v kontakte s médiom", "Nerez 304 / 316L"], ["Prípojka", "M20×1,5 alebo na mieru"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Manometer s kapsovým prvkom",
-    summary: "Manometer s kapsovým prvkom na meranie nízkeho a mikrotlaku plynov.",
-    description: "Kapsový prvok umožňuje spoľahlivé meranie malých tlakov plynov v oblasti kPa. Nerezové prevedenie, panelová alebo stenová montáž. Vhodné pre horáky, ventilátory a plynové inštalácie; skontrolujte kompatibilitu média a rozsah.",
-    highlights: ["Rozsahy v kPa", "Kapsa 316L", "Panelová / stenová montáž"],
-    specs: [["Rozsah", "0–2,5 až 0–60 kPa, ±kPa"], ["Presnosť", "±1,6 % FS"], ["Diely v kontakte s médiom", "Kapsa 316L"], ["Prípojka", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Manometer na amoniak",
-    summary: "Nerezový manometer pre amoniakové a chladiace inštalácie, s poistným dnom.",
-    description: "Navrhnutý pre amoniakové a chladiace okruhy: diely v kontakte s médiom z nerezovej ocele a poistné dno. Rozsah a prípojku prispôsobte inštalácii; používajte iba s médiami kompatibilnými s amoniakom.",
-    highlights: ["Amoniak / chladenie", "Poistné dno", "Nerezové diely v kontakte"],
-    specs: [["Rozsah", "0–1 až 0–40 MPa, pretlakové + vákuum"], ["Presnosť", "±1,6 % FS"], ["Diely v kontakte s médiom", "Nerezová oceľ"], ["Prípojka", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Manometer" },
+  "stainless-pressure-gauge": { name: "Nerezový manometer" },
+  "capsule-pressure-gauge": { name: "Manometer s kapsovým prvkom" },
+  "ammonia-pressure-gauge": { name: "Manometer na amoniak" },
   "bimetal-thermometer": {
     name: "Bimetalový teplomer",
     summary: "Bimetalový teplomer s ciferníkom na lokálne ukazovanie teploty bez napájania.",

@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug Swedish overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Tryckmätare",
-    summary: "Bourdontryckmätare för lokal avläsning av processtryck.",
-    description: "Bourdonröret omvandlar processtrycket till en elastisk förflyttning; ett mekanisk växeldrivning styr visaren för lokal avläsning utan hjälpenergi. Lämplig för pumpar, tryckluft, processledningar och tryckkärl med stabilt tryck. Bekräfta område, mediekompatibilitet, temperatur, anslutningsriktning och vibrationer; vid pulsering tillhandahåll rebell eller dämpare.",
-    highlights: ["Områden 0–60 MPa", "Noggrannhet ±1,6 % FS", "Radial / axial montering"],
-    specs: [["Område", "0–0,1 till 0–60 MPa"], ["Noggrannhet", "±1,6 % FS"], ["Anslutning", "M20×1,5, radial eller axial"], ["Hölje", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Rostfria tryckmätaren",
-    summary: "Helt rostfri tryckmätare för korrosiva medier och tuffa miljöer.",
-    description: "Helt rostfri utförande (304/316L) för korrosiva medier, med valbar glycerinfyllning mot vibrationer. Lämplig för kemi, petrokemi och utomhusinstallationer. Bekräfta mediekompatibilitet, område och anslutning före beställning.",
-    highlights: ["Medieskydd 316L", "Glycerinfyllning valfri", "Upp till 100 MPa"],
-    specs: [["Område", "0–0,1 till 0–100 MPa"], ["Noggrannhet", "±1,6 % FS"], ["Medieskydd", "Rostfritt 304 / 316L"], ["Anslutning", "M20×1,5 eller special"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Kapselmanometern",
-    summary: "Manometern med kapselelement för mätning av låga tryck och mikrotryck i gaser.",
-    description: "Kapselelementet möjliggör tillförlitlig mätning av små gastryck i kPa-området. Rostfritt hölje, panel- eller väggmontering. Lämplig för brännare, fläktar och gasinstallationer; kontrollera mediekompatibilitet och område.",
-    highlights: ["kPa-områden", "316L-kapsel", "Panel-/väggmontering"],
-    specs: [["Område", "0–2,5 till 0–60 kPa, ±kPa"], ["Noggrannhet", "±1,6 % FS"], ["Medieskydd", "316L-kapsel"], ["Anslutning", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Ammoniaktryckmätaren",
-    summary: "Rostfri manometern för ammoniak- och kylsystem, med säkerhetsbotten.",
-    description: "Designad för ammoniak- och kylkretsar: mediumskontakt i rostfritt och säkerhetsbotten. Område och anslutning anpassas efter installationen; använd endast med ammoniakkompatibla medier.",
-    highlights: ["Ammoniak / kylning", "Säkerhetsbotten", "Rostfri medieskydd"],
-    specs: [["Område", "0–1 till 0–40 MPa, övertryck + vakuum"], ["Noggrannhet", "±1,6 % FS"], ["Medieskydd", "Rostfritt stål"], ["Anslutning", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Tryckmätare" },
+  "stainless-pressure-gauge": { name: "Rostfria tryckmätaren" },
+  "capsule-pressure-gauge": { name: "Kapselmanometern" },
+  "ammonia-pressure-gauge": { name: "Ammoniaktryckmätaren" },
   "bimetal-thermometer": {
     name: "Bimetalltermometer",
     summary: "Bimetallvisarttermometer för lokal temperaturvisning utan hjälpenergi.",

@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { defaultLocale, locales, type Locale } from "@/lib/i18n-config";
+import { categoryTopics, defaultLocale, locales, type Locale } from "@/lib/i18n-config";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname === "/en/products" && request.nextUrl.searchParams.get("cat") === "pressure" && !request.nextUrl.searchParams.has("q")) {
+  const category = request.nextUrl.searchParams.get("cat");
+  if (pathname === "/en/products" && category && Object.hasOwn(categoryTopics, category) && !request.nextUrl.searchParams.has("q")) {
     const url = request.nextUrl.clone();
-    url.pathname = "/en/pressure-gauges";
+    url.pathname = `/en${categoryTopics[category]}`;
     url.searchParams.delete("cat");
     return NextResponse.redirect(url, 308);
   }

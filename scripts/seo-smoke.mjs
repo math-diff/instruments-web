@@ -54,13 +54,42 @@ test("English topic: canonical, language alternatives, server content", async ()
   assert.match(markup(html), /JF-1541/);
 });
 
-test("Untranslated pressure topic returns 404", () => page("/zh/pressure-gauges", 404));
+test("Untranslated topics return 404", async () => {
+  for (const path of ["/zh/pressure-gauges", "/fr/temperature-instruments", "/zh/level-instruments"]) await page(path, 404);
+});
 
 test("Pure English pressure category permanently redirects", async () => {
   const { response } = await page("/en/products?cat=pressure", 308);
   const target = new URL(response.headers.get("location"), base);
   assert.equal(target.pathname, "/en/pressure-gauges");
   assert.equal(target.searchParams.has("cat"), false);
+});
+
+test("Temperature and level topics have independent metadata and catalogue links", async () => {
+  for (const [path, keyword, model] of [["/en/temperature-instruments", "Temperature", "JF-1550"], ["/en/level-instruments", "Level", "JF-1551"]]) {
+    const { html } = await page(path);
+    assert.deepEqual(canonical(html), [expected(path)]);
+    assert.ok(!noindex(html));
+    assert.ok(html.match(/<title>([^<]+)<\/title>/)?.[1].includes(keyword));
+    assert.ok(markup(html).includes(model));
+    const alternatives = tags(html, "link").filter((tag) => tag.hreflang);
+    assert.deepEqual(alternatives.map((tag) => tag.hreflang).sort(), ["en", "x-default"]);
+    assert.ok(tags(html, "meta").some((tag) => tag.property === "og:url" && tag.content === expected(path)));
+    assert.ok(tags(html, "a").some((tag) => tag.href?.startsWith("/en/docs/")));
+  }
+});
+
+test("New category redirects preserve unrelated query parameters", async () => {
+  for (const [cat, path] of [["temperature", "/en/temperature-instruments"], ["level", "/en/level-instruments"]]) {
+    const { response } = await page(`/en/products?cat=${cat}&utm_source=seo-check`, 308);
+    const target = new URL(response.headers.get("location"), base);
+    assert.equal(target.pathname, path);
+    assert.equal(target.searchParams.get("utm_source"), "seo-check");
+    assert.equal(target.searchParams.has("cat"), false);
+    const { html } = await page(`/en/products?cat=${cat}&q=`);
+    assert.ok(noindex(html));
+    assert.deepEqual(canonical(html), [expected("/en/products")]);
+  }
 });
 
 test("Search requests, including empty search, stay searchable and noindex", async () => {
@@ -73,6 +102,16 @@ test("Search requests, including empty search, stay searchable and noindex", asy
 
 test("English homepage and topic use explicit locale paths", async () => {
   for (const path of ["/en", "/en/pressure-gauges"]) checkEnglishLinks((await page(path)).html);
+});
+
+test("Homepage has one primary heading and category topic entry links", async () => {
+  const { html } = await page("/en");
+  assert.equal((markup(html).match(/<h1\b/gi) || []).length, 1);
+  assert.match(markup(html), /Pressure, temperature and level instruments/);
+  assert.match(html.match(/<title>([^<]+)<\/title>/)?.[1] || "", /Industrial Pressure Gauges/);
+  for (const path of ["/en/pressure-gauges", "/en/temperature-instruments", "/en/level-instruments"]) {
+    assert.ok(tags(html, "a").some((tag) => tag.href === path));
+  }
 });
 
 const gauges = [
@@ -97,6 +136,40 @@ test("Four pressure products: metadata, breadcrumbs and model enquiry", async ()
       return url.pathname === "/en/contact" && url.searchParams.get("product") === slug;
     }), `${slug}: enquiry link lacks product slug`);
   }
+});
+
+test("Pressure sample specifications agree across all twelve languages", async () => {
+  const sampleValues = [
+    ["pressure-gauge", "0–1.6 MPa", "1.6"],
+    ["stainless-pressure-gauge", "0–2.5 MPa", "1.6"],
+    ["capsule-pressure-gauge", "0–10000 Pa", "2.5"],
+    ["ammonia-pressure-gauge", "0–4 MPa / 0–580 psi", "1.6"],
+  ];
+  for (const locale of ["en", "zh", "fr", "de", "it", "ru", "ar", "hi", "sk", "ms", "sv", "tr"]) {
+    for (const [slug, range, accuracy] of sampleValues) {
+      const { html } = await page(`/${locale}/products/${slug}`);
+      const table = markup(html).match(/<table\b[^>]*>([\s\S]*?)<\/table>/i)?.[1];
+      assert.ok(table, `${locale}/${slug}: missing sample table`);
+      const values = [...table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((match) => {
+        const cells = [...match[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)];
+        return decode(cells[1]?.[1]?.replace(/<[^>]*>/g, "").trim() || "");
+      });
+      assert.equal(values[0], range, `${locale}/${slug}: range drift`);
+      assert.equal(values[1], accuracy, `${locale}/${slug}: accuracy drift`);
+      if (slug === "capsule-pressure-gauge") assert.doesNotMatch(table, /M20|316L|60 kPa/);
+    }
+  }
+});
+
+test("Pressure comparison and configuration details are visible server content", async () => {
+  const { html } = await page("/en/pressure-gauges");
+  for (const model of ["JF-1541", "JF-1545", "JF-1543", "JF-1542"]) assert.ok(markup(html).includes(model));
+  assert.match(markup(html), /Photographed catalogue samples/);
+  assert.match(markup(html), /dimensioned drawing/);
+  const { html: product } = await page("/en/products/stainless-pressure-gauge");
+  assert.doesNotMatch(markup(product), /All-stainless/);
+  const productText = decode(markup(product).replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ");
+  assert.ok(productText.includes("Request a JF-1545 drawing and specification"), "Missing model-specific documentation enquiry link");
 });
 
 test("Valid enquiry preselection derives hidden metadata from catalogue", async () => {
@@ -140,6 +213,7 @@ test("Direct success URL does not claim a delivered enquiry", async () => {
 test("Sitemap lists the topic and excludes unpublished drafts/search", async () => {
   const { html: xml } = await page("/sitemap.xml");
   assert.ok(xml.includes(`<loc>${expected("/en/pressure-gauges")}</loc>`));
+  for (const path of ["/en/temperature-instruments", "/en/level-instruments"]) assert.ok(xml.includes(`<loc>${expected(path)}</loc>`));
   assert.ok(!xml.includes("/zh/pressure-gauges"));
   for (const draft of ["npt-vs-bsp-pressure-gauge-connections", "pressure-gauge-vibration-pulsation", "editorial-drafts"]) assert.ok(!xml.includes(draft), `Draft appeared in sitemap: ${draft}`);
   assert.ok(!/<loc>[^<]*\?/.test(xml), "Query URL in sitemap");
@@ -154,8 +228,21 @@ test("Article JSON-LD uses real ISO dates and matching canonical", async () => {
   const { html } = await page("/en/blog/selecting-pressure-gauge");
   const article = jsonLd(html).find((item) => item["@type"] === "Article");
   assert.equal(article?.datePublished, "2025-01-15");
+  assert.equal(article?.dateModified, "2026-10-18");
   assert.equal(article?.mainEntityOfPage, expected("/en/blog/selecting-pressure-gauge"));
   assert.ok(!article?.reviewedBy, "An unverified reviewer must not be invented");
+});
+
+test("Revised selection guides link to products and enquiry without unsupported claims", async () => {
+  for (const locale of ["en", "zh"]) {
+    const { html } = await page(`/${locale}/blog/selecting-pressure-gauge`);
+    const article = markup(html).match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1];
+    assert.ok(article);
+    for (const [slug] of gauges) assert.ok(tags(article, "a").some((tag) => tag.href === `/${locale}/products/${slug}`));
+    assert.ok(tags(article, "a").some((tag) => tag.href === `/${locale}/contact`));
+    assert.doesNotMatch(article, /After-sales statistics|steam above ~60|正常工作压力位于量程的/);
+    assert.ok(tags(article, "a").some((tag) => tag.href?.startsWith("https://www.wika.com/")));
+  }
 });
 
 let failed = 0;

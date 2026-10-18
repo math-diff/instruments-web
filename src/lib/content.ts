@@ -9,6 +9,7 @@ export type ContentMeta = {
   title: string;
   description: string;
   date: string;
+  updated?: string;
   tags?: string[];
   category?: string;
 };
@@ -64,6 +65,7 @@ export function listContent(
         title: String(data.title ?? slug),
         description: String(data.description ?? ""),
         date: contentDate(data.date),
+        updated: contentDate(data.updated) || undefined,
         tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
         category: data.category ? String(data.category) : undefined,
       };
@@ -85,6 +87,7 @@ export function getContent(kind: "blog" | "docs", locale: Locale, slug: string) 
       title: String(data.title ?? slug),
       description: String(data.description ?? ""),
       date: contentDate(data.date),
+      updated: contentDate(data.updated) || undefined,
       tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
       category: data.category ? String(data.category) : undefined,
     },

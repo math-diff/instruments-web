@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -13,34 +11,10 @@ export type ProductOverride = Partial<{
  * Missing slugs/fields fall back to English.
  */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Manomètre",
-    summary: "Manomètre à tube de Bourdon pour l'indication locale de la pression des procédés.",
-    description: "Le tube de Bourdon convertit la pression du procédé en déplacement élastique ; un mécanisme démultiplié entraîne l'aiguille pour une indication locale sans alimentation externe. Adapté aux pompes, à l'air comprimé, aux lignes de processus et aux réservoirs sous pression stable. Confirmer la plage, la compatibilité du fluide, la température, l'orientation du raccordement et les vibrations ; prévoir un restricteur ou un amortisseur en cas de pulsations.",
-    highlights: ["Plages 0–60 MPa", "Précision ±1,6 % FS", "Montage radial / axial"],
-    specs: [["Plage", "0–0,1 à 0–60 MPa"], ["Précision", "±1,6 % FS"], ["Raccordement", "M20×1,5, radial ou axial"], ["Boîtier", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Manomètre inox",
-    summary: "Manomètre tout inox pour fluides corrosifs et environnements sévères.",
-    description: "Construction entièrement inox (304/316L) résistant à la corrosion, avec remplissage glycérine en option contre les vibrations. Adapté à l'industrie chimique, pétrochimique et aux installations en extérieur. Confirmer la compatibilité du fluide, la plage et le raccordement avant commande.",
-    highlights: ["Parties mouillées 316L", "Remplissage glycérine en option", "Jusqu'à 100 MPa"],
-    specs: [["Plage", "0–0,1 à 0–100 MPa"], ["Précision", "±1,6 % FS"], ["Parties mouillées", "Inox 304 / 316L"], ["Raccordement", "M20×1,5 ou sur mesure"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Manomètre à capsule inox",
-    summary: "Manomètre à élément capsule pour la mesure des basses et micro-pressions gazeuses.",
-    description: "L'élément capsule permet la mesure fiable des faibles pressions de gaz (kPa). Boîtier inox, montage panneau ou mural. Adapté aux brûleurs, ventilateurs et installations de gaz ; vérifier la compatibilité du fluide et la plage.",
-    highlights: ["Plages kPa", "Capsule 316L", "Montage encastré / mural"],
-    specs: [["Plage", "0–2,5 à 0–60 kPa, ±kPa"], ["Précision", "±1,6 % FS"], ["Parties mouillées", "Capsule inox 316L"], ["Raccordement", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Manomètre inox pour ammoniac",
-    summary: "Manomètre inox dédié à l'ammoniac et aux installations frigorifiques, avec fond d'évent de sécurité.",
-    description: "Conçu pour les circuits d'ammoniac et de réfrigération : parties mouillées inox et fond d'évent de sécurité. La plage et le raccordement sont confirmés selon l'installation ; utiliser uniquement avec des fluides compatibles ammoniac.",
-    highlights: ["Ammoniac / froid", "Fond d'évent de sécurité", "Parties mouillées inox"],
-    specs: [["Plage", "0–1 à 0–40 MPa, composé + vide"], ["Précision", "±1,6 % FS"], ["Parties mouillées", "Acier inoxydable"], ["Raccordement", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Manomètre" },
+  "stainless-pressure-gauge": { name: "Manomètre inox" },
+  "capsule-pressure-gauge": { name: "Manomètre à capsule inox" },
+  "ammonia-pressure-gauge": { name: "Manomètre inox pour ammoniac" },
   "bimetal-thermometer": {
     name: "Thermomètre bimétallique",
     summary: "Thermomètre à cadran bimétallique pour l'indication locale de température sans alimentation.",

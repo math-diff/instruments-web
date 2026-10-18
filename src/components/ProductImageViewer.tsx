@@ -55,7 +55,7 @@ export function ProductImageViewer({
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-contain p-6 transition-transform duration-300 group-hover:scale-[1.02]"
-          priority
+          preload
         />
         <span className="absolute bottom-4 right-4 inline-flex h-9 items-center gap-2 rounded-full bg-brand/90 px-3 text-xs font-bold text-white shadow-float backdrop-blur-sm transition-transform duration-200 group-hover:-translate-y-0.5">
           <Maximize2 className="h-3.5 w-3.5" aria-hidden="true" />
@@ -93,7 +93,7 @@ export function ProductImageViewer({
                 fill
                 sizes="100vw"
                 className="object-contain"
-                priority
+                loading="eager"
               />
             </div>
           </div>,

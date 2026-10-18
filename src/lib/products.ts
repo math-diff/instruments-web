@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n-config";
+import { isPressureSample, pressureCatalogue, pressureLocales, type PressureSlug } from "./pressure-catalogue";
 import { table as frT } from "./product-translations/fr";
 import { table as deT } from "./product-translations/de";
 import { table as itT } from "./product-translations/it";
@@ -37,139 +38,23 @@ export const categories: Category[] = [
   "level",
 ];
 
+function pressureProduct(slug: PressureSlug, model: string, name: { en: string; zh: string }, image: string): Product {
+  const product: Product = { slug, category: "pressure", model, name, image, summary: { en: "" }, description: { en: "" }, highlights: { en: [] }, specs: { en: [] } };
+  for (const locale of pressureLocales) {
+    const catalogue = pressureCatalogue(slug, locale);
+    product.summary[locale] = catalogue.summary;
+    product.description[locale] = catalogue.description;
+    product.highlights[locale] = catalogue.highlights;
+    product.specs[locale] = catalogue.specs;
+  }
+  return product;
+}
+
 export const products: Product[] = [
-  {
-    slug: "pressure-gauge",
-    category: "pressure",
-    model: "JF-1541",
-    image: "/products/pressure-gauge.jpg",
-    name: { en: "Pressure Gauge", zh: "压力表" },
-    summary: {
-      en: "Bourdon-tube mechanical gauge for local monitoring of gauge pressure on industrial piping, equipment and pressure vessels.",
-      zh: "用于工业管道、设备及压力容器现场表压监测的波登管式机械压力表。",
-    },
-    description: {
-      en: "This gauge uses a Bourdon-tube sensing element to convert process pressure into elastic displacement; a geared movement then drives the pointer to provide local indication without external power. The photographed sample has a 0–1.6 MPa range and accuracy class 1.6, and is suited to pumps, compressed-air systems, general process lines and pressure vessels operating under relatively stable pressure. Final selection should confirm the operating range, process-medium compatibility, temperature, connection orientation and ambient vibration; pressure pulsation or shock may require a restrictor, snubber or other protective accessory.",
-      zh: "该仪表采用波登管弹性元件将介质压力转换为管端位移，再经齿轮传动机构驱动指针，实现无需外部供电的就地压力指示。实拍样品量程为 0–1.6 MPa、精度等级 1.6，适用于泵组、压缩空气系统、一般工艺管线及压力容器等压力相对稳定的工况。实际选型应综合确认工作量程、介质相容性、工作温度、接口方向和环境振动；存在压力脉动或冲击时，应配置节流、缓冲或其他防护附件。",
-    },
-    highlights: {
-      en: ["Photo sample: 0–1.6 MPa", "Accuracy class 1.6", "Mechanical pointer display"],
-      zh: ["实拍量程 0–1.6 MPa", "精度等级 1.6", "机械指针显示"],
-    },
-    specs: {
-      en: [
-        ["Photo range", "0–1.6 MPa"],
-        ["Accuracy class", "1.6"],
-        ["Display", "White dial with black mechanical pointer"],
-        ["Case", "Black circular case"],
-      ],
-      zh: [
-        ["实拍量程", "0–1.6 MPa"],
-        ["精度等级", "1.6"],
-        ["显示方式", "白色表盘、黑色机械指针"],
-        ["表壳", "黑色圆形表壳"],
-      ],
-    },
-  },
-  {
-    slug: "stainless-pressure-gauge",
-    category: "pressure",
-    model: "JF-1545",
-    image: "/products/stainless-pressure-gauge.jpg",
-    name: { en: "Stainless Steel Pressure Gauge", zh: "不锈钢压力表" },
-    summary: {
-      en: "All-stainless pressure gauge for local measurement in corrosive, humid and cleanliness-sensitive process environments.",
-      zh: "面向腐蚀性介质、高湿及清洁度要求较高工况的全不锈钢压力表。",
-    },
-    description: {
-      en: "The gauge combines a mechanical pressure-sensing movement with a stainless-steel case and process assembly to improve resistance to humid and corrosive environments. The photographed sample has a 0–2.5 MPa range, accuracy class 1.6 and a lower flange assembly visibly marked 316L, making it suitable for local monitoring on chemical-service equipment, utility systems, vessels and process piping where a robust connection is required. The final specification must confirm wetted-material compatibility, flange standard and pressure rating, operating temperature and sealing arrangement; the visible 316L marking should not be treated as confirmation that every wetted component uses the same alloy.",
-      zh: "该仪表采用机械式压力敏感元件，并配置不锈钢表壳及过程连接组件，以提升在潮湿和腐蚀性环境中的耐受能力。实拍样品量程为 0–2.5 MPa、精度等级 1.6，下部法兰组件可见 316L 标识，适用于化工设备、公用工程、容器和工艺管线的现场压力监测。最终选型需确认接液材质与介质的相容性、法兰标准及压力等级、工作温度和密封形式；图片中的 316L 标识不应视为全部接液部件均采用同一材料的依据。",
-    },
-    highlights: {
-      en: ["Photo sample: 0–2.5 MPa", "Accuracy class 1.6", "316L-marked flange assembly"],
-      zh: ["实拍量程 0–2.5 MPa", "精度等级 1.6", "法兰组件标注 316L"],
-    },
-    specs: {
-      en: [
-        ["Photo range", "0–2.5 MPa"],
-        ["Accuracy class", "1.6"],
-        ["Visible marking", "316L on lower connector"],
-        ["Process connection", "Flange assembly shown in photo"],
-      ],
-      zh: [
-        ["实拍量程", "0–2.5 MPa"],
-        ["精度等级", "1.6"],
-        ["可见标识", "下部连接件标注 316L"],
-        ["过程连接", "实拍为法兰组件"],
-      ],
-    },
-  },
-  {
-    slug: "capsule-pressure-gauge",
-    category: "pressure",
-    model: "JF-1543",
-    image: "/products/capsule-pressure-gauge-repaired.png",
-    name: { en: "Capsule Pressure Gauge", zh: "不锈钢膜盒压力表" },
-    summary: {
-      en: "Capsule-element pressure gauge for local indication of low and very low gas pressures in ventilation, dust-collection and process applications.",
-      zh: "用于微压与低压气体现场指示的膜盒式压力表，适用于通风、除尘及低压工艺管线。",
-    },
-    description: {
-      en: "The instrument uses an elastic capsule element to sense small pressure variations. A mechanical movement converts capsule displacement into local pointer indication on a large-diameter Pa-scale dial. The photographed sample has a 0–10,000 Pa range, accuracy class 2.5 and a side-entry threaded process connection, making it suitable for micro-pressure monitoring in HVAC and ventilation systems, dust collection, furnace draft and other low-pressure gas lines. Final selection should confirm process-medium compatibility, operating temperature, mounting orientation and connection specification; pulsating pressure, mechanical vibration or special media may require appropriate damping, isolation or protective accessories.",
-      zh: "该仪表采用膜盒式弹性元件感受微小压力变化，经机械传动机构驱动指针，在大直径 Pa 刻度表盘上实现就地指示。实拍样品量程为 0–10000 Pa、精度等级 2.5，并采用侧向螺纹过程连接，适用于通风空调、除尘系统、炉膛风压及低压气体管线等需要监测微压变化的场合。实际选型应根据介质兼容性、工作温度、安装方向和接口规格进行确认；存在压力脉动、机械振动或特殊介质时，应配置相应的缓冲、隔离或防护措施。",
-    },
-    highlights: {
-      en: ["Photo sample: 0–10,000 Pa", "Accuracy class 2.5", "Side threaded connection"],
-      zh: ["实拍量程 0–10000 Pa", "精度等级 2.5", "侧向螺纹接口"],
-    },
-    specs: {
-      en: [
-        ["Photo range", "0–10,000 Pa"],
-        ["Accuracy class", "2.5"],
-        ["Instrument marking", "Stainless steel capsule pressure gauge"],
-        ["Process connection", "Side threaded connection"],
-      ],
-      zh: [
-        ["实拍量程", "0–10000 Pa"],
-        ["精度等级", "2.5"],
-        ["表盘标识", "不锈钢膜盒压力表"],
-        ["过程连接", "侧向螺纹接口"],
-      ],
-    },
-  },
-  {
-    slug: "ammonia-pressure-gauge",
-    category: "pressure",
-    model: "JF-1542",
-    image: "/products/ammonia-pressure-gauge.jpg",
-    name: { en: "Ammonia Pressure Gauge", zh: "不锈钢氨用压力表" },
-    summary: {
-      en: "Mechanical pressure gauge for ammonia refrigeration and related gas systems, with MPa / psi dual-scale local indication.",
-      zh: "用于氨制冷及相关气体系统、采用 MPa / psi 双刻度现场指示的机械压力表。",
-    },
-    description: {
-      en: "This gauge uses an elastic pressure element and mechanical movement to provide direct local indication without external power. The photographed sample has a 0–4 MPa / 0–580 psi dual scale, accuracy class 1.6, a stainless circular case and a bottom process connection, supporting pressure monitoring on refrigeration compressors, condensers, receivers and ammonia piping. Ammonia service imposes specific compatibility requirements on wetted materials and seals, so the final order must confirm the specified refrigerant, pressure range, operating temperature, connection size and vibration conditions.",
-      zh: "该仪表通过弹性压力元件和机械传动机构直接指示系统压力，无需外部供电。实拍样品采用 0–4 MPa / 0–580 psi 双刻度、精度等级 1.6、不锈钢圆形表壳及下部过程接口，可用于制冷压缩机、冷凝器、储液设备和氨管线的现场压力监测。氨介质对接液材质和密封件的相容性有专门要求，订货时应明确制冷剂类型、压力范围、工作温度、接口规格及现场振动条件。",
-    },
-    highlights: {
-      en: ["Photo sample: 0–4 MPa", "Dual scale: 0–580 psi", "Accuracy class 1.6"],
-      zh: ["实拍量程 0–4 MPa", "双刻度 0–580 psi", "精度等级 1.6"],
-    },
-    specs: {
-      en: [
-        ["Photo range", "0–4 MPa / 0–580 psi"],
-        ["Accuracy class", "1.6"],
-        ["Display", "MPa / psi dual-scale pointer dial"],
-        ["Process connection", "Bottom connection assembly shown in photo"],
-      ],
-      zh: [
-        ["实拍量程", "0–4 MPa / 0–580 psi"],
-        ["精度等级", "1.6"],
-        ["显示方式", "MPa / psi 双刻度指针表盘"],
-        ["过程连接", "实拍为下部连接组件"],
-      ],
-    },
-  },
+  pressureProduct("pressure-gauge", "JF-1541", { en: "Pressure Gauge", zh: "压力表" }, "/products/pressure-gauge.jpg"),
+  pressureProduct("stainless-pressure-gauge", "JF-1545", { en: "Stainless Steel Pressure Gauge", zh: "不锈钢压力表" }, "/products/stainless-pressure-gauge.jpg"),
+  pressureProduct("capsule-pressure-gauge", "JF-1543", { en: "Capsule Pressure Gauge", zh: "不锈钢膜盒压力表" }, "/products/capsule-pressure-gauge-repaired.png"),
+  pressureProduct("ammonia-pressure-gauge", "JF-1542", { en: "Ammonia Pressure Gauge", zh: "不锈钢氨用压力表" }, "/products/ammonia-pressure-gauge.jpg"),
   {
     slug: "bimetal-thermometer",
     category: "temperature",
@@ -666,12 +551,15 @@ for (const [localeKey, table] of Object.entries(translationTables)) {
     const t = table[product.slug];
     if (!t) continue;
     if (t.name) product.name[loc] = t.name;
+    // Pressure sample specifications and technical copy come from the shared facts below.
+    if (isPressureSample(product.slug)) continue;
     if (t.summary) product.summary[loc] = t.summary;
     if (t.description) product.description[loc] = t.description;
     if (t.highlights) product.highlights[loc] = t.highlights;
     if (t.specs) product.specs[loc] = t.specs;
   }
 }
+
 
 export function getProduct(slug: string) {
   return products.find((p) => p.slug === slug);

@@ -52,7 +52,9 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
       className="relative h-[26rem] overflow-hidden md:h-[30rem] lg:h-[34rem]"
       aria-roledescription="carousel"
     >
-      {slides.map((slide, i) => (
+      {slides.map((slide, i) => {
+        const Heading = i === 0 ? "h1" : "h2";
+        return (
         <div
           key={slide.title}
           className={`absolute inset-0 transition-opacity duration-700 ${
@@ -89,7 +91,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
                       src={slide.image}
                       alt=""
                       fill
-                      priority={i === 0}
+                      preload={i === 0}
                       sizes="100vw"
                       className="object-contain"
                     />
@@ -99,7 +101,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
                     src={slide.image}
                     alt=""
                     fill
-                    priority={i === 0}
+                    preload={i === 0}
                     sizes="100vw"
                     className={`object-cover ${slide.imagePosition ?? "object-center"}`}
                   />
@@ -151,9 +153,9 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
               key={i === index ? `card-active-${index}` : `card-idle-${i}`}
               className="w-full max-w-[30rem] rounded-[0.8rem] bg-white p-7 shadow-[0_0.6rem_2.4rem_rgba(0,37,101,0.35)] sm:p-9 animate-fade-up"
             >
-              <h1 className="text-2xl font-bold leading-tight text-brand sm:text-[2rem] sm:leading-[1.2]">
+              <Heading className="text-2xl font-bold leading-tight text-brand sm:text-[2rem] sm:leading-[1.2]">
                 {slide.title}
-              </h1>
+              </Heading>
               <p className="mt-4 text-[15px] leading-7 text-ink-soft">
                 {slide.text}
               </p>
@@ -168,7 +170,8 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             </div>
           </div>
         </div>
-      ))}
+        );
+      })}
 
       {/* arrows */}
       <button

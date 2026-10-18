@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { PressureComparison } from "@/components/sections/PressureComparison";
 import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { products } from "@/lib/products";
 import { pressureQuoteChecklist, pressureSelection } from "@/lib/pressure-content";
@@ -17,6 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: "Industrial Pressure Gauge Manufacturer",
     description: "Compare Jingfeng Bourdon-tube, stainless steel, capsule and ammonia pressure gauges. Review sample specifications and prepare a configuration enquiry.",
     alternates: pageAlternates("en", "/pressure-gauges", ["en"]),
+    openGraph: {
+      title: "Industrial Pressure Gauge Manufacturer",
+      description: "Compare four Jingfeng pressure gauge samples, review their observed specifications and prepare a configuration enquiry.",
+      url: pageUrl("en", "/pressure-gauges"), type: "website",
+      images: [{ url: "/products/stainless-pressure-gauge.jpg", alt: "JF-1545 pressure gauge sample" }],
+    },
   };
 }
 
@@ -47,9 +54,10 @@ export default async function PressureGaugesPage({ params }: Props) {
           </div>
         </Container>
       </section>
-      <Section id="compare">
+      <Section id="compare" className="scroll-mt-24 lg:scroll-mt-36">
         <h2 className="text-3xl font-bold text-brand">Find your starting point</h2>
         <p className="mt-4 max-w-3xl leading-7 text-ink-soft">The ranges below describe catalogue photographs, not the complete available range or a final supply specification. Application suitability depends on the confirmed materials and operating conditions.</p>
+        <PressureComparison />
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {gauges.map((product) => (
             <article key={product.slug} className="overflow-hidden rounded-2xl border border-line bg-surface">
@@ -79,7 +87,17 @@ export default async function PressureGaugesPage({ params }: Props) {
           ))}
         </div>
       </Section>
-      <Section muted id="requirements">
+      <Section>
+        <h2 className="text-3xl font-bold text-brand">From a catalogue sample to an ordered configuration</h2>
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {[
+            ["1. Describe the process", "Record the medium, normal and maximum pressure, process temperature, ambient conditions and the reading you need. Include pulsation, surges and vibration."],
+            ["2. Confirm the construction", "Specify dial diameter, mounting position, thread or flange standard, connection size, pressure rating, wetted components and seals. Use a dimensioned drawing for a replacement."],
+            ["3. Agree the documentation", "Request the model-specific drawing, specification and project-required inspection or calibration documents with your enquiry. Availability and scope are confirmed with the quotation."],
+          ].map(([title, text]) => <div key={title} className="rounded-xl border border-line p-6"><h3 className="text-xl font-bold text-brand">{title}</h3><p className="mt-4 leading-7 text-ink-soft">{text}</p></div>)}
+        </div>
+      </Section>
+      <Section muted id="requirements" className="scroll-mt-24 lg:scroll-mt-36">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-bold text-brand">A clearer enquiry. A better starting specification.</h2>

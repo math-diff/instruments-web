@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug Malay overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Tolok tekanan",
-    summary: "Tolok tekanan tiub Bourdon untuk pembacaan tempatan tekanan proses.",
-    description: "Tiub Bourdon menukar tekanan proses kepada anjakan kenyal; mekanisme gear menggerakkan penunjuk untuk pembacaan tempatan tanpa bekalan kuasa. Sesuai untuk pam, udara termampat, talian proses dan vessel tekanan stabil. Sahkan julat, keserasian media, suhu, orientasi sambungan dan getaran; sediakan penyekat atau pelindam jika ada denyutan.",
-    highlights: ["Julat 0–60 MPa", "Ketepatan ±1.6% FS", "Pemasangan radial / paksi"],
-    specs: [["Julat", "0–0.1 hingga 0–60 MPa"], ["Ketepatan", "±1.6% FS"], ["Sambungan", "M20×1.5, radial atau paksi"], ["Kepingan", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Tolok tekanan tahan karat",
-    summary: "Tolok tekanan sepenuhnya tahan karat untuk media kakisan dan persekitaran sukar.",
-    description: "Pembinaan sepenuhnya tahan karat (304/316L) untuk media korosif, dengan pilihan isian gliserin menentang getaran. Sesuai untuk industri kimia, petrokimia dan pemasangan luar. Sahkan keserasian media, julat dan sambungan sebelum pesanan.",
-    highlights: ["Bahagian basah 316L", "Pilihan isian gliserin", "Hingga 100 MPa"],
-    specs: [["Julat", "0–0.1 hingga 0–100 MPa"], ["Ketepatan", "±1.6% FS"], ["Bahagian basah", "Stainless 304 / 316L"], ["Sambungan", "M20×1.5 atau tersuai"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Tolok tekanan kapsul",
-    summary: "Tolok elemen kapsul untuk pengukuran tekanan rendah dan mikro tekanan gas.",
-    description: "Elemen kapsul membolehkan pengukuran tekanan gas rendah julat kPa dengan boleh dipercayai. Kepingan tahan karat, pemasangan panel atau dinding. Sesuai untuk pembakar, kipas dan instalasi gas; semak keserasian media dan julat.",
-    highlights: ["Julat kPa", "Kapsul 316L", "Pemasangan panel / dinding"],
-    specs: [["Julat", "0–2.5 hingga 0–60 kPa, ±kPa"], ["Ketepatan", "±1.6% FS"], ["Bahagian basah", "Kapsul 316L"], ["Sambungan", "M20×1.5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Tolok tekanan ammonia",
-    summary: "Tolok tahan karat khusus untuk ammonia dan sistem penyejukan, dengan belakang keselamatan.",
-    description: "Direka untuk litar ammonia dan penyejukan: bahagian basah tahan karat dan belakang keselamatan. Julat dan sambungan ditentukan mengikut pemasangan; gunakan hanya dengan media serasi ammonia.",
-    highlights: ["Ammonia / penyejukan", "Belakang keselamatan", "Bahagian basah tahan karat"],
-    specs: [["Julat", "0–1 hingga 0–40 MPa, kompaun + vakum"], ["Ketepatan", "±1.6% FS"], ["Bahagian basah", "Keluli tahan karat"], ["Sambungan", "M20×1.5"]],
-  },
+  "pressure-gauge": { name: "Tolok tekanan" },
+  "stainless-pressure-gauge": { name: "Tolok tekanan tahan karat" },
+  "capsule-pressure-gauge": { name: "Tolok tekanan kapsul" },
+  "ammonia-pressure-gauge": { name: "Tolok tekanan ammonia" },
   "bimetal-thermometer": {
     name: "Termometer bimetal",
     summary: "Termometer bimetal dial untuk pembacaan suhu tempatan tanpa bekalan kuasa.",

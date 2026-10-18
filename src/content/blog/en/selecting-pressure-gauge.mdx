@@ -1,107 +1,62 @@
 ---
-title: "Industrial pressure gauge selection: range, accuracy class and service conditions"
-description: "Selection essentials for Bourdon-tube and capsule pressure gauges — range margin, accuracy class, media compatibility, pulsation protection and certification."
+title: "How to Select a Pressure Gauge: Range, Accuracy and Process Conditions"
+description: "Prepare a pressure gauge enquiry: define operating pressure, accuracy, wetted materials, connection and service protection, then compare four Jingfeng catalogue samples."
 date: 2025-01-15
+updated: 2026-10-18
 tags: [selection, pressure]
 category: Selection guides
 ---
 
-Pressure gauges are the most common field instrument, yet the classic
-failure modes — bent pointers, ruptured Bourdon tubes, drifting
-readings — keep showing up in after-sales cases. This article walks
-through the five selection decisions that matter most in engineering
-practice for mechanical pressure gauges.
+import { PressureComparison } from "@/components/sections/PressureComparison";
 
-## 1. Range: leave a one-third margin
+A useful pressure gauge enquiry starts with the process: normal pressure, possible peaks, the medium, temperature and installation conditions. A photographed gauge is a starting point for a discussion; its appearance does not establish every material, operating limit or order option.
 
-The fundamental rule of pressure gauge range selection: **normal
-operating pressure should sit between one-third and two-thirds of
-span**.
+This guide helps prepare the information needed for a configuration quotation. Final suitability must be confirmed against the ordered instrument and its documentation.
 
-- Steady pressure: normal pressure ideally at 50–67% of span;
-- Pulsating service (pump discharge): normal pressure should not
-  exceed two-thirds of span, leaving margin for surges;
-- Continuous operation near the top of span accelerates fatigue of
-  the elastic element (elastic hysteresis); operation below one-third
-  of span reduces effective resolution and increases relative error.
+## 1. Define the operating pressure and loading
 
-Example: pump discharge at 0.9 MPa normally, surging to 1.1 MPa —
-a 0–1.6 MPa gauge (normal at ~56% of span) is correct. A 0–1.0 MPa
-gauge would be over-ranged; a 0–2.5 MPa gauge would read in the lower
-third of the dial.
+Record minimum, normal and maximum pressure, including vacuum, pressure cycling and short surges. Separate normal operation from commissioning, cleaning and abnormal events. State the pressure units.
 
-## 2. Accuracy class: fit for purpose
+Choose a scale that is legible at the readings you need and remains within the permitted steady and fluctuating loads for that configuration. A percentage of span alone cannot establish suitability. For example, the [WIKA 232.50/233.50 data sheet](https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0202_en_co.pdf) specifies configuration-dependent operating conditions. Its ratings apply to those WIKA instruments and do not establish Jingfeng product limits.
 
-Industrial pressure gauges per GB/T 1226:2017 (general-purpose pressure
-gauges) come in classes 1.0, 1.6, 2.5 and 4.0. The class number is
-the **percentage of full-span error** — a class 1.6 gauge on a
-0–1.6 MPa range has a permissible error of ±1.6% × 1.6 MPa =
-±0.026 MPa.
+The [JF-1541 Bourdon-tube gauge](/en/products/pressure-gauge) is photographed with a 0–1.6 MPa scale. Confirm the required range and permissible loads before using that sample as a replacement specification.
 
-| Service | Recommended class |
-| --- | --- |
-| General monitoring (compressed air, cooling water) | 2.5 |
-| General process lines, pump discharge | 1.6 |
-| Custody transfer, test benches | 1.0 or better |
+## 2. State the required accuracy and its reference conditions
 
-Note that higher classes cost more and are more sensitive to mounting
-attitude and vibration. Specifying an unnecessarily high class does
-not improve system reliability.
+Specify the permitted error at the readings that matter, the applicable accuracy standard and whether calibration evidence is required. Where a specification defines error as a percentage of span, calculate it from the full span rather than the current reading.
 
-## 3. Sensing element by media and range
+For an arithmetic illustration, 1.6% of a 1.6 MPa span is 0.0256 MPa. This does not include temperature effects, reading error or calibration uncertainty and does not certify a product. The accuracy markings in the comparison below are observations from catalogue samples; confirm their applicable standard for the ordered configuration.
 
-- **Bourdon tube (C-spring)**: the general-purpose element for gases,
-  liquids and steam from roughly 0.1 MPa up to 60 MPa. Ranges like
-  0–1.6 MPa and 0–2.5 MPa cover most line monitoring. 316L stainless
-  wetted parts handle water, steam and mildly corrosive media.
-- **Capsule (corrugated diaphragm)**: for low and very low pressures,
-  from a few hundred pascals up to tens of kPa — gas regulator
-  monitoring, furnace draft. Typical accuracy class 2.5.
-- **Special media**: ammonia service **requires an ammonia-rated
-  gauge** (different Bourdon-tube material to avoid ammonia stress
-  corrosion); oxygen service **requires an oil-free oxygen gauge**
-  marked "oil-free" — a safety requirement, not an option.
+## 3. Compare the instrument and the wetted materials
 
-## 4. Service protection: pulsation, vibration and heat
+<PressureComparison />
 
-After-sales statistics show the top three causes of gauge failure are
-pulsation shock, ambient vibration and over-temperature media — not
-manufacturing defects:
+The [stainless-case JF-1545](/en/products/stainless-pressure-gauge) has a visible 316L marking on its lower assembly. That marking does not identify every wetted part. Specify the exact medium, concentration, contaminants and cleaning fluids so the sensing element, connector and seals can be reviewed together.
 
-- **Pressure pulsation**: install a **snubber (restrictor or needle
-  orifice)** on pump discharge and compressor lines, or specify a
-  **liquid-filled (glycerin-damped) vibration-resistant gauge**.
-- **Ambient vibration**: choose the damped case, or isolate with a
-  flexible siphon / remote mounting.
-- **Hot media** (steam above ~60 °C reaching the Bourdon tube
-  directly damages the movement): install a **siphon (pigtail) loop**
-  so steam condenses before reaching the element.
-- **Corrosion**: specify 316L or Hastelloy wetted parts, or a
-  **diaphragm-seal (chemical) gauge** where the diaphragm isolates
-  the media and a filled capillary transmits the pressure.
+For low gas pressure, consider a [capsule-element enquiry for JF-1543](/en/products/capsule-pressure-gauge), with gas compatibility, overload limits and mounting confirmed. For an [ammonia-system enquiry for JF-1542](/en/products/ammonia-pressure-gauge), identify the refrigerant and confirm every wetted material and seal. A general product name does not establish suitability for a particular medium.
 
-## 5. Connection, case and certification
+## 4. Describe vibration, pulsation and temperature separately
 
-- **Connection orientation**: lower-back (radial) is most common;
-  panel mounting uses axial connection with back flange.
-- **Case diameter**: 100 mm and 150 mm are standard; 60 mm for dense
-  panel layouts.
-- **Ingress protection**: IP54 suffices for general indoor service;
-  outdoor dusty/wet locations use IP65 liquid-filled cases.
-- **Safety release**: the case back must provide a **pressure-relief
-  opening**, so a ruptured Bourdon tube vents through the back
-  instead of bursting the front glass. GB/T 1226 specifies case
-  construction and relief requirements — check the relief opening
-  is unobstructed (do not tape over the back).
-- **Legal metrology**: gauges used for safety protection or custody
-  transfer fall under mandatory verification — schedule periodic
-  calibration accordingly.
+Mechanical vibration and pressure pulsation are different loading conditions. Describe the source, frequency and severity as far as known rather than asking only for a vibration-resistant gauge.
 
-## Summary
+Ask whether damping, a restrictor, isolation or remote mounting is appropriate. Confirm the effect of any accessory on response, blockage risk and service limits. Case filling alone is not evidence of overpressure protection. Check both process and ambient temperature limits for the selected construction and any proposed heat-isolation arrangement.
 
-A correct gauge selection = correct range margin + adequate accuracy
-class + element matched to the media + protection against pulsation,
-vibration and heat. Put these four items into your inquiry and you
-will avoid the vast majority of field problems. When in doubt, send
-your process parameters to our application engineers — we will
-recommend a model against the actual media and installation.
+## 5. Specify the connection and installation dimensions
+
+Give the thread standard, size, male or female end, sealing interface, connection position and mounting arrangement. For flanges, include the standard, size, pressure rating and facing. Obtain a dimensioned drawing when replacing an existing instrument.
+
+The [Swagelok thread and end connection identification guide](https://www.swagelok.com/downloads/webcatalogs/EN/ms-13-77.pdf) explains how to identify connection systems. Use it as an identification reference, then verify the actual connection drawing for the gauge being ordered.
+
+## Prepare the enquiry
+
+- Medium and composition; normal, maximum and transient pressure.
+- Process and ambient temperature; vibration and pulsation.
+- Required scale, units, accuracy standard and calibration documentation.
+- Connection, sealing method, dial diameter, mounting and a drawing where available.
+- Quantity, destination and required project documents.
+
+Compare the [pressure gauge families](/en/pressure-gauges), then [send your process requirements](/en/contact). Requested configurations, documentation and supply terms are confirmed in the quotation.
+
+## Sources and scope
+
+Prepared by Jingfeng Instruments as an enquiry preparation guide. Sample observations come from the current catalogue; they are not a signed engineering specification. The external manufacturer references above explain selection and connection concepts and do not establish approvals or available options for Jingfeng products.

@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug Italian overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Manometro",
-    summary: "Manometro a tubo di Bourdon per l'indicazione locale della pressione di processo.",
-    description: "Il tubo di Bourdon converte la pressione in spostamento elastico; un movimento moltiplicatore comanda la lancetta per un'indicazione locale senza alimentazione. Adatto a pompe, aria compressa, linee di processo e recipienti a pressione stabile. Confermare campo, compatibilità del fluido, temperatura, orientamento del raccordo e vibrazioni; prevedere restrittore o smorzatore in caso di pulsazioni.",
-    highlights: ["Campi 0–60 MPa", "Precisione ±1,6% FS", "Montaggio radiale / assiale"],
-    specs: [["Campo", "0–0,1 a 0–60 MPa"], ["Precisione", "±1,6% FS"], ["Raccordo", "M20×1,5, radiale o assiale"], ["Cassa", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Manometro in acciaio inox",
-    summary: "Manometro interamente in acciaio inox per fluidi corrosivi e ambienti difficili.",
-    description: "Costruzione interamente inox (304/316L) resistente alla corrosione, con riempimento in glicerina opzionale contro le vibrazioni. Adatto a chimica, petrochimica e installazioni esterne. Confermare compatibilità del fluido, campo e raccordo prima dell'ordine.",
-    highlights: ["Parti a contatto 316L", "Riempimento in glicerina opzionale", "Fino a 100 MPa"],
-    specs: [["Campo", "0–0,1 a 0–100 MPa"], ["Precisione", "±1,6% FS"], ["Parti a contatto", "Acciaio inox 304 / 316L"], ["Raccordo", "M20×1,5 o su misura"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Manometro a capsula",
-    summary: "Manometro a elemento capsula per la misura di basse e micro-pressioni gassose.",
-    description: "L'elemento a capsula consente la misura affidabile di basse pressioni di gas nell'ordine dei kPa. Cassa in acciaio inox, montaggio a pannello o a parete. Adatto a bruciatori, ventilatori e impianti gas; verificare compatibilità e campo.",
-    highlights: ["Campi in kPa", "Capsula 316L", "Montaggio a incasso / parete"],
-    specs: [["Campo", "0–2,5 a 0–60 kPa, ±kPa"], ["Precisione", "±1,6% FS"], ["Parti a contatto", "Capsula inox 316L"], ["Raccordo", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Manometro per ammoniaca",
-    summary: "Manometro inox dedicato ad ammoniaca e impianti frigoriferi, con fondello di sicurezza.",
-    description: "Progettato per circuiti di ammoniaca e refrigerazione: parti a contatto in inox e fondello di sicurezza. Campo e raccordo da definire secondo l'impianto; utilizzare solo con fluidi compatibili con l'ammoniaca.",
-    highlights: ["Ammoniaca / refrigerazione", "Fondello di sicurezza", "Parti a contatto in inox"],
-    specs: [["Campo", "0–1 a 0–40 MPa, composto + vuoto"], ["Precisione", "±1,6% FS"], ["Parti a contatto", "Acciaio inossidabile"], ["Raccordo", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Manometro" },
+  "stainless-pressure-gauge": { name: "Manometro in acciaio inox" },
+  "capsule-pressure-gauge": { name: "Manometro a capsula" },
+  "ammonia-pressure-gauge": { name: "Manometro per ammoniaca" },
   "bimetal-thermometer": {
     name: "Termometro bimetallico",
     summary: "Termometro a quadrante bimetallico per l'indicazione locale della temperatura senza alimentazione.",

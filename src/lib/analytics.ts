@@ -1,6 +1,7 @@
-import { isLocale } from "./i18n-config";
+import { categoryTopics, isLocale } from "./i18n-config";
 
-const staticPages = new Set(["", "products", "pressure-gauges", "about", "contact", "blog", "docs", "privacy"]);
+const topicPages = new Set(Object.values(categoryTopics).map((path) => path.slice(1)));
+const staticPages = new Set(["", "products", ...topicPages, "about", "contact", "blog", "docs", "privacy"]);
 const articles = new Set([
   "blog/selecting-pressure-gauge", "blog/local-vs-remote-temperature",
   "blog/level-gauge-selection", "blog/hazardous-area-certifications",
@@ -15,7 +16,7 @@ export function analyticsPath(path: string, productSlugs: readonly string[]): st
   const locale = parts.shift();
   if (!locale || !isLocale(locale)) return null;
   const rest = parts.join("/");
-  if (rest === "pressure-gauges" && locale !== "en") return null;
+  if (topicPages.has(rest) && locale !== "en") return null;
   if (staticPages.has(rest) || articles.has(rest) ||
     (parts.length === 2 && parts[0] === "products" && productSlugs.includes(parts[1]))) {
     return `/${locale}${rest ? `/${rest}` : ""}`;

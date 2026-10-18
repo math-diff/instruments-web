@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug Turkish overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Basınç göstergesi",
-    summary: "Endüstriyel tesisatlarda proses basıncının yerel gösterimi için Bourdon tüp manometre.",
-    description: "Bourdon tüpü proses basıncını esnek yer değiştirmeye dönüştürür; dişli mekanizma ibleyi çalıştırarak enerji gerektirmeyen yerel gösterim sağlar. Pompa, basınçlı hava, proses hatları ve sabit basınçlı tanklar için uygundur. Aralık, ortam uyumu, sıcaklık, bağlantı yönü ve titreşimi teyit edin; darbeli basınçta kısıtlayıcı veya sönümleyici kullanın.",
-    highlights: ["0–60 MPa aralıklar", "±%1,6 FS doğruluk", "Radyal / aksiyel montaj"],
-    specs: [["Aralık", "0–0,1 ila 0–60 MPa"], ["Doğruluk", "±%1,6 FS"], ["Bağlantı", "M20×1,5, radyal veya aksiyel"], ["Gövde", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Paslanmaz çelik basınç göstergesi",
-    summary: "Korozif ortamlar ve ağır koşullar için tam paslanmaz manometre.",
-    description: "Korozif ortamlar için tam paslanmaz (304/316L) gövde, titreşime karşı opsiyonel gliserin dolgusu. Kimya, petrokimya ve dış saha kurulumlarına uygundur. Sipariş öncesi ortam uyumunu, aralığı ve bağlantıyı teyit edin.",
-    highlights: ["316L ıslak parçalar", "Opsiyonel gliserin dolgu", "100 MPa'ya kadar"],
-    specs: [["Aralık", "0–0,1 ila 0–100 MPa"], ["Doğruluk", "±%1,6 FS"], ["Islak parçalar", "Paslanmaz 304 / 316L"], ["Bağlantı", "M20×1,5 veya özel"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Kapsül manometre",
-    summary: "Gazların düşük ve mikro basınç ölçümü için kapsül elemanlı manometre.",
-    description: "Kapsül eleman, kPa mertebesindeki gaz basınçlarının güvenilir ölçümünü sağlar. Paslanmaz gövde, panel veya duvar montajı. Brülörler, fanlar ve gaz tesisatları için uygundur; ortam uyumu ve aralığı kontrol edin.",
-    highlights: ["kPa aralıkları", "316L kapsül", "Panel / duvar montajı"],
-    specs: [["Aralık", "0–2,5 ila 0–60 kPa, ±kPa"], ["Doğruluk", "±%1,6 FS"], ["Islak parçalar", "316L kapsül"], ["Bağlantı", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Amonyak manometresi",
-    summary: "Amonyak ve soğutma tesisatlarına özel, güvenlik tabanlı paslanmaz manometre.",
-    description: "Amonyak ve soğutma devreleri için tasarlanmıştır: paslanmaz ıslak parçalar ve güvenlik tabanı. Aralık ve bağlantı tesisata göre belirlenir; yalnızca amonyakla uyumlu ortamlarda kullanın.",
-    highlights: ["Amonyak / soğutma", "Güvenlik tabanı", "Paslanmaz ıslak parçalar"],
-    specs: [["Aralık", "0–1 ila 0–40 MPa, bileşik + vakum"], ["Doğruluk", "±%1,6 FS"], ["Islak parçalar", "Paslanmaz çelik"], ["Bağlantı", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Basınç göstergesi" },
+  "stainless-pressure-gauge": { name: "Paslanmaz çelik basınç göstergesi" },
+  "capsule-pressure-gauge": { name: "Kapsül manometre" },
+  "ammonia-pressure-gauge": { name: "Amonyak manometresi" },
   "bimetal-thermometer": {
     name: "Bimetal termometre",
     summary: "Enerji gerektirmeyen yerel sıcaklık göstergesi için bimetal kadranlı termometre.",

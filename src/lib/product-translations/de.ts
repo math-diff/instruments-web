@@ -1,5 +1,3 @@
-import type { Locale } from "@/lib/i18n-config";
-
 export type ProductOverride = Partial<{
   name: string;
   summary: string;
@@ -10,34 +8,10 @@ export type ProductOverride = Partial<{
 
 /** Per-slug German overrides. Missing slugs/fields fall back to English. */
 export const table: Record<string, ProductOverride> = {
-  "pressure-gauge": {
-    name: "Manometer",
-    summary: "Bourdonrohr-Manometer zur lokalen Anzeige des Prozessdrucks.",
-    description: "Das Bourdonrohr wandelt den Prozessdruck in eine elastische Auslenkung; ein Übersetzungsgetriebe bewegt den Zeiger für eine lokale Anzeige ohne Hilfsenergie. Geeignet für Pumpen, Druckluft, Prozessleitungen und Druckbehälter mit stabilen Druckverhältnissen. Messbereich, Medienverträglichkeit, Temperatur, Anschlussorientierung und Vibration im Vorfeld klären; bei Druckpulsation Drossel oder Dämpfer vorsehen.",
-    highlights: ["Bereiche 0–60 MPa", "Genauigkeit ±1,6 % FS", "Radial-/Axialanschluss"],
-    specs: [["Messbereich", "0–0,1 bis 0–60 MPa"], ["Genauigkeit", "±1,6 % FS"], ["Anschluss", "M20×1,5, radial oder axial"], ["Gehäuse", "φ100 / φ150 mm"]],
-  },
-  "stainless-pressure-gauge": {
-    name: "Edelstahl-Manometer",
-    summary: "Komplett-Edelstahlmanometer für korrosive Medien und raue Umgebungen.",
-    description: "Vollständige Edelstahlausführung (304/316L) für korrosive Medien, optional mit Glycerinfüllung gegen Vibration. Geeignet für Chemie-, Petrochemie- und Außenaufstellungen. Medienverträglichkeit, Bereich und Anschluss vor Bestellung klären.",
-    highlights: ["316L mediumskontaktiert", "Glycerinfüllung optional", "Bis 100 MPa"],
-    specs: [["Messbereich", "0–0,1 bis 0–100 MPa"], ["Genauigkeit", "±1,6 % FS"], ["Mediumskontakt", "Edelstahl 304 / 316L"], ["Anschluss", "M20×1,5 oder kundenspezifisch"]],
-  },
-  "capsule-pressure-gauge": {
-    name: "Kapsel-Manometer",
-    summary: "Kapselfedermanometer für Nieder- und Kleindruckmessung von Gasen.",
-    description: "Das Kapselfederelement ermöglicht zuverlässige Messung kleiner Gasdrücke im kPa-Bereich. Edelstahlgehäuse, Schalttafel- oder Wandmontage. Geeignet für Brenner, Gebläse und Gasanlagen; Medienverträglichkeit und Bereich prüfen.",
-    highlights: ["kPa-Bereiche", "316L-Kapsel", "Einbau-/Wandmontage"],
-    specs: [["Messbereich", "0–2,5 bis 0–60 kPa, ±kPa"], ["Genauigkeit", "±1,6 % FS"], ["Mediumskontakt", "316L-Kapsel"], ["Anschluss", "M20×1,5"]],
-  },
-  "ammonia-pressure-gauge": {
-    name: "Ammoniak-Manometer",
-    summary: "Edelstahlmanometer für Ammoniak- und Kälteanlagen, mit Sicherheitsboden.",
-    description: "Speziell für Ammoniak- und Kältekreisläufe: mediumskontaktierte Edelstahlteile und berstsicherer Gehäuseboden. Bereich und Anschluss anlageabhängig festlegen; nur mit ammoniakkompatiblen Medien einsetzen.",
-    highlights: ["Ammoniak / Kälte", "Sicherheitsboden", "Edelstahl-mediumskontakt"],
-    specs: [["Messbereich", "0–1 bis 0–40 MPa, Compound + Vakuum"], ["Genauigkeit", "±1,6 % FS"], ["Mediumskontakt", "Edelstahl"], ["Anschluss", "M20×1,5"]],
-  },
+  "pressure-gauge": { name: "Manometer" },
+  "stainless-pressure-gauge": { name: "Edelstahl-Manometer" },
+  "capsule-pressure-gauge": { name: "Kapsel-Manometer" },
+  "ammonia-pressure-gauge": { name: "Ammoniak-Manometer" },
   "bimetal-thermometer": {
     name: "Bimetallthermometer",
     summary: "Bimetall-Anzeigethermometer für lokale Temperaturmessung ohne Hilfsenergie.",

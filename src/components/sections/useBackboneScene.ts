@@ -87,6 +87,7 @@ export function useBackboneScene(active: number) {
 
     let cancelled = false;
     let inView = false;
+    let nearViewport = false;
     let resizeFrame = 0;
     let generation = 0;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -114,6 +115,7 @@ export function useBackboneScene(active: number) {
         setFailed(true);
         return;
       }
+      if (!nearViewport || document.hidden || controllerRef.current) return;
       try {
         const library = await loadLibrary();
         if (cancelled || currentGeneration !== generation) return;
@@ -141,6 +143,18 @@ export function useBackboneScene(active: number) {
       inView = entry.isIntersecting;
       syncVisibility();
     });
+    // Download and create the original scene only when the section is nearby.
+    // Actual visibility is tracked separately so offscreen scenes stay paused.
+    const preload = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      nearViewport = true;
+      preload.disconnect();
+      void initialize();
+    }, { rootMargin: "200px 0px" });
+    const onVisibility = () => {
+      syncVisibility();
+      if (!document.hidden && !controllerRef.current) void initialize();
+    };
     const resize = new ResizeObserver(() => {
       cancelAnimationFrame(resizeFrame);
       resizeFrame = requestAnimationFrame(() => {
@@ -149,19 +163,21 @@ export function useBackboneScene(active: number) {
     });
 
     intersection.observe(scene);
+    preload.observe(scene);
     resize.observe(scene);
-    document.addEventListener("visibilitychange", syncVisibility);
+    document.addEventListener("visibilitychange", onVisibility);
     canvas.addEventListener("webglcontextlost", onContextLost);
     motion.addEventListener("change", initialize);
-    void initialize();
+    if (motion.matches) void initialize();
 
     return () => {
       cancelled = true;
       ++generation;
       cancelAnimationFrame(resizeFrame);
       intersection.disconnect();
+      preload.disconnect();
       resize.disconnect();
-      document.removeEventListener("visibilitychange", syncVisibility);
+      document.removeEventListener("visibilitychange", onVisibility);
       canvas.removeEventListener("webglcontextlost", onContextLost);
       motion.removeEventListener("change", initialize);
       dispose();

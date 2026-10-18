@@ -62,6 +62,7 @@ export default async function BlogPostPage({
         headline: post.meta.title, description: post.meta.description,
         mainEntityOfPage: pageUrl(contentLocale, `/blog/${slug}`), inLanguage: contentLocale,
         ...(post.meta.date ? { datePublished: post.meta.date } : {}),
+        ...(post.meta.updated ? { dateModified: post.meta.updated } : {}),
         publisher: { "@id": `${SITE_URL}/#organization` },
       }} />
       <section className="border-b border-line bg-surface-muted">
@@ -88,6 +89,7 @@ export default async function BlogPostPage({
               <time dateTime={post.meta.date}>
                 {dict.blog.publishedOn} {formatDate(post.meta.date, loc)}
               </time>
+              {post.meta.updated && <span>{loc === "zh" ? "更新于" : "Updated"} <time dateTime={post.meta.updated}>{formatDate(post.meta.updated, loc)}</time></span>}
               {post.meta.tags && post.meta.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
                   {post.meta.tags.map((tag) => (

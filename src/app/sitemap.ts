@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/lib/i18n-config";
+import { categoryTopics, locales } from "@/lib/i18n-config";
 import { products } from "@/lib/products";
 import { listContent } from "@/lib/content";
 import { contentLocales, pageUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
-  entries.push({ url: pageUrl("en", "/pressure-gauges"), changeFrequency: "monthly", priority: 0.9 });
+  for (const path of Object.values(categoryTopics)) {
+    entries.push({ url: pageUrl("en", path), changeFrequency: "monthly", priority: 0.9 });
+  }
   for (const locale of ["en", "zh"] as const) {
     entries.push({ url: pageUrl(locale, "/privacy"), changeFrequency: "yearly", priority: 0.2 });
   }
@@ -32,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({ url: pageUrl(locale, `/${kind}`), changeFrequency: "weekly", priority: 0.7, alternates: { languages } });
       for (const item of listContent(kind, locale)) {
         const path = `/${kind}/${item.slug}`;
-        const published = item.date ? new Date(item.date) : undefined;
+        const published = item.updated || item.date ? new Date(item.updated || item.date) : undefined;
         entries.push({
           url: pageUrl(locale, path),
           ...(published && !Number.isNaN(published.getTime()) ? { lastModified: published } : {}),

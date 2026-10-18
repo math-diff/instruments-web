@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_SC } from "next/font/google";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AnalyticsConsent } from "@/components/analytics/AnalyticsConsent";
-import { products } from "@/lib/products";
+import { categories, pick, products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n";
 import {
@@ -11,6 +11,8 @@ import {
   locales,
   localeMeta,
   defaultLocale,
+  categoryPath,
+  localizePath,
   type Locale,
 } from "@/lib/i18n-config";
 import { Header } from "@/components/layout/Header";
@@ -110,6 +112,17 @@ export default async function LocaleLayout({
           quoteLabel={dict.nav.getQuote}
           contactLabel={dict.nav.contact}
           searchPlaceholder={dict.common.searchPlaceholder}
+          viewAllLabel={dict.common.viewAll}
+          productCategories={categories.map((category) => ({
+            id: category,
+            label: dict.categories[category].name,
+            href: categoryPath(currentLocale, category),
+            products: products.filter((product) => product.category === category).map((product) => ({
+              label: pick(product.name, currentLocale),
+              href: localizePath(currentLocale, `/products/${product.slug}`),
+              image: product.image,
+            })),
+          }))}
         />
         <main className="flex-1">{children}</main>
         <Footer locale={currentLocale} dict={dict} />

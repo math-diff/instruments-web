@@ -5,6 +5,8 @@
 | 规范英文路径 | 主要查询意图 | 辅助词/问题 | 转化与内链 | 状态/发布依赖 |
 | --- | --- | --- | --- | --- |
 | `/en/pressure-gauges` | pressure gauge manufacturer; industrial pressure gauges | gauge types; request a quotation | 四个产品、选型文章、联系 | 代码交付后本地验收；生产发布另记 |
+| `/en/temperature-instruments` | industrial temperature instruments; RTD sensor; thermocouple | bimetal thermometer; probe selection; installation | 九个产品、现有选型文章与安装文档、型号询价 | 2026-10-18 本地实现；候选词未取得搜索量或排名数据，生产发布另记 |
+| `/en/level-instruments` | industrial level instruments; level gauge | magnetic level gauge; radar level; float measurement | 五个产品、现有选型文章与安装文档、型号询价 | 2026-10-18 本地实现；候选词未取得搜索量或排名数据，生产发布另记 |
 | `/en/products/pressure-gauge` | Bourdon tube pressure gauge | JF-1541; range and accuracy | 专题、选型、型号询价 | 样品信息已有；完整规格待审核 |
 | `/en/products/stainless-pressure-gauge` | stainless steel pressure gauge | JF-1545; wetted material vs case | 专题、材质确认、型号询价 | 316L 仅可见标记；材料清单待审 |
 | `/en/products/capsule-pressure-gauge` | capsule pressure gauge; low pressure gas gauge | JF-1543; Pa scale | 专题、低压工况、型号询价 | 气体兼容性与安装限制待审 |

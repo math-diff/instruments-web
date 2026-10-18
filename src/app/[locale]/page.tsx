@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageUrl } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -39,7 +39,17 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return { alternates: pageAlternates(isLocale(locale) ? locale : "en") };
+  const loc = isLocale(locale) ? locale : "en";
+  const dict = await getDictionary(loc);
+  const title = loc === "en" ? "Industrial Pressure Gauges & Process Instruments" : `${dict.brand.name} — ${dict.brand.tagline}`;
+  const description = loc === "en"
+    ? "Explore Jingfeng pressure gauges, temperature sensors and level instruments. Compare catalogue samples, prepare process requirements and request a configuration quotation."
+    : dict.home.heroSubtitle;
+  return {
+    ...(loc === "en" ? { title: { absolute: `${title} | ${dict.brand.name}` } } : {}), description,
+    alternates: pageAlternates(loc),
+    openGraph: { title, description, url: pageUrl(loc), type: "website", images: [{ url: "/shouye/hero-engineers.jpg", alt: dict.brand.name }] },
+  };
 }
 
 export default async function HomePage({

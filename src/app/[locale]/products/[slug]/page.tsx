@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/i18n";
-import { isLocale, localizePath, type Locale } from "@/lib/i18n-config";
+import { categoryPath, isLocale, localizePath, type Locale } from "@/lib/i18n-config";
 import { getProduct, products, pick } from "@/lib/products";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -56,11 +56,12 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const pressureContext = loc === "en" ? pressureSelection[product.slug] : undefined;
-  const cataloguePath = pressureContext ? "/pressure-gauges" : "/products";
-  const catalogueName = pressureContext ? "Pressure gauges" : dict.nav.products;
+  const catalogueHref = loc === "en" ? categoryPath(loc, product.category) : localizePath(loc, "/products");
+  const catalogueName = loc === "en" ? { pressure: "Pressure gauges", temperature: "Temperature instruments", level: "Level instruments" }[product.category] : dict.nav.products;
+  const sampleConnection = product.specs.en.find(([label]) => label === "Process connection")?.[1];
   const breadcrumbs = [
     { name: dict.nav.home, url: pageUrl(loc) },
-    { name: catalogueName, url: pageUrl(loc, cataloguePath) },
+    { name: catalogueName, url: new URL(catalogueHref, pageUrl(loc)).href },
     { name: pick(product.name, loc), url: pageUrl(loc, `/products/${product.slug}`) },
   ];
 
@@ -76,12 +77,12 @@ export default async function ProductDetailPage({
           <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap gap-2 text-sm text-ink-soft">
             <Link href={localizePath(loc, "/")}>{dict.nav.home}</Link>
             <span aria-hidden="true">/</span>
-            <Link href={localizePath(loc, cataloguePath)}>{catalogueName}</Link>
+            <Link href={catalogueHref}>{catalogueName}</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">{pick(product.name, loc)}</span>
           </nav>
           <Button
-            href={localizePath(loc, cataloguePath)}
+            href={catalogueHref}
             variant="secondary"
             className="group w-fit border-line px-3.5 shadow-[0_0.15rem_0.55rem_rgba(0,37,101,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-link hover:shadow-[0_0.35rem_1rem_rgba(0,37,101,0.14)]"
           >
@@ -108,7 +109,7 @@ export default async function ProductDetailPage({
                   </Badge>
                 </div>
                 <h1 className="text-3xl font-bold tracking-tight text-brand sm:text-4xl">
-                  {pick(product.name, loc)}
+                  {loc === "en" && pressureContext ? `${product.model} ${product.slug === "pressure-gauge" ? "Bourdon Tube Pressure Gauge" : product.name.en}` : pick(product.name, loc)}
                 </h1>
                 <p className="mt-4 text-lg leading-7 text-ink-soft">
                   {pick(product.summary, loc)}
@@ -147,6 +148,7 @@ export default async function ProductDetailPage({
             <p className="mt-4 text-base leading-8 text-ink-soft sm:text-lg">
               {pick(product.description, loc)}
             </p>
+            {pressureContext && <p className="mt-4 text-base leading-8 text-ink-soft sm:text-lg">{pressureContext.application}</p>}
           </div>
         </Reveal>
 
@@ -169,10 +171,19 @@ export default async function ProductDetailPage({
         <Section muted>
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-bold text-brand">Confirm the ordered configuration</h2>
+              <h2 className="text-2xl font-bold text-brand">Specify {product.model} for your installation</h2>
               <p className="mt-4 leading-7 text-ink-soft">The specifications above describe the pictured catalogue sample. They are not a complete ordering specification or confirmation of every available option.</p>
               <p className="mt-4 leading-7 text-ink-soft">{pressureContext.confirm}</p>
               <p className="mt-4 leading-7 text-ink-soft">Request a configuration-specific drawing and the inspection, calibration or certification documents required by your project. Their availability and scope must be confirmed before ordering.</p>
+              <dl className="mt-6 divide-y divide-line rounded-xl border border-line bg-white px-5">
+                {[
+                  ["Dial and mounting", "Dial diameter, mounting position, dimensions and installation clearance: confirm for the ordered configuration."],
+                  ["Process connection", `${sampleConnection ? `Sample observation: ${sampleConnection}.` : "Connection dimensions have not been recorded for this sample."} Confirm the thread or flange standard, size, sealing face and pressure rating.`],
+                  ["Materials and service limits", "Confirm each wetted component and seal, compatible medium, process and ambient temperatures, and steady, fluctuating and overload pressure limits."],
+                  ["Drawings and documents", "Request a dimensioned drawing and the required inspection, calibration or approval evidence. Documents are supplied only where available for the specified configuration."],
+                ].map(([label, value]) => <div key={label} className="py-4"><dt className="font-bold text-brand">{label}</dt><dd className="mt-2 text-sm leading-6 text-ink-soft">{value}</dd></div>)}
+              </dl>
+              <Link href={localizePath(loc, `/contact?product=${product.slug}`)} data-track="quote_click" data-product={product.slug} className="mt-6 inline-block font-bold text-link underline underline-offset-4">Request a {product.model} drawing and specification</Link>
               <Link href="/en/blog/selecting-pressure-gauge" className="mt-6 inline-block font-bold text-link underline underline-offset-4">Read the pressure gauge selection guide</Link>
             </div>
             <div className="rounded-2xl border border-line bg-surface p-6">

@@ -46,8 +46,14 @@ export function localizePath(locale: Locale, path = "") {
   return normalized === "/" ? `/${locale}` : `/${locale}${normalized}`;
 }
 
+export const categoryTopics: Record<string, string> = {
+  pressure: "/pressure-gauges",
+  temperature: "/temperature-instruments",
+  level: "/level-instruments",
+};
+
 export function categoryPath(locale: Locale, category: string) {
-  return locale === "en" && category === "pressure"
-    ? "/en/pressure-gauges"
+  return locale === "en" && categoryTopics[category]
+    ? localizePath(locale, categoryTopics[category])
     : localizePath(locale, `/products?cat=${encodeURIComponent(category)}`);
 }
